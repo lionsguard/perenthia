@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /Admin/
+Disallow: /App_Data/
+Disallow: /App_Themes/
+Disallow: /bin/
+Disallow: /Private/
+Disallow: /Web.config
+Disallow: /Logout.aspx
+Disallow: /SignUp.aspx

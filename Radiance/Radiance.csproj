@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AD9C1E8-47C9-44DA-9552-EF48A558A0EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Radiance</RootNamespace>
+    <AssemblyName>Radiance</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.PollingDuplex, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Silverlight\v3.0\Libraries\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actor.cs" />
+    <Compile Include="ArmorRating.cs" />
+    <Compile Include="AttributeList.cs" />
+    <Compile Include="AuthKey.cs" />
+    <Compile Include="AuthKeyMessageInspector.cs" />
+    <Compile Include="AuthKeyServiceBehaviorAttribute.cs" />
+    <Compile Include="Avatars.cs" />
+    <Compile Include="ClientManager.cs" />
+    <Compile Include="Combat\CombatManager.cs" />
+    <Compile Include="Combat\CombatMatch.cs" />
+    <Compile Include="CommandDictionary.cs" />
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="Configuration\CommandSection.cs" />
+    <Compile Include="Configuration\CryptographySection.cs" />
+    <Compile Include="Configuration\LogSection.cs" />
+    <Compile Include="Configuration\ModuleElement.cs" />
+    <Compile Include="Configuration\ModuleElementCollection.cs" />
+    <Compile Include="Configuration\ScriptSection.cs" />
+    <Compile Include="Configuration\RadianceSection.cs" />
+    <Compile Include="Configuration\WorldSection.cs" />
+    <Compile Include="Dice.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FileUpdate.cs" />
+    <Compile Include="Foci.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="GameTime.cs" />
+    <Compile Include="Household.cs" />
+    <Compile Include="HouseholdManager.cs" />
+    <Compile Include="Handlers\AdminCommandHandler.cs" />
+    <Compile Include="Handlers\AuthenticatedUserCommandHandler.cs" />
+    <Compile Include="Handlers\CommandHandler.cs" />
+    <Compile Include="Handlers\LoginCommandHandler.cs" />
+    <Compile Include="Handlers\PlayerCommandHandler.cs" />
+    <Compile Include="Handlers\UserCommandHandler.cs" />
+    <Compile Include="HttpHeaders.cs" />
+    <Compile Include="Internal\Client.cs" />
+    <Compile Include="Internal\ConsoleMessageContext.cs" />
+    <Compile Include="Internal\InternalMessageContext.cs" />
+    <Compile Include="KnownCommands.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MapManager.cs" />
+    <Compile Include="Markup\Enums.cs" />
+    <Compile Include="Markup\RdlCommandGroup.cs" />
+    <Compile Include="Markup\RdlCommands.cs" />
+    <Compile Include="Markup\RdlExtensions.cs" />
+    <Compile Include="Markup\RdlMessages.cs" />
+    <Compile Include="Markup\RdlMessages_Internal.cs" />
+    <Compile Include="Markup\RdlObjects.cs" />
+    <Compile Include="Markup\RdlSystem.cs" />
+    <Compile Include="Markup\RdlTag.cs" />
+    <Compile Include="Markup\RdlTagCollection.cs" />
+    <Compile Include="Markup\RdlTagConverter.cs" />
+    <Compile Include="Markup\RdlTagReader.cs" />
+    <Compile Include="Markup\RdlTagWriter.cs" />
+    <Compile Include="Markup\RdlTextFormatter.cs" />
+    <Compile Include="Markup\RdlUser.cs" />
+    <Compile Include="NameComparer.cs" />
+    <Compile Include="ObjectValueConverter.cs" />
+    <Compile Include="Place.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="Providers\CommandProvider.cs" />
+    <Compile Include="Providers\CommandProviderCollection.cs" />
+    <Compile Include="Providers\CryptographyProvider.cs" />
+    <Compile Include="Providers\CryptographyProviderCollection.cs" />
+    <Compile Include="Providers\LogProvider.cs" />
+    <Compile Include="Providers\LogProviderCollection.cs" />
+    <Compile Include="Providers\ProviderUtil.cs" />
+    <Compile Include="Providers\WorldProvider.cs" />
+    <Compile Include="Providers\WorldProviderCollection.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Security\RoleNames.cs" />
+    <Compile Include="Security\UserDetail.cs" />
+    <Compile Include="Serialization\BinarySerializer.cs" />
+    <Compile Include="Serialization\IBinarySerializable.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="StringsInternal.cs" />
+    <Compile Include="Terrain.cs" />
+    <Compile Include="World.cs" />
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="MagicManager.cs" />
+    <Compile Include="MersenneTwister.cs" />
+    <Compile Include="Point3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SkillManager.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="WeaponDamage.cs" />
+    <Compile Include="XLinqEx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lionsguard.Logging\Lionsguard.Logging.csproj">
+      <Project>{19755449-881B-474A-AE88-DF8C2A5575F7}</Project>
+      <Name>Lionsguard.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radiance.Contract\Radiance.Contract.csproj">
+      <Project>{00CEB77B-F8E9-4F09-81FE-5942759A1E42}</Project>
+      <Name>Radiance.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

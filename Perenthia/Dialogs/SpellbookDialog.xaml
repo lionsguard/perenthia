@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.SpellbookDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+			  xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" 
+    Width="317.833" Height="300" xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ctlSlot0" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,0,0,0" x:Name="ctlSlot1" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot VerticalAlignment="Top" Margin="76,0,0,0" HorizontalAlignment="Left" x:Name="ctlSlot2" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ctlSlot3" Margin="114,0,0,0" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,38,0,0" x:Name="ctlSlot4" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,38,0,0" x:Name="ctlSlot5" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot VerticalAlignment="Top" Margin="76,38,0,0" HorizontalAlignment="Left" x:Name="ctlSlot6" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,38,0,0" x:Name="ctlSlot7" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="0,76,0,0" VerticalAlignment="Top" x:Name="ctlSlot8" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38,76,0,0" VerticalAlignment="Top" x:Name="ctlSlot9" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="76,76,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ctlSlot10" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="114,76,0,0" VerticalAlignment="Top" x:Name="ctlSlot11" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ctlSlot12" Margin="0,114,0,0" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38,114,0,0" VerticalAlignment="Top" x:Name="ctlSlot13" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="76,114,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ctlSlot14" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ctlSlot15" Margin="114,114,0,0" SlotType="Spell"/>
+
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" x:Name="ctlSlot16" Margin="0,0,0,114" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38,0,0,114" x:Name="ctlSlot17" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="76,0,0,114" HorizontalAlignment="Left" x:Name="ctlSlot18" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" x:Name="ctlSlot19" Margin="114,0,0,114" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="0,0,0,76" x:Name="ctlSlot20" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38,0,0,76" x:Name="ctlSlot21" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="76,0,0,76" HorizontalAlignment="Left" x:Name="ctlSlot22" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="114,0,0,76" x:Name="ctlSlot23" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="0,0,0,38" VerticalAlignment="Bottom" x:Name="ctlSlot24" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38,0,0,38" VerticalAlignment="Bottom" x:Name="ctlSlot25" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="76,0,0,38" HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="ctlSlot26" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="114,0,0,38" VerticalAlignment="Bottom" x:Name="ctlSlot27" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="ctlSlot28" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Bottom" x:Name="ctlSlot29" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="76,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="ctlSlot30" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="ctlSlot31" Margin="114,0,0,0" SlotType="Spell"/>
+
+    	<Perenthia_Controls:ItemSlot x:Name="ctlSlot32" Margin="0,0,113.833,0" VerticalAlignment="Top" d:LayoutOverrides="Width, Height" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,75.833,0" x:Name="ctlSlot33" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,37.833,0" HorizontalAlignment="Right" x:Name="ctlSlot34" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" x:Name="ctlSlot35" Margin="0,0,-0.167,0" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,38,113.833,0" x:Name="ctlSlot36" VerticalAlignment="Top" d:LayoutOverrides="Width" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,38,75.833,0" x:Name="ctlSlot37" VerticalAlignment="Top" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,38,37.833,0" HorizontalAlignment="Right" x:Name="ctlSlot38" VerticalAlignment="Top" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,38,-0.167,0" x:Name="ctlSlot39" VerticalAlignment="Top" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,76,113.833,0" x:Name="ctlSlot40" VerticalAlignment="Top" d:LayoutOverrides="Width, Height" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,76,75.833,0" x:Name="ctlSlot41" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,76,37.833,0" HorizontalAlignment="Right" x:Name="ctlSlot42" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,76,-0.167,0" x:Name="ctlSlot43" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot x:Name="ctlSlot44" Margin="0,114,113.833,0" VerticalAlignment="Top" d:LayoutOverrides="Width, Height" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,114,75.833,0" x:Name="ctlSlot45" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,114,37.833,0" HorizontalAlignment="Right" x:Name="ctlSlot46" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" x:Name="ctlSlot47" Margin="0,114,-0.167,0" VerticalAlignment="Top" d:LayoutOverrides="Height" SlotType="Spell"/>
+
+    	<Perenthia_Controls:ItemSlot x:Name="ctlSlot48" Margin="0,0,113.833,114" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,75.833,114" x:Name="ctlSlot49" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,37.833,114" HorizontalAlignment="Right" x:Name="ctlSlot50" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" x:Name="ctlSlot51" Margin="0,0,-0.167,114" VerticalAlignment="Bottom" d:LayoutOverrides="Height" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,113.833,76" x:Name="ctlSlot52" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,75.833,76" x:Name="ctlSlot53" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,37.833,76" HorizontalAlignment="Right" x:Name="ctlSlot54" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,-0.167,76" x:Name="ctlSlot55" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,113.833,38" x:Name="ctlSlot56" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,75.833,38" x:Name="ctlSlot57" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,37.833,38" HorizontalAlignment="Right" x:Name="ctlSlot58" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,-0.167,38" x:Name="ctlSlot59" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot x:Name="ctlSlot60" Margin="0,0,113.833,0" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" Margin="0,0,75.833,0" x:Name="ctlSlot61" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot Margin="0,0,37.833,0" HorizontalAlignment="Right" x:Name="ctlSlot62" VerticalAlignment="Bottom" SlotType="Spell"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Right" x:Name="ctlSlot63" Margin="0,0,-0.167,0" VerticalAlignment="Bottom" SlotType="Spell"/>
+
+    </Grid>
+</UserControl>

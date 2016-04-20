@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C03D5045-02D9-49B8-B001-62FB6FEEF881}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Radiance</RootNamespace>
+    <AssemblyName>Radiance.Silverlight</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>"%24/Radiance/Radiance.Silverlight/Radiance.Silverlight", EKAAAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <NoConfig>true</NoConfig>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Json, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.PollingDuplex, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Radiance\Direction.cs">
+      <Link>Direction.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Enums.cs">
+      <Link>Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\HttpHeaders.cs">
+      <Link>HttpHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\KnownCommands.cs">
+      <Link>KnownCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\Enums.cs">
+      <Link>Markup\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlCommandGroup.cs">
+      <Link>Markup\RdlCommandGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlCommands.cs">
+      <Link>Markup\RdlCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlExtensions.cs">
+      <Link>Markup\RdlExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlMessages.cs">
+      <Link>Markup\RdlMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlObjects.cs">
+      <Link>Markup\RdlObjects.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlSystem.cs">
+      <Link>Markup\RdlSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlTag.cs">
+      <Link>Markup\RdlTag.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlTagCollection.cs">
+      <Link>Markup\RdlTagCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlTagConverter.cs">
+      <Link>Markup\RdlTagConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlTagReader.cs">
+      <Link>Markup\RdlTagReader.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlTagWriter.cs">
+      <Link>Markup\RdlTagWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlTextFormatter.cs">
+      <Link>Markup\RdlTextFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Markup\RdlUser.cs">
+      <Link>Markup\RdlUser.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Point3.cs">
+      <Link>Point3.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Properties\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Property.cs">
+      <Link>Property.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Serialization\BinarySerializer.cs">
+      <Link>Serialization\BinarySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Serialization\IBinarySerializable.cs">
+      <Link>Serialization\IBinarySerializable.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\Strings.cs">
+      <Link>Strings.cs</Link>
+    </Compile>
+    <Compile Include="..\Radiance\XLinqEx.cs">
+      <Link>XLinqEx.cs</Link>
+    </Compile>
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="HtmlTextBlock.cs" />
+    <Compile Include="HttpCommunicator.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="ICommunicator.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="KeyboardManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommunicationManager.cs" />
+    <Compile Include="SocketCommunicator.cs" />
+    <Compile Include="WcfCommunicator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lionsguard.Logging.Silverlight\Lionsguard.Logging.Silverlight.csproj">
+      <Project>{68E1E2F7-3282-4819-B3AA-7D446894F37F}</Project>
+      <Name>Lionsguard.Logging.Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

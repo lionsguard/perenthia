@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browsergameshub version="0.1">
+	<name>Perenthia</name>
+	<site_url>http://www.perenthia.com/</site_url>
+	<descriptions>
+		<description lang="en">Perenthia is a free, text-based multiplayer fantasy and adventure game where you take part in a living story. Exploration, questing and role playing are key components of Perenthia and choices made in game will help shape the future of the world.</description>
+	</descriptions>
+	<genre>rpg</genre>
+	<setting>fantasy</setting>
+	<age_recom>13+</age_recom>
+	<logo_url>http://www.perenthia.com/common/images/logo-small.png</logo_url>
+	<status>alpha</status>
+</browsergameshub>

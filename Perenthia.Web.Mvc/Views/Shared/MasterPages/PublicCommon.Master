@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/MasterPages/Common.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Lionsguard" %>
+<asp:Content ID="cnTitle" runat="server" ContentPlaceHolderID="cphTitle">
+    <asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnMeta" runat="server" ContentPlaceHolderID="cphMeta">
+    <asp:ContentPlaceHolder ID="cphMeta" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnHead" ContentPlaceHolderID="cphHead" runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnMain" ContentPlaceHolderID="cphMain" runat="server">
+	<div id="container">
+        <div>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td><img src="/common/images/bg-canvas-tl.png" alt="" /></td>
+                    <td><a href="/"><img src="/common/images/bg-canvas-logo.png" alt="Perenthia" /></a></td>
+                    <td><img src="/common/images/bg-canvas-tr.png" alt="" /></td>
+                </tr>
+                <tr>
+                    <td><img src="/common/images/bg-canvas-ml.png" alt="" /></td>
+                    <td><img src="/common/images/bg-canvas-mm.png" alt="" /></td>
+                    <td><img src="/common/images/bg-canvas-mr.png" alt="" /></td>
+                </tr>
+                <tr>
+                    <td><img src="/common/images/bg-canvas-bl.png" alt="" /></td>
+                    <td><img src="/common/images/bg-canvas-bm.png" alt="" /></td>
+                    <td><img src="/common/images/bg-canvas-br.png" alt="" /></td>
+                </tr>
+                <tr>
+                    <td><img src="/common/images/bg-canvas-menu-left.png" alt="" /></td>
+                    <td><img src="/common/images/bg-canvas-menu-mid.png" alt="" /></td>
+                    <td><img src="/common/images/bg-canvas-menu-right.png" alt="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-image:url(/common/images/bg-menu.png); height:25px;">
+                        <asp:ContentPlaceHolder ID="cphMenu" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><img src="/common/images/bg-canvas-menu-bottom.png" alt="" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="container-content">
+            <div id="content">
+                <asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="container-footer">
+            <perenthia:Footer id="ctlFooter" runat="server" />
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="cnScript" ContentPlaceHolderID="cphScript" runat="server">
+	<asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

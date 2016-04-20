@@ -1,0 +1,65 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Perenthia_Models="clr-namespace:Perenthia.Models"
+    mc:Ignorable="d" xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit" x:Class="Perenthia.Controls.ActorManager"
+    d:DesignWidth="412" d:DesignHeight="140">
+    <Grid x:Name="LayoutRoot" DataContext="{Binding}">
+
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="68"/>
+    		<ColumnDefinition Width="*"/>
+    	</Grid.ColumnDefinitions>
+    	<StackPanel Margin="0" Width="64">
+    		<Image Height="64" HorizontalAlignment="Center" Margin="0,8,0,0" Width="64" Source="{Binding ImageSource, Mode=OneWay}"/>
+    		<ProgressBar Height="10" Margin="0,8,0,0" Style="{StaticResource StatBarStyle}" Foreground="{StaticResource HealthBrush}" Maximum="{Binding Converter={StaticResource ActorPropertyConverter}, ConverterParameter=BodyMax, Mode=OneWay}" Value="{Binding Converter={StaticResource ActorPropertyConverter}, ConverterParameter=Body, Mode=OneWay}"/>
+    		<ProgressBar Height="10" Margin="0,8,0,0" Style="{StaticResource StatBarStyle}" Foreground="{StaticResource WillpowerBrush}" Maximum="{Binding Converter={StaticResource ActorPropertyConverter}, ConverterParameter=WillpowerMax, Mode=OneWay}" Value="{Binding Converter={StaticResource ActorPropertyConverter}, ConverterParameter=Willpower, Mode=OneWay}"/>
+    		<TextBlock Text="{Binding Converter={StaticResource ActorPropertyConverter}, ConverterParameter=Level, Mode=OneWay}" TextWrapping="Wrap" Margin="0,8,0,0" FontSize="13.333" FontWeight="Bold" TextAlignment="Center">
+    			<TextBlock.Foreground>
+    				<SolidColorBrush Color="{StaticResource TextColor}"/>
+    			</TextBlock.Foreground>
+    		</TextBlock>
+    	</StackPanel>
+
+    	<TextBlock Text="{Binding Name, Mode=OneWay}" TextWrapping="Wrap" Margin="8,0,4,0" VerticalAlignment="Top" Grid.Column="1">
+    		<TextBlock.Foreground>
+    			<SolidColorBrush Color="{StaticResource TextColor}"/>
+    		</TextBlock.Foreground>
+    	</TextBlock>
+    	<ScrollViewer Margin="0,20,0,0" Grid.Column="1">
+    		<controlsToolkit:WrapPanel>
+    			<Button x:Name="btnDelete" Margin="8" Style="{StaticResource ButtonStyle}" Width="100" Content="Delete" Click="btnDelete_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<Button x:Name="btnLevelUp" Margin="8" Style="{StaticResource ButtonStyle}" Width="100" Content="Level Up" Click="btnLevelUp_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<Button x:Name="btnTeleport" Margin="8" Style="{StaticResource ButtonStyle}" Width="100" Content="Teleport" Click="btnTeleport_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<Button x:Name="btnKill" Margin="8" Style="{StaticResource ButtonStyle}" Width="100" Content="Kill" Click="btnKill_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<Button x:Name="btnHeal" Margin="8" Style="{StaticResource ButtonStyle}" Width="100" Content="Heal" Click="btnHeal_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<Button x:Name="btnRefresh" Margin="8" Style="{StaticResource ButtonStyle}" Width="100" Content="Refresh" Click="btnRefresh_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    		</controlsToolkit:WrapPanel>
+    	</ScrollViewer>
+
+    </Grid>
+</UserControl>

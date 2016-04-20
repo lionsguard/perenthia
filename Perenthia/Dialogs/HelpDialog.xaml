@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.HelpDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="700" Height="520">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+    	<TextBlock HorizontalAlignment="Left" Margin="8,8,0,231.955" FontFamily="Trebuchet MS" Foreground="{StaticResource TextAltBrush}" TextWrapping="Wrap" Width="684"><Run Text="The help reference material will be compiled slowly as the alpha and beta testing progresses, based on questions and feedback. For now, here is a list of some common things you may wish to know:"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="The chat text field defaults to a SAY command unless you prefix the text with a forward slash &quot;/&quot; such as &quot;/who&quot; or &quot;tell Jerik hi!&quot;"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="When avatars are displayed in the window below the map those avatars are located in the current room. Next to the avatar image are icons such as a balloon, crossed swords or dollar sign. These icons allow you to interact with the avatar. The balloon is for a TELL, the crossed swords set that avatar as your TARGET and the dollar sign displays the GOODS of the vendor."/></TextBlock>
+
+    </Grid>
+</UserControl>

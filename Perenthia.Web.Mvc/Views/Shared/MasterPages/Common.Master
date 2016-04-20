@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="Lionsguard" %>
+
+<%@ Import Namespace="Lionsguard" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head profile="http://www.w3.org/2005/10/profile">
+    <title><asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder> :: Perenthia Browser Based Role Playing and Adventure Game</title>
+	<asp:ContentPlaceHolder ID="cphMeta" runat="server"></asp:ContentPlaceHolder>
+    <meta name="author" content="Cameron Albert & Lionsguard Technologies, LLC" /> 
+	<meta name="document-rights" content="Copyrighted Work" /> 
+	<meta name="Copyright" content="Copyright (c) Cameron Albert & Lionsguard Technologies, LLC" /> 
+	<meta name="Rating" content="General" /> 
+	<meta http-equiv="imagetoolbar" content="no" /> 
+    <link rel="icon" type="image/png" href="/Common/images/favicon.png" />
+    <link rel="browser-game-info" href="http://www.perenthia.com/browser-games-hub.xml" />
+    <link rel="stylesheet" type="text/css" href="http://assets.lionsguard.com/css/reset.css" media="screen, projection" />
+    <link rel="stylesheet" type="text/css" href="/common/css/core.css" media="screen, projection" />
+    <!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/Common/css/ie.css" media="screen, projection" />
+	<![endif]-->
+	<asp:Literal ID="litCssOverrides" runat="server" />
+	<script type="text/javascript" src="/common/scripts/Util.js"></script>
+	<script type="text/javascript" src="/common/scripts/boxover.js"></script>
+	<script type="text/javascript" src="http://assets.lionsguard.com/jquery/jquery-1.3.2.js"></script>
+	
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+	<div id="container">
+		<asp:ContentPlaceHolder ID="cphMain" runat="server" />
+		<div id="footer">
+			<div>This site and all content is copyright &copy; 2003-<%= DateTime.Now.Year %> by Cameron Albert and Lionsguard Technologies, LLC.</div>
+			<div>
+				<ul>
+					<li><%= Html.ActionLink("Armorial", "Search", "Armorial","Search for characters, households, items and creatures.") %></li>
+					<li>|</li>
+					<li><%= Html.ActionLink("Screenshots", "Screenshots", "Media", "Screenshots of the character creation process including some user submitted game play images.") %></li>
+					<li>|</li>
+					<li><%= Html.ActionLink("News", "News", "Home", "The latest news and press releases for the browser based game Perenthia.") %></li>
+					<li>|</li>
+					<li><%= Html.ActionLink("Site Map", "SiteMap", "Home", "A list of the sections of the Perenthia web site for easy navigation.") %></li>
+					<li>|</li>
+					<li><%= Html.ActionLink("Home", "Index", "Home", "The Perenthia home page.") %></li>
+				</ul>
+			</div>
+			<div><script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=7f54853a-b18d-4ca2-9e4c-a4d8c63c2280&amp;type=website&amp;buttonText=Share%20Perenthia&amp;embeds=true&amp;style=rotate&amp;headerfg=%23FFCC00&amp;headerbg=%23000000&amp;headerTitle=Share%20Perenthia!"></script></div>
+			<div>Artwork and Illustrations by <a href="http://www.antongustilo.com" target="_blank" title="Anton Gustilo">Anton Gustilo</a></div>
+			<div><a href="http://www.browser-games-hub.org/" target="_blank"><img src="http://www.browser-games-hub.org/images/browsergameshub.png" alt="http://www.browser-games-hub.org/" title="Browser Games Hub" /></a></div>
+		</div>
+	</div>
+	<div>
+		<script type="text/javascript" src="http://assets.lionsguard.com/asset/?type=footer"></script>
+    </div>
+    <script src="https://rpxnow.com/openid/v2/widget" type="text/javascript"></script>
+    <script type="text/javascript">
+    	RPXNOW.token_url = '<%= String.Concat(Lionsguard.Util.GetServerUrl(this.Context), "/AuthVerify") %>';
+    	RPXNOW.realm = "<%= Perenthia.Web.WebUtils.GetRpxRealm() %>";
+    	RPXNOW.overlay = true;
+    	RPXNOW.language_preference = 'en';
+    </script>
+	<% if (!this.Page.Request.Url.Host.Equals("localhost"))
+	{%>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2265041-2");
+			pageTracker._trackPageview();
+		} catch (err) { }
+	</script>
+	<% }  %>
+	<asp:ContentPlaceHolder ID="cphScript" runat="server" />
+</body>
+</html>

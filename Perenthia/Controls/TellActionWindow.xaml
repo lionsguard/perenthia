@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Perenthia.Controls.TellActionWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="204" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="{StaticResource TextBrush}" Text="Tell:" TextWrapping="Wrap"/>
+    	<TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="{StaticResource TextBrush}" Text="Name" TextWrapping="Wrap" Margin="28,0,0,0" x:Name="lblName" FontFamily="Trebuchet MS" FontWeight="Bold"/>
+    	<ScrollViewer Margin="0,17,0,31" Style="{StaticResource ScrollViewerStyle}">
+    		<TextBox Style="{StaticResource TextBoxStyle}" FontFamily="Trebuchet MS" Foreground="{StaticResource TextAltBrush}" Text="" TextWrapping="Wrap" x:Name="txtTell" GotFocus="txtTell_GotFocus" LostFocus="txtTell_LostFocus"/>
+    	</ScrollViewer>
+    	<Button Height="22" HorizontalAlignment="Left" Margin="0,0,0,5" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="68" Content="SEND" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Foreground="{StaticResource HeadingBrush}" x:Name="btnSend" Click="btnSend_Click"/>
+
+    </Grid>
+</UserControl>

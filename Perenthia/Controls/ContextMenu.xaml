@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Perenthia.Controls.ContextMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource DialogFillBrush}" MouseLeave="LayoutRoot_MouseLeave">
+    	<Border Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Padding="8,8,8,8"  BorderThickness="2,2,2,2" CornerRadius="0,4,4,4" BorderBrush="{StaticResource BorderBrush}">
+    		<StackPanel x:Name="ctlLinks"/>
+    	</Border>
+    </Grid>
+</UserControl>

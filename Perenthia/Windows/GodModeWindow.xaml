@@ -1,0 +1,203 @@
+﻿<controls:FloatableWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=FloatableWindow"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Perenthia_Models="clr-namespace:Perenthia.Models" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" x:Class="Perenthia.Windows.GodModeWindow"
+           Width="608" Height="564" 
+           Title="God Mode">
+	<controls:FloatableWindow.Resources>
+		<Style x:Key="PropertyItemStyle" TargetType="ListBoxItem">
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="VerticalContentAlignment" Value="Top"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="TabNavigation" Value="Local"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ListBoxItem">
+						<Perenthia_Controls:PropertyEditor DataContext="{Binding}" d:LayoutOverrides="Width, Height" d:DesignWidth="328" d:DesignHeight="108"/>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ActorItemStyle" TargetType="ListBoxItem">
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="VerticalContentAlignment" Value="Top"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="TabNavigation" Value="Local"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ListBoxItem">
+						<Perenthia_Controls:ActorManager DataContext="{Binding}"/>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</controls:FloatableWindow.Resources>
+	<controls:FloatableWindow.Style>
+		<StaticResource ResourceKey="FloatableWindowStyle"/>
+	</controls:FloatableWindow.Style>
+	<controls:FloatableWindow.DataContext>
+		<Perenthia_Models:Place x:Name="NewPlace" Description="Description"/>
+	</controls:FloatableWindow.DataContext>
+    <Grid x:Name="LayoutRoot" Margin="2">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.5*"/>
+			<ColumnDefinition Width="0.5*"/>
+		</Grid.ColumnDefinitions>
+		<Grid x:Name="DetailsRoot" Margin="0">
+    		<StackPanel Margin="0,0,0,34">
+    			<StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+    				<TextBlock Text="Place:" HorizontalAlignment="Left" Margin="0" FontSize="13.333">
+    					<TextBlock.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</TextBlock.Foreground>
+    				</TextBlock>
+    				<TextBlock Text="{Binding LocationString}" FontSize="13.333" FontWeight="Bold" Margin="8,0,0,0">
+    					<TextBlock.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextColor}"/>
+    					</TextBlock.Foreground>
+    				</TextBlock>
+    			</StackPanel>
+    			<StackPanel VerticalAlignment="Top" Margin="0,8,0,0" Orientation="Horizontal">
+    				<TextBlock Text="Terrain:" Margin="0" FontSize="13.333">
+    					<TextBlock.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</TextBlock.Foreground>
+    				</TextBlock>
+    				<ComboBox x:Name="cboTerrain" FontSize="13.333" Background="Black" Height="24" Margin="8,0,0,0">
+    					<ComboBox.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</ComboBox.Foreground>
+    					<ComboBox.BorderBrush>
+    						<SolidColorBrush Color="{StaticResource BorderColor}"/>
+    					</ComboBox.BorderBrush>
+    				</ComboBox>
+    				<Rectangle Fill="{Binding TerrainColor, Mode=OneWay}" Height="32" Width="32" Margin="8,0,0,0">
+    					<Rectangle.Stroke>
+    						<SolidColorBrush Color="{StaticResource BorderColor}"/>
+    					</Rectangle.Stroke>
+    				</Rectangle>
+    			</StackPanel>
+    			<StackPanel Margin="0,8,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+    				<TextBlock Text="Type:" Margin="0" FontSize="13.333">
+    					<TextBlock.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</TextBlock.Foreground>
+    				</TextBlock>
+    				<ComboBox x:Name="cboType" FontSize="13.333" Background="Black" Height="24" Margin="8,0,0,0">
+    					<ComboBox.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</ComboBox.Foreground>
+    					<ComboBox.BorderBrush>
+    						<SolidColorBrush Color="{StaticResource BorderColor}"/>
+    					</ComboBox.BorderBrush>
+    					<ListBoxItem Content="Perenthia.Room"/>
+    					<ListBoxItem Content="Perenthia.Wilderness"/>
+    					<ListBoxItem Content="Perenthia.Dungeon"/>
+    					<ListBoxItem Content="Perenthis.DungeonEntrance"/>
+    					<ListBoxItem Content="Perenthia.DungeonFinalRoom"/>
+    					<ListBoxItem Content="Perenthia.Temple"/>
+    				</ComboBox>
+    			</StackPanel>
+    			<StackPanel Margin="0,8,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+    				<TextBlock Text="Name:" Margin="0" FontSize="13.333">
+    					<TextBlock.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</TextBlock.Foreground>
+    				</TextBlock>
+    				<TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}" TextWrapping="Wrap" Width="240" FontSize="13.333" Margin="8,0,0,0">
+    					<TextBox.Foreground>
+    						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    					</TextBox.Foreground>
+    					<TextBox.CaretBrush>
+    						<SolidColorBrush Color="{StaticResource CaretColor}"/>
+    					</TextBox.CaretBrush>
+    				</TextBox>
+    			</StackPanel>
+    			<Button x:Name="btnManageProps" Content="Manage Properties" Height="30" HorizontalAlignment="Left" Margin="0,8,0,0" Style="{StaticResource ButtonStyle}" Width="200" FontSize="13.333" d:LayoutOverrides="HorizontalAlignment" Click="btnManageProps_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<Button x:Name="btnManageActors" Content="Manage Actors" Height="30" HorizontalAlignment="Left" Margin="0,8,0,0" Style="{StaticResource ButtonStyle}" Width="200" FontSize="13.333" d:LayoutOverrides="HorizontalAlignment" Click="btnManageActors_Click">
+    				<Button.Foreground>
+    					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+    				</Button.Foreground>
+    			</Button>
+    			<TextBlock Text="Description:" Margin="0,8,0,0" FontSize="13.333" HorizontalAlignment="Left">
+    				<TextBlock.Foreground>
+    					<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    				</TextBlock.Foreground>
+    			</TextBlock>
+    		</StackPanel>
+    		<StackPanel Margin="0,212,0,0" VerticalAlignment="Top" Orientation="Horizontal" d:LayoutOverrides="VerticalAlignment"/>
+    		<ScrollViewer Margin="0,232,8,34">
+    			<TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=Explicit}" TextWrapping="Wrap" FontSize="13.333">
+    				<TextBox.Foreground>
+    					<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    				</TextBox.Foreground>
+    				<TextBox.CaretBrush>
+    					<SolidColorBrush Color="{StaticResource CaretColor}"/>
+    				</TextBox.CaretBrush>
+    			</TextBox>
+    		</ScrollViewer>
+
+			<Button x:Name="btnNewPlace" Content="New Place" Height="30" HorizontalAlignment="Left" Margin="8,0,0,0" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="100" FontSize="13.333" Click="btnNewPlace_Click">
+				<Button.Foreground>
+					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+				</Button.Foreground>
+			</Button>
+			<Button x:Name="btnUpdate" Content="Update" Height="30" Margin="0,0,8,0" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" FontSize="13.333" Width="100" HorizontalAlignment="Right" Click="btnUpdate_Click">
+				<Button.Foreground>
+					<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+				</Button.Foreground>
+			</Button>
+    	</Grid>
+		<Grid x:Name="SubDetailsRoot" Margin="0" Grid.Column="1">
+			<Grid x:Name="ActorsPanel">
+				<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Text="ACTORS" TextWrapping="Wrap">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+					</TextBlock.Foreground>
+				</TextBlock>
+				<Button x:Name="btnAddActor" HorizontalAlignment="Right" Style="{StaticResource ButtonStyle}" VerticalAlignment="Top" Width="100" FontSize="13.333" Content="Add" Click="btnAddActor_Click">
+					<Button.Foreground>
+						<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+					</Button.Foreground>
+				</Button>
+				<ListBox x:Name="ActorsList" Background="{x:Null}" Margin="0,30,0,0" ItemContainerStyle="{StaticResource ActorItemStyle}" ItemsSource="{Binding Actors, Mode=OneWay}">
+					<ListBox.Foreground>
+						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+					</ListBox.Foreground>
+					<ListBox.BorderBrush>
+						<SolidColorBrush Color="{StaticResource BorderColor}"/>
+					</ListBox.BorderBrush>
+				</ListBox>
+			</Grid>
+			<Grid x:Name="PropertiesPanel" d:IsHidden="True" Visibility="Collapsed">
+				<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Text="PROPERTIES" TextWrapping="Wrap">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+					</TextBlock.Foreground>
+				</TextBlock>
+				<Button x:Name="btnAddProperty" HorizontalAlignment="Right" Style="{StaticResource ButtonStyle}" VerticalAlignment="Top" Width="100" FontSize="13.333" Content="Add" Click="btnAddProperty_Click">
+					<Button.Foreground>
+						<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+					</Button.Foreground>
+				</Button>
+				<ListBox x:Name="PropertiesList" Background="{x:Null}" Margin="0,30,0,0" ItemContainerStyle="{StaticResource PropertyItemStyle}" ItemsSource="{Binding PropertyList, Mode=OneWay}">
+					<ListBox.Foreground>
+						<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+					</ListBox.Foreground>
+					<ListBox.BorderBrush>
+						<SolidColorBrush Color="{StaticResource BorderColor}"/>
+					</ListBox.BorderBrush>
+				</ListBox>
+			</Grid>
+		</Grid>
+    </Grid>
+</controls:FloatableWindow>

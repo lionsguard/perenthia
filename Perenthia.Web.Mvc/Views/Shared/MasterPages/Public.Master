@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/MasterPages/Common.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="Lionsguard" %>
+<asp:Content ID="cnTitle" runat="server" ContentPlaceHolderID="cphTitle">
+    <asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnMeta" runat="server" ContentPlaceHolderID="cphMeta">
+    <asp:ContentPlaceHolder ID="cphMeta" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnHead" ContentPlaceHolderID="cphHead" runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnMain" ContentPlaceHolderID="cphMain" runat="server">
+	<div id="header">
+		<div id="menu">
+			<ul class="left">
+				<li><a href="<%= Perenthia.Web.WebUtils.GetPlayUri() %>" title="Play Perenthia!">PLAY</a></li>
+				<li class="divider"></li> 
+				<li><%= Html.ActionLink("ARMORIAL", "Search", "Armorial", "Search for characters, households, items and creatures.")%></li>
+				<li class="divider"></li> 
+				<li><%= Html.ActionLink("NEWS", "News", "Home", "The latest news and press releases for the browser based game Perenthia.")%></li>
+				<li class="divider"></li> 
+				<li><%= Html.ActionLink("HOME", "Index", "Home", "The Perenthia home page.")%></li>
+			</ul>
+			<ul class="right">
+			<li><%= Html.ActionLink("SCREENSHOTS", "Screenshots", "Media", "Screenshots of the character creation process including some user submitted game play images.")%></li>
+				<li class="divider"></li> 
+				<li><%= Html.ActionLink("GETTING STARTED", "GettingStarted", "Home", "A guide to getting started playing Perenthia.")%></li>
+				<%--<li class="divider"></li> 
+				<li><%= Html.ActionLink("MARKET", "Index", "Market", "Buy, sell and trade items and goods with other players.")%></li> --%>
+			</ul>
+		</div>
+	</div>
+	<div class="colmask twocol">
+		<div class="colleft">
+			<div id="content" class="col1">
+				<% if (SiteMap.CurrentNode.GetNodeLevel() != 0) { %>
+				<div class="breadcrumbs"><%= Html.SiteMapPath("&gt;")%></div>
+				<%} %>
+				<asp:ContentPlaceHolder ID="cphMain" runat="server"></asp:ContentPlaceHolder>
+			</div>
+			<div id="submenu" class="col2">
+				<div style="text-align:center;">
+					<p>Perenthia Version <%= Perenthia.Web.Game.GetVersion() %></p>
+				</div>
+				<div id="mini-login">
+					<div class="button"><a href="<%= Perenthia.Web.WebUtils.GetPlayUri() %>" title="Play Perenthia!">Play Now!</a></div>
+					<div class="item"><script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=7f54853a-b18d-4ca2-9e4c-a4d8c63c2280&amp;type=website&amp;buttonText=Share%20Perenthia&amp;embeds=true&amp;style=rotate&amp;headerfg=%23FFCC00&amp;headerbg=%23000000&amp;headerTitle=Share%20Perenthia!"></script></div>
+					<div class="item"><a href="http://www.twitter.com/Perenthia"><img src="http://twitter-badges.s3.amazonaws.com/follow_bird_us-c.png" alt="Follow Perenthia on Twitter"/></a></div>
+				</div>
+				<%--<div>
+					<% Html.RenderPartial("~/Views/Shared/Controls/MiniLogon.ascx"); %>
+				</div>--%>
+				<h3>ARMORIAL</h3>
+				<ul>
+					<li><%= Html.ActionLink("Search", "Search", "Armorial", "Search for characters, households, items and creatures.")%></li>
+				</ul>
+				<h3>GAME LORE</h3>
+				<ul>
+					<li><%= Html.ActionLink("Getting Started", "GettingStarted", "Home", "A guide to getting started playing Perenthia.")%></li>
+					<li><%= Html.ActionLink("About Perenthia", "Index", "Lore", "Learn about the game, what you need to play, etc.")%></li>
+					<li><%= Html.ActionLink("History of Perenthia", "History", "Lore", "Read a brief history of Perenthia.")%></li>
+					<li><%= Html.ActionLink("Races of Perenthia", "Races", "Lore", "Information on the races of Perenthia, with images.")%></li>
+					<li><%= Html.ActionLink("Attributes & Skills", "AttributesAndSkills", "Lore", "Description of character attributes and the current list of skills.")%></li>
+					<li><%= Html.ActionLink("Households", "Households", "Lore", "What are households? Find out here.")%></li>
+					<li><%= Html.ActionLink("Development", "Development", "Lore", "Technologies used in the development of Perenthia.")%></li>
+				</ul>
+				<h3>MEDIA</h3>
+				<ul>
+					<li><%= Html.ActionLink("Screenshots", "Index", "Media", "Screenshots of the character creation process and some user submitted game play screens.")%></li>
+					<%--<li><a href="/Media/Wallpaper">Wallpaper</a></li>--%>
+					<%--<li><a href="/Media/Icons">Icons</a></li>--%>
+				</ul>
+				<h3>COMMUNITY</h3>
+				<ul>
+					<li><%= Html.ActionLink("FAQ", "Faq", "Support", "Frequently asked questions about the browser based game Perenthia.")%></li>
+					<%--<li><a href="/Support.aspx">Customer Support</a></li>--%>
+					<li><a href="<%= Perenthia.Web.WebUtils.GetForumsUri() %>" title="Visit the Official Perenthia Forums.">Forums</a></li>
+					<li><a href="<%= Perenthia.Web.WebUtils.GetBlogUri() %>" title="A blog dedicated to the persistent browser based game Perenthia.">Blog</a></li>
+					<%--<li><a href="/Community/Players">Players</a></li>--%>
+					<%--<li><a href="/Community/Fansites">Fansites</a></li>--%>
+				</ul>
+			</div>
+		</div>
+		<%--<div id="submenu">
+			
+		</div>
+		<div id="content">
+		</div>
+		<div id="sidebar">
+		    
+		</div>--%>
+	</div>
+</asp:Content>
+<asp:Content ID="cnScript" ContentPlaceHolderID="cphScript" runat="server">
+	<asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Perenthia.Controls.AttackActionWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="230" Height="300" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Perenthia_Controls:AvatarPanel HorizontalAlignment="Left" x:Name="ctlTarget" VerticalAlignment="Top"/>
+    	<TextBlock Margin="0,75,0,0" VerticalAlignment="Top" FontFamily="Georgia" FontSize="14" Foreground="{StaticResource HeadingBrush}" Text="Actions" TextAlignment="Center" TextWrapping="Wrap"/>
+    	<TextBlock Margin="0,133,0,0" FontFamily="Georgia" FontSize="14" Foreground="{StaticResource HeadingBrush}" Text="Spells" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" d:LayoutOverrides="Height"/>
+    	<Lionsguard:Slot HorizontalAlignment="Left" Margin="78,95,0,0" VerticalAlignment="Top" d:LayoutOverrides="Height" x:Name="ctlWeapon0" BackgroundSource="../Assets/bg-weapon.png"/>
+    	<Lionsguard:Slot Margin="0,95,80,0" VerticalAlignment="Top" HorizontalAlignment="Right" d:LayoutOverrides="Width" x:Name="ctlWeapon1" BackgroundSource="../Assets/bg-weapon.png"/>
+
+    </Grid>
+</UserControl>

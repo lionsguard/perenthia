@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="Perenthia.Controls.TestControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    Width="34" Height="34">
+	<Grid x:Name="LayoutRoot">
+		<vsm:VisualStateManager.VisualStateGroups>
+			<vsm:VisualStateGroup x:Name="CommonStates">
+				<vsm:VisualState x:Name="Normal"/>
+				<vsm:VisualState x:Name="MouseOver">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</vsm:VisualState>
+				<vsm:VisualState x:Name="Pressed"/>
+				<vsm:VisualState x:Name="Disabled"/>
+			</vsm:VisualStateGroup>
+			<vsm:VisualStateGroup x:Name="SlotStates">
+				<vsm:VisualState x:Name="UnselectedShowQuantity"/>
+				<vsm:VisualState x:Name="UnselectedHideQuantity">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="QuantityBorderElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="QuantityLabelElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</vsm:VisualState>
+				<vsm:VisualState x:Name="SelectedShowQuantity">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="SelectedVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</vsm:VisualState>
+				<vsm:VisualState x:Name="SelectedHideQuantity">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="SelectedVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="QuantityBorderElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="QuantityLabelElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+							<DiscreteObjectKeyFrame KeyTime="00:00:00">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</vsm:VisualState>
+			</vsm:VisualStateGroup>
+		</vsm:VisualStateManager.VisualStateGroups>
+
+		<Image Margin="2,2,2,2" x:Name="BackgroundElement" Opacity="0.2"/>
+
+		<Border HorizontalAlignment="Stretch" Margin="0,0,0,0" x:Name="BorderElement" VerticalAlignment="Stretch" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" Background="{StaticResource SlotFillBrush}"/>
+		<Border x:Name="MouseOverVisualElement" Margin="1,1,1,1" Background="{StaticResource HighlightBrush}" Visibility="Collapsed"/>
+		<Border Margin="0,0,0,0" x:Name="SelectedVisualElement" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" BorderBrush="{StaticResource AlertBrush}" Background="{StaticResource HighlightBrush}" Visibility="Collapsed"/>
+		<Image Margin="2,2,2,2" x:Name="IconElement"/>
+		<Border VerticalAlignment="Bottom" Width="16" Height="16" HorizontalAlignment="Right" BorderThickness="1,1,1,1" CornerRadius="2,0,2,0" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource HighlightBrush}" x:Name="QuantityBorderElement" Visibility="Collapsed"/>
+		<TextBlock Text="99" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontSize="10" TextAlignment="Center" Margin="0,0,0.753,0.639" Height="12.861" VerticalAlignment="Bottom" Width="14" HorizontalAlignment="Right" Foreground="{StaticResource HeadingBrush}" x:Name="QuantityLabelElement"/>
+		<Border Height="12.375" HorizontalAlignment="Right" x:Name="UseBorderElement" VerticalAlignment="Top" Width="10.875" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,1,1,1" CornerRadius="0,1,0,1" Background="{StaticResource HighlightBrush}"/>
+		<Path Height="8.697" HorizontalAlignment="Right" Margin="0,1.35,1.672,0" VerticalAlignment="Top" Width="6.583" Fill="{StaticResource PositiveBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M2.25,37.75 L2.2734375,49.375 L8.1636286,43.5625 z" x:Name="UseElement" ToolTipService.ToolTip="Use" Visibility="Visible" d:LayoutOverrides="Width, Height"/>
+
+	</Grid>
+</UserControl>

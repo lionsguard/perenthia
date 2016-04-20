@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Perenthia.Builder.ActorList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="358" Height="Auto">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Text="Actors" TextWrapping="Wrap"/>
+    	<HyperlinkButton HorizontalAlignment="Right" x:Name="lnkAdd" VerticalAlignment="Top" Content="ADD" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource LinkBrush}" Click="lnkAdd_Click"/>
+    	<ScrollViewer Height="36" Margin="0,17,0,0" VerticalAlignment="Stretch" Style="{StaticResource ScrollViewerStyle}">
+    		<StackPanel x:Name="spList"/>
+    	</ScrollViewer>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title><asp:ContentPlaceHolder ID="cphTitle" runat="server" /> :: Perenthia Browser Based Role Playing and Adventure Game</title>
+    <meta name="author" content="Cameron Albert & Lionsguard Technologies, LLC" /> 
+	<meta name="document-rights" content="Copyrighted Work" /> 
+	<meta name="Copyright" content="Copyright (c) Cameron Albert & Lionsguard Technologies, LLC" /> 
+	<meta name="Rating" content="General" /> 
+	<meta http-equiv="imagetoolbar" content="no" /> 
+    <link rel="icon" type="image/png" href="/Common/images/favicon.png" />
+    <link rel="browser-game-info" href="http://www.perenthia.com/browser-games-hub.xml" />
+    <link rel="stylesheet" type="text/css" href="http://assets.lionsguard.com/css/reset.css" media="screen, projection" />
+    <link rel="stylesheet" type="text/css" href="/common/css/core.css" media="screen, projection" />
+    <link rel="stylesheet" type="text/css" href="/common/css/mobile.css" media="screen, projection" />
+	<script type="text/javascript" src="http://assets.lionsguard.com/jquery/jquery-1.3.2.js"></script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</head>
+<body>
+    <div id="container">
+		<div id="header">
+			<div>
+				<a href="/" title="Perenthia multi-player adventure game home"><img src="/common/images/logo.png" alt="Perenthia" width="200" height="59" /></a>
+			</div>
+			<asp:ContentPlaceHolder ID="cphMenu" runat="server" />
+		</div>
+		<div id="content">
+			<asp:ContentPlaceHolder ID="cphMain" runat="server" />
+		</div>
+		<div id="footer">
+			<div>This site and all content is copyright &copy; 2003-<%= DateTime.Now.Year %> by Cameron Albert and Lionsguard Technologies, LLC.</div>
+		</div>
+    </div>
+	<div>
+		<script type="text/javascript" src="http://assets.lionsguard.com/asset/?type=footer"></script>
+    </div>
+    <% if (!this.Page.Request.Url.Host.Equals("localhost"))
+	{%>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-2265041-2");
+		pageTracker._trackPageview();
+	} catch (err) { }
+	</script>
+	<% }  %>
+	<asp:ContentPlaceHolder ID="cphScript" runat="server" />
+</body>
+</html>

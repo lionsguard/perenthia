@@ -1,0 +1,82 @@
+﻿body
+{
+	font-size: 1em;
+}
+.colmask
+{
+	background-image: none;
+	margin-top: 0px;
+}
+#container
+{
+	background-image: none;
+}
+
+#header
+{
+	margin: 0px auto;
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+#menu
+{
+	top:0;
+	margin:0;
+	width:auto;
+	height: auto;
+	font-size: 1em;
+	padding:4px;
+	border-top:1px solid #94A9B6;
+	border-bottom:1px solid #94A9B6;
+}
+#menu ul
+{
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	display: block;
+	top: 0;
+}
+#menu ul li
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	display: block;
+}
+#menu ul li a
+{
+	font-size: .9em;
+	padding:4px;
+}
+#menu ul li a:hover
+{
+	color: #ffff00;
+	font-weight: bolder;
+	background-color:#696969;
+}
+#menu ul li.divider
+{
+	background-image: none;
+	width: 3px;
+	background-repeat: no-repeat;
+}
+#main
+{
+	width: auto;
+}
+#footer
+{
+	width: auto;
+	height: auto;
+}
+
+.avatar .image
+{
+	float:none;
+}
+.avatar .details
+{
+	float:none;
+	padding-left:0px;
+}

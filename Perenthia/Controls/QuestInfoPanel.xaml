@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Perenthia.Controls.QuestInfoPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="36" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<TextBlock HorizontalAlignment="Stretch" x:Name="lblName" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource TextAltBrush}" Text="Quest Name" TextWrapping="Wrap" Margin="38,0,0,0"/>
+    	<TextBlock HorizontalAlignment="Stretch" Margin="38,0,0,6.228" x:Name="lblDetails" VerticalAlignment="Bottom" FontFamily="Trebuchet MS" Foreground="{StaticResource TextBrush}" Text="Min Level = 1" TextWrapping="Wrap" d:LayoutOverrides="VerticalAlignment, Height"/>
+    	<Border Width="34" Height="34" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" BorderBrush="{StaticResource BorderBrush}" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1,1,1,1">
+    		<Image x:Name="imgMain" Source="../Assets/order-none-128.png"/>
+    	</Border>
+
+    </Grid>
+</UserControl>

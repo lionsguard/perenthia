@@ -1,0 +1,9 @@
+﻿<Canvas
+        xmlns="http://schemas.microsoft.com/client/2007"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="parentCanvas"
+        Width="995"
+        Height="620"
+		Background="#FF000000"
+        >
+</Canvas>

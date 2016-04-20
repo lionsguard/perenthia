@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Perenthia.Controls.GenderSelection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<TextBlock HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Width="64" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Text="Male" TextAlignment="Center" TextWrapping="Wrap"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="178,68,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Text="Female" TextAlignment="Center" TextWrapping="Wrap" Width="64"/>
+
+    	<Lionsguard:Icon Height="64" HorizontalAlignment="Left" x:Name="male" Style="{StaticResource IconStyle}" VerticalAlignment="Top" Width="64" Source="../Assets/icon-male.png" Click="male_Click"/>
+    	<Lionsguard:Icon HorizontalAlignment="Right" VerticalAlignment="Top" Width="64" Height="64" Style="{StaticResource IconStyle}" Source="../Assets/icon-female.png" x:Name="female" Click="female_Click"/>
+
+    </Grid>
+</UserControl>

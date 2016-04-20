@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.CreateCharacterChoiceDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="450" Height="180" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<TextBlock HorizontalAlignment="Left" Margin="8,8,0,59" Width="434" FontSize="12" Foreground="{StaticResource HeadingBrush}" TextWrapping="Wrap"><Run Text="You have two options for creating a Character; choose the option that best fits your level of comfort with Perenthia. If this is your first Character in Perenthia choose the &quot;I am new to Perenthia&quot; option to use the character creation wizard that will walk you through all the steps. The other option puts everything on one screen with no explanations.  "/><LineBreak/><Run Text=""/></TextBlock>
+    	<Button Height="55" HorizontalAlignment="Left" Margin="8,0,0,0" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="196" Content="I am new to Perenthia" FontFamily="Trebuchet MS" FontSize="14" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" x:Name="btnNew" Click="btnNew_Click"/>
+    	<Button Margin="0,0,8,0" Style="{StaticResource ButtonStyle}" Content="I have played Perenthia" FontFamily="Trebuchet MS" FontSize="14" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" Height="55" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="196" x:Name="btnPro" Click="btnPro_Click"/>
+
+    </Grid>
+</UserControl>

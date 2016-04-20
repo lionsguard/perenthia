@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Perenthia.Controls.CurrencyPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="230" Height="17">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+    	<Canvas x:Name="CurrencyContainer" Margin="-0.167,0,0.167,1">
+    		<Image Height="16" Source="../Assets/copper.png" Stretch="Fill" ToolTipService.ToolTip="Copper" Width="16" Canvas.Left="213.833" Canvas.Top="0.209"/>
+    		<Image Height="16" Width="16" Source="../Assets/gold.png" Stretch="Fill" ToolTipService.ToolTip="Gold" Canvas.Left="150.759" Canvas.Top="0.209"/>
+    		<Image Height="16" Width="16" Source="../Assets/silver.png" Stretch="Fill" ToolTipService.ToolTip="Silver" Canvas.Left="182.296" Canvas.Top="0.209"/>
+    		<Image Height="16" Width="16" Source="../Assets/emblem16X16.png" Stretch="Fill" ToolTipService.ToolTip="Emblem" Canvas.Left="73.835"/>
+    		<TextBlock x:Name="EmblemLabel" Width="71.833" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" Canvas.Top="1.137" ToolTipService.ToolTip="Emblem"/>
+    		<TextBlock Width="15.537" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" x:Name="CopperLabel" Canvas.Left="198.296" Canvas.Top="1.137" ToolTipService.ToolTip="Copper"/>
+    		<TextBlock Width="15.537" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" x:Name="SilverLabel" Canvas.Left="166.759" Canvas.Top="1.137" ToolTipService.ToolTip="Silver"/>
+    		<TextBlock x:Name="GoldLabel" Width="60.924" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" Height="12.772" Canvas.Left="89.835" Canvas.Top="1.136" ToolTipService.ToolTip="Gold"/>
+    	</Canvas>
+
+    </Grid>
+</UserControl>

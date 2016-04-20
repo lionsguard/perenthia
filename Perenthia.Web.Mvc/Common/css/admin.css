@@ -1,0 +1,33 @@
+﻿#admin-header
+{
+	margin-top:25px;
+}
+#admin-menu
+{
+	height:25px;
+	font-size:11px;
+}
+#admin-menu ul
+{
+	padding:0px;
+	margin:0px;
+}
+#admin-menu ul li
+{
+	padding-left:2px;
+	padding-right:2px;
+	display:inline;
+}
+#admin-menu ul li a
+{
+	font-family: 'Times New Roman' , Times, serif;
+	color: #fffac5;
+	font-weight: bolder;
+	text-decoration: none;
+	padding: 2px;
+}
+#admin-menu ul li a:hover
+{
+	color: #ffff00;
+	font-weight: bolder;
+}

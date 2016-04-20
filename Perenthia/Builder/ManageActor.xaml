@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Perenthia.Builder.ManageActor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="358" Height="484" xmlns:Perenthia_Builder="clr-namespace:Perenthia.Builder" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Perenthia_Builder:ActorList Height="104.4" HorizontalAlignment="Left" Margin="-0.226,0,0,40.4" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+    	<Perenthia_Builder:PropertyList HorizontalAlignment="Left" Margin="0,100,0,148.4"/>
+    	<Button Height="28" HorizontalAlignment="Right" Margin="0,0,82,8.4" x:Name="btnCancel" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="94" Content="Cancel" Foreground="{StaticResource HeadingBrush}" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+    	<Button Height="28" Margin="84,0,0,8.4" x:Name="btnSave" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Content="Save" Foreground="{StaticResource HeadingBrush}" Width="94" HorizontalAlignment="Left"/>
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Object Type" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+    	<TextBlock VerticalAlignment="Top" Text="Runtime Type" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource TextBrush}" HorizontalAlignment="Left" Margin="-0.226,30,0,0" d:LayoutOverrides="Width"/>
+    	<TextBlock VerticalAlignment="Top" Text="ID:" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Margin="0,58,0,0" d:LayoutOverrides="Width" HorizontalAlignment="Left"/>
+    	<TextBlock VerticalAlignment="Top" Text="Name" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Margin="0,75,0,0" d:LayoutOverrides="Width" HorizontalAlignment="Left"/>
+    	<TextBlock VerticalAlignment="Top" Text="0" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" Margin="18,58,0,0" x:Name="lblID"/>
+    	<TextBox VerticalAlignment="Top" Text="" TextWrapping="Wrap" Margin="33,75,0,0" Style="{StaticResource TextBoxStyle}" Foreground="{StaticResource TextAltBrush}" FontFamily="Trebuchet MS"/>
+    	<ComboBox VerticalAlignment="Top" Margin="86,0,0,0" x:Name="cboObjectType"/>
+    	<ComboBox Margin="86,30,0,0" x:Name="cboRuntimeType" VerticalAlignment="Top"/>
+
+    </Grid>
+</UserControl>

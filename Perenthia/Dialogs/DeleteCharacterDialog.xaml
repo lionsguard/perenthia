@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.DeleteCharacterDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="995" Height="620" xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource DialogFillBrush}">
+
+    	<Lionsguard:Window Margin="296,221,287,247" x:Name="diagDeleteWindow" Style="{StaticResource WindowStyle}" d:LayoutOverrides="Width, Height" Title="Delete Character?" Closed="diagDeleteWindow_Closed">
+    		<Canvas Height="116" Width="399.5">
+    			<TextBlock Height="73" Width="401.497" Foreground="{StaticResource TextBrush}" Text="Once deleted, you may re-use this Character name but will be unable to recover this Character. Are you sure you want to delete this Character?" TextWrapping="Wrap"/>
+    			<Button Height="25" x:Name="btnYes" Style="{StaticResource ButtonStyle}" Width="80" Content="YES" Foreground="{StaticResource TextAltBrush}" Canvas.Left="119" Canvas.Top="91" d:LayoutOverrides="HorizontalAlignment" Click="btnYes_Click"/>
+    			<Button x:Name="btnNo" Style="{StaticResource ButtonStyle}" Content="NO" Foreground="{StaticResource TextAltBrush}" Height="25" Width="80" Canvas.Left="203" Canvas.Top="91" Click="btnNo_Click"/>
+    		</Canvas>
+    	</Lionsguard:Window>
+
+    </Grid>
+</UserControl>

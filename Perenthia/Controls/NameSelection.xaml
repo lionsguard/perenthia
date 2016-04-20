@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Perenthia.Controls.NameSelection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="84" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}" Height="90">
+    	<TextBox Text="" TextWrapping="Wrap" x:Name="txtName" Foreground="{StaticResource TextBrush}" Margin="0,42,103,26" ToolTipService.ToolTip="Name" MaxLength="32" d:LayoutOverrides="Height" Style="{StaticResource TextBoxStyle}"/>
+    	<TextBlock Text="Name" TextWrapping="Wrap" Foreground="{StaticResource TextBrush}" Margin="0,24,155,0" TextAlignment="Left" FontFamily="Trebuchet MS" FontSize="12" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
+    	<Button HorizontalAlignment="Right" Margin="0,42,0,26" Width="99" Content="CHECK NAME" x:Name="btnCheckName" Foreground="{StaticResource TextAltBrush}" Style="{StaticResource ButtonStyle}" Click="btnCheckName_Click"/>
+    	<TextBlock VerticalAlignment="Top" Text="( Letters only, no numbers or special characters, max length of 32 characters )" TextWrapping="Wrap" Margin="0,68,0,0" Foreground="{StaticResource TextBrush}" FontFamily="Trebuchet MS" FontSize="10" TextAlignment="Center" d:LayoutOverrides="Width"/>
+    	
+    </Grid>
+</UserControl>

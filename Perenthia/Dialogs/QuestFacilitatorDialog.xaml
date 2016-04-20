@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.QuestFacilitatorDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource DialogFillBrush}">
+
+    	<RadioButton HorizontalAlignment="Left" Margin="8,8,0,0" x:Name="rdoStartsWith" VerticalAlignment="Top" Content="Starts With" Foreground="{StaticResource TextAltBrush}" IsChecked="True" GroupName="Type"/>
+    	<RadioButton Margin="128,8,0,0" x:Name="rdoEndsWith" VerticalAlignment="Top" Content="Ends With" Foreground="{StaticResource TextAltBrush}" IsChecked="False" GroupName="Type" d:LayoutOverrides="Width"/>
+    	<Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Submit" Margin="61,53,0,0" Width="81" Height="22" Style="{StaticResource ButtonStyle}" Foreground="{StaticResource TextAltBrush}" x:Name="btnSubmit" Cursor="Hand" Click="btnSubmit_Click"/>
+
+    </Grid>
+</UserControl>

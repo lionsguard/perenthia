@@ -1,0 +1,25 @@
+﻿<controls:ChildWindow x:Class="Perenthia.Windows.IncreaseIsoQuotaWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="500" Height="350" 
+           Title="Increase Local Storage Quota" Style="{StaticResource ChildWindowStyle}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="30" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Style="{StaticResource ButtonStyle}" FontSize="13.333" >
+        	<Button.Foreground>
+        		<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+        	</Button.Foreground>
+        </Button>
+        <Button x:Name="OKButton" Content="Increase" Click="OKButton_Click" Width="75" Height="30" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Style="{StaticResource ButtonStyle}" FontSize="13.333" >
+        	<Button.Foreground>
+        		<SolidColorBrush Color="{StaticResource HeadingColor}"/>
+        	</Button.Foreground>
+        </Button>
+        <TextBlock Margin="0" FontFamily="Trebuchet MS" Foreground="{StaticResource TextAltBrush}" TextWrapping="Wrap" FontSize="12"><Run Text="In order to increase the performance of Perenthia some of the game world object information can be stored on your local computer. This will make future sessions faster and initial load times shorter. "/><LineBreak/><Run Text=""/><LineBreak/><Run Text="The Silverlight plug-in required to play Perenthia is limited to 1 MB of space. Perenthia would like that space to be increased to 25 MB in order to store information such as maps, items, etc. If you would like Perenthia to store this information on your local hard drive click on the “Increase” button. If you do not want this information stored click on the “Cancel” button. If you choose not to store information locally but change your mind down the road you can enable local storage by clicking on the checkbox at the top right of the Character Selection screen."/><LineBreak/><Run Text=""/><LineBreak/><Run Text="If you click the “Increase” button the Silverlight plug-in will confirm the increase in space. This is a security feature of Silverlight to prevent automatic increases."/></TextBlock>
+    </Grid>
+</controls:ChildWindow>

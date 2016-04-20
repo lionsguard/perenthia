@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="lg" EntityNamespace="Lionsguard.Forums" ContextNamespace="Lionsguard.Forums" Class="ForumsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=cam-mobile;Initial Catalog=lg;Integrated Security=True" SettingsObjectName="Lionsguard.Properties.Settings" SettingsPropertyName="lgConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.lg_Boards" Member="Boards">
+    <Type Name="Board">
+      <Column Name="BoardId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardName" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Association Name="Board_Category" Member="Categories" OtherKey="BoardId" Type="Category" />
+      <Association Name="Board_Forum" Member="Forums" OtherKey="BoardId" Type="Forum" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lg_ForumCategories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="ForumCategoryId" Member="CategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Association Name="Category_Forum" Member="Forums" ThisKey="CategoryId" OtherKey="CategoryId" Type="Forum" />
+      <Association Name="Board_Category" Member="Board" ThisKey="BoardId" Type="Board" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lg_ForumReplies" Member="Replies">
+    <Type Name="Reply">
+      <Column Name="ForumReplyId" Member="ReplyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForumTopicId" Member="TopicId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostedByUserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReplyText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Topic_Reply" Member="Topic" ThisKey="TopicId" OtherKey="TopicId" Type="Topic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lg_Forums" Member="Forums">
+    <Type Name="Forum">
+      <Column Name="ForumId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BoardId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForumCategoryId" Member="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentForumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="TopicCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastPosterUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastPostDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastTopicId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastReplyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Association Name="Forum_Forum" Member="Forums" OtherKey="ParentForumId" Type="Forum" />
+      <Association Name="Forum_Topic" Member="Topics" OtherKey="ForumId" Type="Topic" />
+      <Association Name="Board_Forum" Member="Board" ThisKey="BoardId" Type="Board" IsForeignKey="true" />
+      <Association Name="Category_Forum" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" />
+      <Association Name="Forum_Forum" Member="lg_Forum1" ThisKey="ParentForumId" Type="Forum" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lg_ForumTopics" Member="Topics">
+    <Type Name="Topic">
+      <Column Name="ForumTopicId" Member="TopicId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForumId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostedByUserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TopicText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="LastReplyUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastReplyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Topic_Reply" Member="Replies" ThisKey="TopicId" OtherKey="TopicId" Type="Reply" />
+      <Association Name="Forum_Topic" Member="Forum" ThisKey="ForumId" Type="Forum" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

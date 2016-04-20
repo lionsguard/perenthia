@@ -1,0 +1,112 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+			 xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" xmlns:System_Windows_Controls_Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls" xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" xmlns:Perenthia_Dialogs="clr-namespace:Perenthia.Dialogs" xmlns:Perenthia_Windows="clr-namespace:Perenthia.Windows" xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit" x:Class="Perenthia.Screens.PlayScreen"
+    d:DesignWidth="700" d:DesignHeight="550">
+	<Grid>
+		<controlsToolkit:DockPanel>
+			<Grid Height="100" Margin="8,0,0,0" VerticalAlignment="Bottom" controlsToolkit:DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="568">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotCharacterSheet" ToolTip="Character Sheet" Source="../Assets/avatar-norvic-male.png" Click="ctlSlotCharacterSheet_Click" SlotType="Menu" HorizontalAlignment="Left" VerticalAlignment="Bottom" d:LayoutOverrides="Height" Margin="0,0,0,8"/>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotSpells" ToolTip="Spells" Source="../Assets/menu-spells.png" Click="ctlSlotSpells_Click" SlotType="Menu" HorizontalAlignment="Left" Margin="38,0,0,8" d:LayoutOverrides="Width, Height" VerticalAlignment="Bottom" />
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotHousehold" ToolTip="Household" Visibility="Visible" IsEnabled="False" Click="ctlSlotHousehold_Click" SlotType="Menu" Source="../Assets/menu-household.png" HorizontalAlignment="Left" Margin="76,0,0,8" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotWho" ToolTip="Who" Source="../Assets/menu-who.png" Click="ctlSlotWho_Click" SlotType="Menu" HorizontalAlignment="Left" Margin="114,0,0,8" VerticalAlignment="Bottom" d:LayoutOverrides="Height" />
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotCraft" ToolTip="Craft" Visibility="Visible" IsEnabled="False" Click="ctlSlotCraft_Click" SlotType="Menu" HorizontalAlignment="Left" Margin="152,0,0,8" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+				<Canvas x:Name="BagsContainer" Margin="209,0,173,8" d:LayoutOverrides="HorizontalAlignment" Height="34" VerticalAlignment="Bottom">
+					<Perenthia_Controls:ItemSlot x:Name="ctlSlotBag0" ToolTip="Bag" Visibility="Visible" IsEnabled="True" BackgroundSource="../Assets/bg-bag.png" EnableDragAndDrop="false" SlotType="Bag" Click="ctlSlotBag0_Click"/>
+					<Perenthia_Controls:ItemSlot x:Name="ctlSlotBag1" ToolTip="Bag" Visibility="Visible" IsEnabled="True" BackgroundSource="../Assets/bg-bag.png" Canvas.Left="38" EnableDragAndDrop="false" SlotType="Bag" Click="ctlSlotBag1_Click"/>
+					<Perenthia_Controls:ItemSlot x:Name="ctlSlotBag2" ToolTip="Bag" Visibility="Visible" IsEnabled="True" BackgroundSource="../Assets/bg-bag.png" Canvas.Left="76" EnableDragAndDrop="false" SlotType="Bag" Click="ctlSlotBag2_Click"/>
+					<Perenthia_Controls:ItemSlot x:Name="ctlSlotBag3" ToolTip="Bag" Visibility="Visible" IsEnabled="True" BackgroundSource="../Assets/bg-bag.png" Canvas.Left="114" EnableDragAndDrop="false" SlotType="Bag" Click="ctlSlotBag3_Click"/>
+					<Perenthia_Controls:ItemSlot x:Name="ctlSlotBag4" ToolTip="Bag" Visibility="Visible" IsEnabled="True" BackgroundSource="../Assets/bg-bag.png" Canvas.Left="152" EnableDragAndDrop="false" SlotType="Bag" Click="ctlSlotBag4_Click"/>
+
+				</Canvas>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotQuests" ToolTip="Quests" IsEnabled="False" Click="ctlSlotQuests_Click" SlotType="Menu" HorizontalAlignment="Right" Margin="0,0,114,8" d:LayoutOverrides="Width, Height" VerticalAlignment="Bottom" Source="/Perenthia;Component/Assets/menu-quest.png"/>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotMap" ToolTip="Map" Source="../Assets/menu-map.png" Click="ctlSlotMap_Click" SlotType="Menu" Margin="0,0,76,8" HorizontalAlignment="Right" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height"/>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotHelp" ToolTip="Help" Source="../Assets/menu-help.png" Click="ctlSlotHelp_Click" SlotType="Menu" HorizontalAlignment="Right" Margin="0,0,38,8" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+				<Perenthia_Controls:ItemSlot x:Name="ctlSlotQuit" ToolTip="Quit" Source="../Assets/menu-quit.png" Click="ctlSlotQuit_Click" SlotType="Menu" HorizontalAlignment="Right" Margin="0,0,0,8" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+
+				<Canvas x:Name="ActionsContainer" Margin="0,16,0,44" d:LayoutOverrides="VerticalAlignment">
+					<Perenthia_Controls:ItemSlot x:Name="ctlSlot0" ActionSlotNumber="0" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="38" x:Name="ctlSlot1" ActionSlotNumber="1" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="76" x:Name="ctlSlot2" ActionSlotNumber="2" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="114" x:Name="ctlSlot3" ActionSlotNumber="3" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="152" x:Name="ctlSlot4" ActionSlotNumber="4" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="190" x:Name="ctlSlot5" ActionSlotNumber="5" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="229" x:Name="ctlSlot6" ActionSlotNumber="6" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="267" x:Name="ctlSlot7" ActionSlotNumber="7" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="305" x:Name="ctlSlot8" ActionSlotNumber="8" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="343" x:Name="ctlSlot9" ActionSlotNumber="9" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="381" x:Name="ctlSlot10" ActionSlotNumber="10" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="419" x:Name="ctlSlot11" ActionSlotNumber="11" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="457" x:Name="ctlSlot12" ActionSlotNumber="12" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="495" x:Name="ctlSlot13" ActionSlotNumber="13" EnableDragAndDrop="true" SlotType="Action"/>
+					<Perenthia_Controls:ItemSlot Canvas.Left="533" x:Name="ctlSlot14" ActionSlotNumber="14" EnableDragAndDrop="true" SlotType="Action"/>
+				</Canvas>
+				<ProgressBar Height="10" x:Name="ctlXp" Style="{StaticResource StatBarStyle}" Background="{StaticResource ExperienceBrush}" BorderBrush="{StaticResource BorderBrush}" Foreground="{StaticResource ExperienceBrush}" Margin="0" VerticalAlignment="Top"/>
+
+			</Grid>
+			<Canvas x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+				<Canvas x:Name="ActionDropContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:IsLocked="True"/>
+				<Perenthia_Windows:ChatWindow x:Name="ctlChat" Height="257" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="420" Canvas.Top="185" Canvas.Left="8" ChatInputReceived="ctlChat_ChatInputReceived" HasCloseButton="False" HasMinimizeButton="False" Title="Main" DragCompleted="WindowDragCompleted" SizeChanged="WindowResizeCompleted"/>
+				<Perenthia_Controls:Map x:Name="ctlMap" Canvas.Left="442" Canvas.Top="172" DirectionClick="ctlMap_DirectionClick"/>
+				<Perenthia_Windows:AvatarWindow x:Name="ctlPlayer" Canvas.Left="8" Canvas.Top="8" EnableCurrencyDisplay="True" Height="152" DragCompleted="WindowDragCompleted" Click="ctlPlayer_Click"/>
+				<Perenthia_Windows:AvatarWindow x:Name="ctlTarget" Canvas.Left="420" Canvas.Top="8" DragCompleted="WindowDragCompleted" SizeChanged="WindowResizeCompleted" Click="ctlTarget_Click"/>
+		
+				<Lionsguard:Window Height="Auto" x:Name="diagMap" Width="Auto" Canvas.Left="84" Canvas.Top="19" Title="Map" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:MapDialog x:Name="diagMapContent"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="375" x:Name="diagCharacterSheet" Width="634" Canvas.Left="8" Canvas.Top="19" Title="Character Sheet" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:CharacterSheetDialog x:Name="diagCharacterSheetContent" SkillChanged="diagCharacterSheetContent_SkillChanged"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="336" x:Name="diagSpellbook" Width="330" Canvas.Left="12" Canvas.Top="100" Title="Spellbook" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:SpellbookDialog x:Name="diagSpellbookContent" />
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="Auto" x:Name="diagQuestLog" Width="Auto" Canvas.Left="26" Canvas.Top="8" Title="Quest Log" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:QuestLogDialog x:Name="diagQuestLogContent"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="184" x:Name="diagBag0" Width="160" Canvas.Left="320" Canvas.Top="8" Title="Bag" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:BagDialog x:Name="diagBag0Content"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="184" x:Name="diagBag1" Width="160" Title="Bag" Canvas.Left="346" Canvas.Top="18" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:BagDialog x:Name="diagBag1Content"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="184" x:Name="diagBag2" Width="160" Title="Bag" Canvas.Left="462" Canvas.Top="18" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:BagDialog x:Name="diagBag2Content"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="184" x:Name="diagBag3" Width="160" Title="Bag" Canvas.Left="532" Canvas.Top="19" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:BagDialog x:Name="diagBag3Content"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="184" x:Name="diagBag4" Width="160" Title="Bag" Canvas.Left="500" Canvas.Top="160" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:BagDialog x:Name="diagBag4Content"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window Height="434" x:Name="diagHelp" Width="684" Canvas.Left="8" Canvas.Top="8" Title="Help" Style="{StaticResource WindowStyle}" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:HelpDialog x:Name="diagHelpContent"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window x:Name="diagTell" Style="{StaticResource WindowStyle}" Canvas.Left="156" Canvas.Top="100" Title="Send a Tell" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Controls:TellActionWindow x:Name="diagTellContent" Height="204" Width="400"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window x:Name="diagCommerce" Style="{StaticResource WindowStyle}" Canvas.Left="16" Canvas.Top="8" Title="Goods &amp; Services" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Controls:CommerceActionWindow Height="400" x:Name="diagCommerceContent" Width="600"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window x:Name="diagInventory" Style="{StaticResource WindowStyle}" Canvas.Left="168" Canvas.Top="8" Title="Corpse" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Controls:InventoryActionWindow Height="400" x:Name="diagInventoryContent" Width="300"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window x:Name="diagQuests" Style="{StaticResource WindowStyle}" Canvas.Left="120" Canvas.Top="58" Title="Quests" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Controls:QuestsActionWindow Height="300" Width="400" x:Name="diagQuestsContent"/>
+				</Lionsguard:Window>
+				<Lionsguard:Window x:Name="diagHousehold" Style="{StaticResource WindowStyle}" Canvas.Left="8" Canvas.Top="8" Height="434" Width="684" Visibility="Collapsed" d:IsLocked="True">
+					<Perenthia_Dialogs:HouseholdDialog x:Name="ctlHousehold"/>
+				</Lionsguard:Window>
+			</Canvas>
+		</controlsToolkit:DockPanel>
+		<Grid x:Name="SplashScreen" Margin="0" d:IsHidden="True" d:IsLocked="True">
+			<Border x:Name="ctlSplash" Background="#FF000000"/>
+			<ProgressBar Height="24" x:Name="ctlLoadbar" Style="{StaticResource StatBarStyle}" Foreground="{StaticResource WillpowerBrush}" Margin="0,0,0,205" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="500" IsIndeterminate="True"/>
+			<TextBlock Text="Loading..." TextWrapping="Wrap" x:Name="lblLoadText" Foreground="{StaticResource TextBrush}" Margin="0,0,0,234" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+			<Image Height="100.24" Width="341.727" Source="../Assets/logo.png" Stretch="Fill" Margin="0,190,0,260" HorizontalAlignment="Center"/>
+		</Grid>
+	</Grid>
+</UserControl>

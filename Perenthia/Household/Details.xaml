@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Perenthia.Household.Details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="955" Height="500" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" xmlns:Perenthia_Household="clr-namespace:Perenthia.Household">
+	<UserControl.Resources>
+		<DataTemplate x:Key="MenuItemDataTemplate">
+			<Grid Cursor="Hand">
+				<Border BorderThickness="0,1,0,1" BorderBrush="{StaticResource AdBackgroundBrush}">
+					<TextBlock x:Name="lblName" Width="Auto" Foreground="{StaticResource TextAltBrush}" Text="Name" TextWrapping="NoWrap" Height="Auto" Margin="8,0,8,0"/>
+				</Border>
+			</Grid>
+		</DataTemplate>
+	</UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="{StaticResource DialogFillBrush}">
+
+    	<TextBlock Margin="8.238,8.5,244,0" VerticalAlignment="Top" Text="Household Name" TextWrapping="NoWrap" x:Name="txtName" Foreground="{StaticResource HeadingBrush}" FontFamily="Georgia" FontSize="18" FontStretch="Condensed" d:IsLocked="True"/>
+    	<Border Height="Auto" HorizontalAlignment="Left" Width="Auto" BorderBrush="{StaticResource BorderBrush}" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4" Padding="1,1,1,1" Margin="8,33,0,205" VerticalAlignment="Top" d:LayoutOverrides="Height" d:IsLocked="True">
+    		<Image Height="128" x:Name="imgMain" Width="128" d:IsLocked="True"/>
+    	</Border>
+
+    	<TextBlock Height="89" Margin="146.119,78,243.762,0" x:Name="txtDescription" FontFamily="Trebuchet MS" Foreground="{StaticResource TextBrush}" Text="" TextWrapping="Wrap" VerticalAlignment="Top" d:IsLocked="True"/>
+    	<TextBlock VerticalAlignment="Top" Text="Motto" TextWrapping="Wrap" Margin="146,33,243.762,0" Height="20.5" x:Name="txtMotto" Foreground="{StaticResource TextAltBrush}" FontFamily="Times New Roman" FontStyle="Italic" FontSize="12" d:IsLocked="True"/>
+    	<HyperlinkButton HorizontalAlignment="Left" VerticalAlignment="Top" Content="Change" Margin="95.762,171,0,0" x:Name="lnkChangeImage" Background="{x:Null}" Foreground="{StaticResource LinkBrush}" Click="lnkChangeImage_Click" d:IsLocked="True"/>
+    	<HyperlinkButton Background="{x:Null}" Foreground="{StaticResource LinkBrush}" Margin="0,58,243.643,0" x:Name="lnkEditMotto" VerticalAlignment="Top" Content="Edit" Click="lnkEditMotto_Click" HorizontalAlignment="Right" d:LayoutOverrides="Width" d:IsLocked="True"/>
+    	<HyperlinkButton Background="{x:Null}" Foreground="{StaticResource LinkBrush}" Margin="0,171,243.643,0" x:Name="lnkEditDesc" VerticalAlignment="Top" Content="Edit" Click="lnkEditDesc_Click" HorizontalAlignment="Right" d:IsLocked="True"/>
+    	<Perenthia_Household:Armory Height="125" VerticalAlignment="Bottom" Margin="8.238,0,243.881,8" x:Name="ctlArmory" d:IsLocked="True"/>
+    	<Perenthia_Household:Members Margin="8.238,191,243.762,137" x:Name="ctlMembers" d:IsLocked="True"/>
+    	<Perenthia_Controls:Wait d:LayoutOverrides="Width, Height" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ctlWait"/>
+
+    </Grid>
+</UserControl>

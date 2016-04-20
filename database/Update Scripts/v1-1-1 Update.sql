@@ -1,0 +1,1 @@
+insert into rad_commands (WorldId, CommandName, RequiredRole, Syntax, Arguments, Help, IsVisible) values (1, 'COMBATACTION', 'Mortal', '', '', '', 0)

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.CharacterSheetDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="621" Height="339" 
+			 xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+			 xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Perenthia_Controls:AvatarPanel HorizontalAlignment="Left" x:Name="ctlPlayer" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+    	<Perenthia_Controls:SkillsList HorizontalAlignment="Left" Margin="261,0,0,25.834" x:Name="ctlSkills"/>
+    	<ProgressBar Height="10" x:Name="ctlXp" Style="{StaticResource StatBarStyle}" VerticalAlignment="Bottom" Foreground="{StaticResource ExperienceBrush}" Margin="0,0,0,0"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="76,87.334,0,0" x:Name="ctlHead" VerticalAlignment="Top" ToolTip="Head" EquipmentSlot="Head" SlotType="Equipment" EnableDragAndDrop="True" />
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="56.666,125.334,0,0" x:Name="ctlNeck" VerticalAlignment="Top" ToolTip="Neck" EquipmentSlot="Neck" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="95.333,125.169,0,0" x:Name="ctlShoulders" VerticalAlignment="Top" ToolTip="Shoulders" EquipmentSlot="Shoulders" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="152.333,125.5,0,0" VerticalAlignment="Top" x:Name="ctlNecklace" BackgroundSource="../Assets/bg-pendant.png" ToolTip="Pendant" EquipmentSlot="Pendant" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="0,87.667,0,0" x:Name="ctlEar0" VerticalAlignment="Top" ToolTip="Ear" EquipmentSlot="Ear1" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="152,87.168,0,0" VerticalAlignment="Top" x:Name="ctlEar1" ToolTip="Ear" EquipmentSlot="Ear2" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="37.667,164,0,141" x:Name="ctlChest" ToolTip="Chest" EquipmentSlot="Chest" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="76.001,163.667,0,141.333" x:Name="ctlBack" ToolTip="Back" EquipmentSlot="Back" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="114,164,0,141" x:Name="ctlArms" ToolTip="Arms" EquipmentSlot="Arms" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="-0.333,0,0,103" x:Name="ctlFinger0" VerticalAlignment="Bottom" BackgroundSource="../Assets/bg-ring.png" ToolTip="Finger" EquipmentSlot="Finger1" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="37.667,0,0,102.666" VerticalAlignment="Bottom" x:Name="ctlWrists" EquipmentSlot="Wrists" ToolTip="Wrists" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="75.667,0,0,103" VerticalAlignment="Bottom" x:Name="ctlWaist" EquipmentSlot="Waist" ToolTip="Waist" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="113.667,0,0,103" VerticalAlignment="Bottom" x:Name="ctlHands" EquipmentSlot="Hands" ToolTip="Hands" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="151.667,0,0,102.666" VerticalAlignment="Bottom" x:Name="ctlFinger1" EquipmentSlot="Finger2" BackgroundSource="../Assets/bg-ring.png" ToolTip="Finger" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="56.999,0,0,64.667" VerticalAlignment="Bottom" x:Name="ctLegs" ToolTip="Legs" EquipmentSlot="Legs" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="95,0,0,64.667" VerticalAlignment="Bottom" x:Name="ctlFeet" ToolTip="Feet" EquipmentSlot="Feet" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="38.001,0,0,26.334" VerticalAlignment="Bottom" x:Name="ctlWeapon0" BackgroundSource="../Assets/bg-weapon.png" ToolTip="Primary Weapon" EquipmentSlot="Weapon1" SlotType="Equipment" EnableDragAndDrop="True"/>
+		<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="76.001,0,0,26.334" VerticalAlignment="Bottom" x:Name="ctlWeapon1" BackgroundSource="../Assets/bg-weapon.png" ToolTip="Secondary Weapon" EquipmentSlot="Weapon2" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="114,0,0,26.167" VerticalAlignment="Bottom" x:Name="ctlShield" BackgroundSource="../Assets/bg-shield.png" ToolTip="Shield" EquipmentSlot="Shield" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="212.666,87.168,0,0" VerticalAlignment="Top" x:Name="ctlHat" ToolTip="Hat" EquipmentSlot="Hat" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="213,125.999,0,0" VerticalAlignment="Top" x:Name="ctlShirt" ToolTip="Shirt" EquipmentSlot="Shirt" BackgroundSource="../Assets/bg-shirt.png" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="213.334,164.499,0,140.501" x:Name="ctlPants" ToolTip="Pants" EquipmentSlot="Pants" d:LayoutOverrides="Height" BackgroundSource="../Assets/bg-pants.png" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="213.333,0,0,102.501" x:Name="ctlRobe" VerticalAlignment="Bottom" ToolTip="Robe" EquipmentSlot="Robe" d:LayoutOverrides="Height" BackgroundSource="../Assets/bg-dress.png" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="213.002,0,0,65.166" x:Name="ctlNose" VerticalAlignment="Bottom" ToolTip="Nose Ring" EquipmentSlot="Nose" Visibility="Collapsed" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<Perenthia_Controls:ItemSlot HorizontalAlignment="Left" Margin="213.335,0,0,25.834" x:Name="ctlLight" VerticalAlignment="Bottom" BackgroundSource="../Assets/bg-light.png" ToolTip="Light" EquipmentSlot="Light" d:LayoutOverrides="Height" SlotType="Equipment" EnableDragAndDrop="True"/>
+    	<HyperlinkButton VerticalAlignment="Top" Content="Hide Untrained Skills" Margin="261,0,200,0" x:Name="lnkHideSkills" Foreground="{StaticResource LinkBrush}" FontFamily="Trebuchet MS" FontWeight="Bold" Click="lnkHideSkills_Click"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,629 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{880BE3D1-AC4F-454D-A6F8-4B418E914AD6}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Perenthia.Web</RootNamespace>
+    <AssemblyName>Perenthia.Web.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="RPXLib, Version=0.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components\RPXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RssToolkit, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components\RssToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="WebTools.Imaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components\WebTools.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="WebTools.ListServ, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components\WebTools.ListServ.dll</HintPath>
+    </Reference>
+    <Reference Include="WebTools.UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=46a9f145fb0803a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components\WebTools.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\PerenthiaVersionInfo.cs">
+      <Link>Properties\PerenthiaVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActionResults\ArmorialImageResult.cs" />
+    <Compile Include="ActionResults\VersionActionResult.cs" />
+    <Compile Include="Controllers\ArmorialController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KongregateController.cs" />
+    <Compile Include="Controllers\LoreController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\SupportController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\ArmorialViewData.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FeedViewData.cs" />
+    <Compile Include="Models\ImageViewData.cs" />
+    <Compile Include="Models\PaymentViewData.cs" />
+    <Compile Include="Models\PlayViewData.cs" />
+    <Compile Include="Models\RpxViewData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Services.Security\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Tester.cs" />
+    <Compile Include="WebUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\css\admin.css" />
+    <Content Include="Common\css\blackberry.css" />
+    <Content Include="Common\css\Default.css" />
+    <Content Include="Common\css\ie.css" />
+    <Content Include="Common\css\iphone.css" />
+    <Content Include="Common\css\mobile.css" />
+    <Content Include="Common\css\winmobile.css" />
+    <Content Include="Common\emails\AlphaTesters.txt" />
+    <Content Include="Common\images\app-offline.png" />
+    <Content Include="Common\images\bg-canvas-base.png" />
+    <Content Include="Common\images\bg-canvas-bl.png" />
+    <Content Include="Common\images\bg-canvas-bm.png" />
+    <Content Include="Common\images\bg-canvas-bottom.png" />
+    <Content Include="Common\images\bg-canvas-br.png" />
+    <Content Include="Common\images\bg-canvas-left.png" />
+    <Content Include="Common\images\bg-canvas-left2.png" />
+    <Content Include="Common\images\bg-canvas-logo.png" />
+    <Content Include="Common\images\bg-canvas-main-repeat.png" />
+    <Content Include="Common\images\bg-canvas-main.png" />
+    <Content Include="Common\images\bg-canvas-menu-bottom.png" />
+    <Content Include="Common\images\bg-canvas-menu-left.png" />
+    <Content Include="Common\images\bg-canvas-menu-mid.png" />
+    <Content Include="Common\images\bg-canvas-menu-right.png" />
+    <Content Include="Common\images\bg-canvas-ml.png" />
+    <Content Include="Common\images\bg-canvas-mm.png" />
+    <Content Include="Common\images\bg-canvas-mr.png" />
+    <Content Include="Common\images\bg-canvas-right.png" />
+    <Content Include="Common\images\bg-canvas-right2.png" />
+    <Content Include="Common\images\bg-canvas-tl.png" />
+    <Content Include="Common\images\bg-canvas-top.png" />
+    <Content Include="Common\images\bg-canvas-tr.png" />
+    <Content Include="Common\images\bg-canvas.png" />
+    <Content Include="Common\images\bg-container-content.png" />
+    <Content Include="Common\images\bg-container-footer.png" />
+    <Content Include="Common\images\bg-container-header.png" />
+    <Content Include="Common\images\bg-content.png" />
+    <Content Include="Common\images\bg-footer.png" />
+    <Content Include="Common\images\bg-header.png" />
+    <Content Include="Common\images\bg-menu-bottom.gif" />
+    <Content Include="Common\images\bg-menu.png" />
+    <Content Include="Common\images\bg-nav-bl.png" />
+    <Content Include="Common\images\bg-nav-bm.png" />
+    <Content Include="Common\images\bg-nav-bottom.png" />
+    <Content Include="Common\images\bg-nav-br.png" />
+    <Content Include="Common\images\bg-nav-middle.png" />
+    <Content Include="Common\images\bg-nav-ml.png" />
+    <Content Include="Common\images\bg-nav-mm.png" />
+    <Content Include="Common\images\bg-nav-mr.png" />
+    <Content Include="Common\images\bg-nav-tl.png" />
+    <Content Include="Common\images\bg-nav-tm.png" />
+    <Content Include="Common\images\bg-nav-top.png" />
+    <Content Include="Common\images\bg-nav-tr.png" />
+    <Content Include="Common\images\bg-nav.png" />
+    <Content Include="Common\images\bg-xhin.png" />
+    <Content Include="Common\images\box-content.png" />
+    <Content Include="Common\images\box-footer.png" />
+    <Content Include="Common\images\box-header.png" />
+    <Content Include="Common\images\box-row.png" />
+    <Content Include="Common\images\btn-cancel.png" />
+    <Content Include="Common\images\btn-login.png" />
+    <Content Include="Common\images\btn-play-now.png" />
+    <Content Include="Common\images\btn-search.png" />
+    <Content Include="Common\images\btn-signup.png" />
+    <Content Include="Common\images\btn-submit.png" />
+    <Content Include="Common\images\favicon.png" />
+    <Content Include="Common\images\header-bottom.png" />
+    <Content Include="Common\images\header-middle.png" />
+    <Content Include="Common\images\header-top.png" />
+    <Content Include="Common\images\icon-female.png" />
+    <Content Include="Common\images\icon-lionhead.png" />
+    <Content Include="Common\images\icon-male.png" />
+    <Content Include="Common\images\link-divider.gif" />
+    <Content Include="Common\images\logo-placeholder.gif" />
+    <Content Include="Common\images\logo-small.png" />
+    <Content Include="Common\images\logo.gif" />
+    <Content Include="Common\images\logo.png" />
+    <Content Include="Common\images\mnu-bottom.png" />
+    <Content Include="Common\images\mnu-links.png" />
+    <Content Include="Common\images\mnu-spike.gif" />
+    <Content Include="Common\images\mnu-spike.png" />
+    <Content Include="Common\images\orb.gif" />
+    <Content Include="Common\images\orders\order-arcane-128.png" />
+    <Content Include="Common\images\orders\order-arcane.png" />
+    <Content Include="Common\images\orders\order-knighthood-128.png" />
+    <Content Include="Common\images\orders\order-knighthood.png" />
+    <Content Include="Common\images\p.png" />
+    <Content Include="Common\images\peren-female-alpha-home.png" />
+    <Content Include="Common\images\pixel.gif" />
+    <Content Include="Common\images\races\avatar-najii-female-400.png" />
+    <Content Include="Common\images\races\avatar-najii-female-full.png" />
+    <Content Include="Common\images\races\avatar-najii-female.png" />
+    <Content Include="Common\images\races\avatar-najii-male-400.png" />
+    <Content Include="Common\images\races\avatar-najii-male-full.png" />
+    <Content Include="Common\images\races\avatar-najii-male.png" />
+    <Content Include="Common\images\races\avatar-norvic-female-400.png" />
+    <Content Include="Common\images\races\avatar-norvic-female-full.png" />
+    <Content Include="Common\images\races\avatar-norvic-female.png" />
+    <Content Include="Common\images\races\avatar-norvic-male-400.png" />
+    <Content Include="Common\images\races\avatar-norvic-male-full.png" />
+    <Content Include="Common\images\races\avatar-norvic-male.png" />
+    <Content Include="Common\images\races\avatar-peren-female-400.png" />
+    <Content Include="Common\images\races\avatar-peren-female-full.png" />
+    <Content Include="Common\images\races\avatar-peren-female.png" />
+    <Content Include="Common\images\races\avatar-peren-male-400.png" />
+    <Content Include="Common\images\races\avatar-peren-male-full.png" />
+    <Content Include="Common\images\races\avatar-peren-male.png" />
+    <Content Include="Common\images\races\avatar-xhin-female-400.png" />
+    <Content Include="Common\images\races\avatar-xhin-female-full.png" />
+    <Content Include="Common\images\races\avatar-xhin-female.png" />
+    <Content Include="Common\images\races\avatar-xhin-male-400.png" />
+    <Content Include="Common\images\races\avatar-xhin-male-full.png" />
+    <Content Include="Common\images\races\avatar-xhin-male.png" />
+    <Content Include="Common\images\races\name-najii.png" />
+    <Content Include="Common\images\races\name-norvic.png" />
+    <Content Include="Common\images\races\name-peren.png" />
+    <Content Include="Common\images\races\name-xhin.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-cc-attributes-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-cc-attributes.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-cc-race-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-cc-race.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-cc-skills-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-cc-skills.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-charsheet-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-charsheet.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-combat1-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-combat1.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-combat2-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-combat2.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-looting-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-looting.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-merchant-thumb.png" />
+    <Content Include="Common\images\screenshots\perenthia-ss-ui-merchant.png" />
+    <Content Include="Common\images\sl-splash.png" />
+    <Content Include="Common\images\twitter-bird.png" />
+    <Content Include="Common\media\avatar-blank.png" />
+    <Content Include="Common\media\avatar-najii-female.png" />
+    <Content Include="Common\media\avatar-najii-male.png" />
+    <Content Include="Common\media\avatar-norvic-female.png" />
+    <Content Include="Common\media\avatar-norvic-male.png" />
+    <Content Include="Common\media\avatar-peren-female.png" />
+    <Content Include="Common\media\avatar-peren-male.png" />
+    <Content Include="Common\media\avatar-xhin-female.png" />
+    <Content Include="Common\media\avatar-xhin-male.png" />
+    <Content Include="Common\media\copper.png" />
+    <Content Include="Common\media\creature-blank.png" />
+    <Content Include="Common\media\creature-creeper.png" />
+    <Content Include="Common\media\creature-kobold.png" />
+    <Content Include="Common\media\creature-rat.png" />
+    <Content Include="Common\media\creature-skeleton.png" />
+    <Content Include="Common\media\emblem.png" />
+    <Content Include="Common\media\emblem16X16.png" />
+    <Content Include="Common\media\gold.png" />
+    <Content Include="Common\media\item-air-damage.png" />
+    <Content Include="Common\media\item-air-shield.png" />
+    <Content Include="Common\media\item-bone.png" />
+    <Content Include="Common\media\item-claw.png" />
+    <Content Include="Common\media\item-clothing-dress.png" />
+    <Content Include="Common\media\item-clothing-pants.png" />
+    <Content Include="Common\media\item-clothing-robe.png" />
+    <Content Include="Common\media\item-clothing-shirt.png" />
+    <Content Include="Common\media\item-container-backpack.png" />
+    <Content Include="Common\media\item-container-bag.png" />
+    <Content Include="Common\media\item-container-box.png" />
+    <Content Include="Common\media\item-container-chest.png" />
+    <Content Include="Common\media\item-container-pouch.png" />
+    <Content Include="Common\media\item-copper-ore.png" />
+    <Content Include="Common\media\item-earth-damage.png" />
+    <Content Include="Common\media\item-earth-shield.png" />
+    <Content Include="Common\media\item-fire-damage.png" />
+    <Content Include="Common\media\item-fire-shield.png" />
+    <Content Include="Common\media\item-food-ale.png" />
+    <Content Include="Common\media\item-food-bread.png" />
+    <Content Include="Common\media\item-food-cheese.png" />
+    <Content Include="Common\media\item-food-pie.png" />
+    <Content Include="Common\media\item-food-water.png" />
+    <Content Include="Common\media\item-food-wine.png" />
+    <Content Include="Common\media\item-fur.png" />
+    <Content Include="Common\media\item-gold-ore.png" />
+    <Content Include="Common\media\item-gold-ring.png" />
+    <Content Include="Common\media\item-iron-ore.png" />
+    <Content Include="Common\media\item-key.png" />
+    <Content Include="Common\media\item-kobold-insignia.png" />
+    <Content Include="Common\media\item-leather-boots.png" />
+    <Content Include="Common\media\item-leather-cap.png" />
+    <Content Include="Common\media\item-leather-gloves.png" />
+    <Content Include="Common\media\item-leather-jerkin.png" />
+    <Content Include="Common\media\item-leather-pants.png" />
+    <Content Include="Common\media\item-leather-shirt.png" />
+    <Content Include="Common\media\item-leather-shoes.png" />
+    <Content Include="Common\media\item-light-candle.png" />
+    <Content Include="Common\media\item-light-torch.png" />
+    <Content Include="Common\media\item-linen-gloves.png" />
+    <Content Include="Common\media\item-mandible.png" />
+    <Content Include="Common\media\item-padded-cap.png" />
+    <Content Include="Common\media\item-padded-pants.png" />
+    <Content Include="Common\media\item-padded-shirt.png" />
+    <Content Include="Common\media\item-pearl.png" />
+    <Content Include="Common\media\item-pendant.png" />
+    <Content Include="Common\media\item-potion-heal.png" />
+    <Content Include="Common\media\item-potion-poison.png" />
+    <Content Include="Common\media\item-potion-willpower.png" />
+    <Content Include="Common\media\item-rat-tail.png" />
+    <Content Include="Common\media\item-ring.png" />
+    <Content Include="Common\media\item-rotting-flesh.png" />
+    <Content Include="Common\media\item-shield-buckler.png" />
+    <Content Include="Common\media\item-shield-heater.png" />
+    <Content Include="Common\media\item-shield-round.png" />
+    <Content Include="Common\media\item-shield-tower.png" />
+    <Content Include="Common\media\item-silver-ring.png" />
+    <Content Include="Common\media\item-spell-comboattack.png" />
+    <Content Include="Common\media\item-spell-createbread.png" />
+    <Content Include="Common\media\item-spell-createwater.png" />
+    <Content Include="Common\media\item-spell-damage.png" />
+    <Content Include="Common\media\item-spell-dexterity.png" />
+    <Content Include="Common\media\item-spell-heal.png" />
+    <Content Include="Common\media\item-spell-protection.png" />
+    <Content Include="Common\media\item-spell-sight.png" />
+    <Content Include="Common\media\item-spell-stamina.png" />
+    <Content Include="Common\media\item-spell-strength.png" />
+    <Content Include="Common\media\item-spirit-essence.png" />
+    <Content Include="Common\media\item-studded-cap.png" />
+    <Content Include="Common\media\item-studded-gloves.png" />
+    <Content Include="Common\media\item-studded-guantlets.png" />
+    <Content Include="Common\media\item-studded-jerkin.png" />
+    <Content Include="Common\media\item-studded-pants.png" />
+    <Content Include="Common\media\item-train-skill.png" />
+    <Content Include="Common\media\item-transport-coach.png" />
+    <Content Include="Common\media\item-water-damage.png" />
+    <Content Include="Common\media\item-water-shield.png" />
+    <Content Include="Common\media\item-weapon-axe.png" />
+    <Content Include="Common\media\item-weapon-bow.png" />
+    <Content Include="Common\media\item-weapon-club.png" />
+    <Content Include="Common\media\item-weapon-dagger.png" />
+    <Content Include="Common\media\item-weapon-fists.png" />
+    <Content Include="Common\media\item-weapon-mace.png" />
+    <Content Include="Common\media\item-weapon-staff.png" />
+    <Content Include="Common\media\item-weapon-sword.png" />
+    <Content Include="Common\media\Map.png" />
+    <Content Include="Common\media\menu-draw.png" />
+    <Content Include="Common\media\menu-exits.png" />
+    <Content Include="Common\media\menu-fill.png" />
+    <Content Include="Common\media\menu-gridlines.png" />
+    <Content Include="Common\media\menu-help.png" />
+    <Content Include="Common\media\menu-inventory.png" />
+    <Content Include="Common\media\menu-map.png" />
+    <Content Include="Common\media\menu-quest.png" />
+    <Content Include="Common\media\menu-quit.png" />
+    <Content Include="Common\media\menu-select.png" />
+    <Content Include="Common\media\menu-show-maps.png" />
+    <Content Include="Common\media\menu-spells.png" />
+    <Content Include="Common\media\menu-who.png" />
+    <Content Include="Common\media\menu-z-down.png" />
+    <Content Include="Common\media\menu-z-up.png" />
+    <Content Include="Common\media\menu-zoom-in.png" />
+    <Content Include="Common\media\menu-zoom-out.png" />
+    <Content Include="Common\media\menu-zoom-to-edit.png" />
+    <Content Include="Common\media\silver.png" />
+    <Content Include="Common\media\terrain\desert-range.png" />
+    <Content Include="Common\media\terrain\dirt.png" />
+    <Content Include="Common\media\terrain\forest.png" />
+    <Content Include="Common\media\terrain\grass.png" />
+    <Content Include="Common\media\terrain\range.png" />
+    <Content Include="Common\media\terrain\road.png" />
+    <Content Include="Common\media\terrain\rock.png" />
+    <Content Include="Common\media\terrain\sand.png" />
+    <Content Include="Common\media\terrain\sea.png" />
+    <Content Include="Common\media\terrain\snow-range.png" />
+    <Content Include="Common\media\terrain\spine-mountain.png" />
+    <Content Include="Common\media\terrain\stone-bridge.png" />
+    <Content Include="Common\media\terrain\stone.png" />
+    <Content Include="Common\media\terrain\tile.png" />
+    <Content Include="Common\media\terrain\water.png" />
+    <Content Include="Common\media\terrain\wooden-bridge.png" />
+    <Content Include="Common\media\terrain\woods.png" />
+    <Content Include="Common\scripts\boxover.js" />
+    <Content Include="Common\scripts\Silverlight.js" />
+    <Content Include="Common\scripts\Silverlight.supportedUserAgent.js" />
+    <Content Include="Common\scripts\Splash.js" />
+    <Content Include="Common\scripts\Util.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\Devices\mobile.browser" />
+    <Content Include="Web.sitemap" />
+    <Content Include="Views\Shared\MasterPages\Public.Master" />
+    <Content Include="Views\Shared\MasterPages\Clean.Master" />
+    <Content Include="Views\Shared\MasterPages\PublicCommon.Master" />
+    <Content Include="Views\Shared\MasterPages\Common.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="browser-games-hub.xml" />
+    <Content Include="clientaccesspolicy.xml" />
+    <Content Include="ClientBin\Perenthia.Loader.xap" />
+    <Content Include="ClientBin\Perenthia.xap" />
+    <Content Include="Common\css\clean.css" />
+    <Content Include="Common\css\core.css" />
+    <Content Include="Common\css\game-ajax.css" />
+    <Content Include="Common\css\game.css" />
+    <Content Include="Common\css\imagePopup.css" />
+    <Content Include="Common\images\armorial\armorial1-najii-female.png" />
+    <Content Include="Common\images\armorial\armorial1-najii-male.png" />
+    <Content Include="Common\images\armorial\armorial1-norvic-female.png" />
+    <Content Include="Common\images\armorial\armorial1-norvic-male.png" />
+    <Content Include="Common\images\armorial\armorial1-peren-female.png" />
+    <Content Include="Common\images\armorial\armorial1-peren-male.png" />
+    <Content Include="Common\images\armorial\armorial1-xhin-female.png" />
+    <Content Include="Common\images\armorial\armorial1-xhin-male.png" />
+    <Content Include="Common\images\armorial\armorial2-najii-female.png" />
+    <Content Include="Common\images\armorial\armorial2-najii-male.png" />
+    <Content Include="Common\images\armorial\armorial2-norvic-female.png" />
+    <Content Include="Common\images\armorial\armorial2-norvic-male.png" />
+    <Content Include="Common\images\armorial\armorial2-peren-female.png" />
+    <Content Include="Common\images\armorial\armorial2-peren-male.png" />
+    <Content Include="Common\images\armorial\armorial2-xhin-female.png" />
+    <Content Include="Common\images\armorial\armorial2-xhin-male.png" />
+    <Content Include="Common\images\bg-box.png" />
+    <Content Include="Common\images\bg-heading.png" />
+    <Content Include="Common\images\bg-main.png" />
+    <Content Include="Common\images\bg-perenthia.png" />
+    <Content Include="Common\images\btn-blank.png" />
+    <Content Include="Common\images\button.png" />
+    <Content Include="Common\images\calendar.png" />
+    <Content Include="Common\media\ui\menu-help.png" />
+    <Content Include="Common\media\ui\menu-household.png" />
+    <Content Include="Common\media\ui\menu-inventory.png" />
+    <Content Include="Common\media\ui\menu-map.png" />
+    <Content Include="Common\media\ui\menu-quest.png" />
+    <Content Include="Common\media\ui\menu-quit.png" />
+    <Content Include="Common\media\ui\menu-spells.png" />
+    <Content Include="Common\media\ui\menu-who.png" />
+    <Content Include="Common\xaml\splash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="crossdomain.xml" />
+    <Content Include="robots.txt" />
+    <Content Include="Config\AppSettings.config" />
+    <Content Include="Config\AppSettings_Debug.config" />
+    <Content Include="Config\AppSettings_Release.config" />
+    <Content Include="Config\ConnectionStrings.config" />
+    <Content Include="Config\ConnectionStrings_Debug.config" />
+    <Content Include="Config\ConnectionStrings_Release.config" />
+    <Content Include="Config\AppSettings_Stage.config" />
+    <Content Include="Config\ConnectionStrings_Stage.config" />
+    <None Include="Properties\DataSources\Lionsguard.Security.Gamer.datasource" />
+    <None Include="Service References\Services.Security\Lionsguard.Security.xsd" />
+    <None Include="Service References\Services.Security\service.wsdl" />
+    <None Include="Service References\Services.Security\service.xsd" />
+    <None Include="Service References\Services.Security\service1.xsd" />
+    <None Include="Service References\Services.Security\configuration91.svcinfo" />
+    <None Include="Service References\Services.Security\configuration.svcinfo" />
+    <None Include="Service References\Services.Security\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Home\Mobile\PlayAjax.aspx" />
+    <Content Include="Views\Home\PlayAjax.aspx" />
+    <Content Include="Views\Media\Mobile\Screenshots.aspx" />
+    <Content Include="Views\Shared\Controls\AjaxClient.ascx" />
+    <Content Include="Views\Shared\Controls\GettingStartedContent.ascx" />
+    <Content Include="Views\Shared\Controls\HomeContent.ascx" />
+    <Content Include="Views\Shared\MasterPages\MobileClean.Master" />
+    <Content Include="Views\Shared\MasterPages\MobileCommon.Master" />
+    <Content Include="Views\Shared\MasterPages\Mobile.Master" />
+    <Content Include="Views\Armorial\Character.aspx" />
+    <Content Include="Views\Armorial\Creature.aspx" />
+    <Content Include="Views\Armorial\Household.aspx" />
+    <Content Include="Views\Armorial\Item.aspx" />
+    <Content Include="Views\Armorial\Mobile\Character.aspx" />
+    <Content Include="Views\Armorial\Mobile\Household.aspx" />
+    <Content Include="Views\Armorial\Mobile\Item.aspx" />
+    <Content Include="Views\Armorial\Mobile\Search.aspx" />
+    <Content Include="Views\Armorial\Search.aspx" />
+    <Content Include="Views\Armorial\Signatures.aspx" />
+    <Content Include="Views\Home\AuthVerify.aspx" />
+    <Content Include="Views\Home\GettingStarted.aspx" />
+    <Content Include="Views\Home\Image.aspx" />
+    <Content Include="Views\Home\Mobile\GettingStarted.aspx" />
+    <Content Include="Views\Home\Mobile\Index.aspx" />
+    <Content Include="Views\Home\Mobile\News.aspx" />
+    <Content Include="Views\Home\Mobile\Play.aspx" />
+    <Content Include="Views\Home\News.aspx" />
+    <Content Include="Views\Home\Play.aspx" />
+    <Content Include="Views\Home\SiteMap.aspx" />
+    <Content Include="Views\Kongregate\Game.aspx" />
+    <Content Include="Views\Kongregate\Index.aspx" />
+    <Content Include="Views\Lore\AttributesAndSkills.aspx" />
+    <Content Include="Views\Lore\Development.aspx" />
+    <Content Include="Views\Lore\History.aspx" />
+    <Content Include="Views\Lore\Households.aspx" />
+    <Content Include="Views\Lore\Index.aspx" />
+    <Content Include="Views\Lore\Races.aspx" />
+    <Content Include="Views\Market\Index.aspx" />
+    <Content Include="Views\Media\Index.aspx" />
+    <Content Include="Views\Media\Screenshots.aspx" />
+    <Content Include="Views\Payments\Complete.aspx" />
+    <Content Include="Views\Payments\Index.aspx" />
+    <Content Include="Views\Security\ChangePassword.aspx" />
+    <Content Include="Views\Security\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Security\Confirm.aspx" />
+    <Content Include="Views\Security\ForgotPassword.aspx" />
+    <Content Include="Views\Security\Login.aspx" />
+    <Content Include="Views\Security\SecurityAnswer.aspx" />
+    <Content Include="Views\Security\SignUp.aspx" />
+    <Content Include="Views\Shared\Controls\Footer.ascx" />
+    <Content Include="Views\Shared\Controls\MainMenu.ascx" />
+    <Content Include="Views\Shared\Controls\Meta.ascx" />
+    <Content Include="Views\Shared\Controls\MiniLogon.ascx" />
+    <Content Include="Views\Shared\Controls\Script.ascx" />
+    <Content Include="Views\Shared\Controls\SearchPanel.ascx" />
+    <Content Include="Views\Shared\Mobile\Error.aspx" />
+    <Content Include="Views\Shared\Mobile\NotFound.aspx" />
+    <Content Include="Views\Shared\NotFound.aspx" />
+    <Content Include="Views\Support\Faq.aspx" />
+    <Content Include="Views\Support\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\corp\src\Lionsguard\Lionsguard.csproj">
+      <Project>{F0DACB3D-6392-48DD-8108-6A1AB5284E59}</Project>
+      <Name>Lionsguard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\lib\src\MvcSiteMap.Core\MvcSiteMap.Core.csproj">
+      <Project>{B23AEE59-E95A-413B-AFDA-3A188FCEFE35}</Project>
+      <Name>MvcSiteMap.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radiance.Contract\Radiance.Contract.csproj">
+      <Project>{00CEB77B-F8E9-4F09-81FE-5942759A1E42}</Project>
+      <Name>Radiance.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Services.Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\media\households\" />
+    <Folder Include="Common\media\ranks\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>82</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)config.bat $(ConfigurationName) $(ProjectDir)Config $(ProjectDir)Config</PostBuildEvent>
+  </PropertyGroup>
+</Project>

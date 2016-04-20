@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.IncreaseIsoQuotaDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource DialogFillBrush}">
+        <Border Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" BorderBrush="{StaticResource BorderBrush}" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4"/>
+        <Button x:Name="btnIncrease" Content="Increase" Foreground="{StaticResource HeadingBrush}" Cursor="Hand" Height="24" HorizontalAlignment="Left" Margin="113,0,0,8" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="85"/>
+        <Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click" Foreground="{StaticResource HeadingBrush}" Cursor="Hand" Height="24" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Margin="0,0,112.5,8" Width="85" HorizontalAlignment="Right"/>
+        <TextBlock Margin="8,8,8,36" FontFamily="Trebuchet MS" Foreground="{StaticResource TextAltBrush}" TextWrapping="Wrap" FontSize="12"><Run Text="In order to increase the performance of Perenthia some of the game world object information can be stored on your local computer. This will make future sessions faster and initial load times shorter. "/><LineBreak/><Run Text=""/><LineBreak/><Run Text="The Silverlight plug-in required to play Perenthia is limited to 1 MB of space. Perenthia would like that space to be increased to 25 MB in order to store information such as maps, items, etc. If you would like Perenthia to store this information on your local hard drive click on the “Increase” button. If you do not want this information stored click on the “Cancel” button. If you choose not to store information locally but change your mind down the road you can enable local storage by clicking on the checkbox at the top right of the Character Selection screen."/><LineBreak/><Run Text=""/><LineBreak/><Run Text="If you click the “Increase” button the Silverlight plug-in will confirm the increase in space. This is a security feature of Silverlight to prevent automatic increases."/></TextBlock>
+    </Grid>
+</UserControl>

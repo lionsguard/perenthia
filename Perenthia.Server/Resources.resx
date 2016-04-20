@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionCanNotPerform" xml:space="preserve">
+    <value>You can not perform this action on {0}.</value>
+  </data>
+  <data name="ActionInvalidSlot" xml:space="preserve">
+    <value>Invalid Action Slot '{0}'.</value>
+  </data>
+  <data name="ActionReset" xml:space="preserve">
+    <value>Action {0} reset.</value>
+  </data>
+  <data name="ActionSet" xml:space="preserve">
+    <value>Action {0} set to {1}.</value>
+  </data>
+  <data name="ActorNotCreated" xml:space="preserve">
+    <value>Actor was not created.</value>
+  </data>
+  <data name="ActorNotFound" xml:space="preserve">
+    <value>An object with an ID/Alias of '{0}' could not be located.</value>
+  </data>
+  <data name="ActorNotSaved" xml:space="preserve">
+    <value>Actor was not saved.</value>
+  </data>
+  <data name="AdminActorSaved" xml:space="preserve">
+    <value>ACTOR SAVED</value>
+  </data>
+  <data name="AdminEnterBuildMode" xml:space="preserve">
+    <value>ENTERING ADMIN BUILD MODE</value>
+  </data>
+  <data name="CanNotAfford" xml:space="preserve">
+    <value>You can not afford {0}.</value>
+  </data>
+  <data name="CanNotDrop" xml:space="preserve">
+    <value>You can not drop that here.</value>
+  </data>
+  <data name="CanNotGet" xml:space="preserve">
+    <value>You can not get {0}.</value>
+  </data>
+  <data name="CanNotPurchaseInventoryFull" xml:space="preserve">
+    <value>You can not purchase this item because your inventory is full.</value>
+  </data>
+  <data name="CanNotSpeakToDead" xml:space="preserve">
+    <value>You need to use a different skill in order to speak to the dead.</value>
+  </data>
+  <data name="CanNotTargetNotInPlace" xml:space="preserve">
+    <value>You can not target something that is not within the same room as you.</value>
+  </data>
+  <data name="CanNotViewNpcGoodsNotInPlace" xml:space="preserve">
+    <value>You can not view the goods of an NPC unless they are present within the same room as you.</value>
+  </data>
+  <data name="CanNotViewTargetInventory" xml:space="preserve">
+    <value>You can not view the inventory of {0}.</value>
+  </data>
+  <data name="CastFailed" xml:space="preserve">
+    <value>Cast failed.</value>
+  </data>
+  <data name="CmdSyntax" xml:space="preserve">
+    <value>The '{0}' command requires the following structure or syntax: {1}</value>
+  </data>
+  <data name="ContainerFull" xml:space="preserve">
+    <value>The specified container '{0}' is full.</value>
+  </data>
+  <data name="CraftFailed" xml:space="preserve">
+    <value>Your attempt to create {0} has failed.</value>
+  </data>
+  <data name="CraftIngredientRequired" xml:space="preserve">
+    <value>{0} required to craft {1}.</value>
+  </data>
+  <data name="CraftNoSpaceLeft" xml:space="preserve">
+    <value>You do not have any space to place {0}.</value>
+  </data>
+  <data name="CraftNotRequiredSkillLevel" xml:space="preserve">
+    <value>A skill level of {0} is required in {1} in order to craft {2}.</value>
+  </data>
+  <data name="CraftSuccess" xml:space="preserve">
+    <value>You have successfully created {0}.</value>
+  </data>
+  <data name="CurrencyGained" xml:space="preserve">
+    <value>You receive {0}.</value>
+  </data>
+  <data name="EmblemGained" xml:space="preserve">
+    <value>You receive {0} Emblem.</value>
+  </data>
+  <data name="Emote" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="EmoteCry" xml:space="preserve">
+    <value>{0} begins to cry...</value>
+  </data>
+  <data name="EmoteCrySelf" xml:space="preserve">
+    <value>Tears begin streaming down your face...</value>
+  </data>
+  <data name="EmoteDance" xml:space="preserve">
+    <value>{0} begins to dance around!</value>
+  </data>
+  <data name="EmoteDanceSelf" xml:space="preserve">
+    <value>You begin to dance!</value>
+  </data>
+  <data name="EmoteGrin" xml:space="preserve">
+    <value>{0} grins :)</value>
+  </data>
+  <data name="EmoteGrinSelf" xml:space="preserve">
+    <value>You grin :)</value>
+  </data>
+  <data name="EmoteLaugh" xml:space="preserve">
+    <value>{0} laughs out loud!</value>
+  </data>
+  <data name="EmoteLaughSelf" xml:space="preserve">
+    <value>You laugh out loud!</value>
+  </data>
+  <data name="EmoteSelf" xml:space="preserve">
+    <value>You {0}</value>
+  </data>
+  <data name="EmoteWave" xml:space="preserve">
+    <value>{0} waves.</value>
+  </data>
+  <data name="EmoteWaveByTarget" xml:space="preserve">
+    <value>{0} waves at you.</value>
+  </data>
+  <data name="EmoteWaveSelf" xml:space="preserve">
+    <value>You wave.</value>
+  </data>
+  <data name="EmoteWaveTarget" xml:space="preserve">
+    <value>You wave at {0}.</value>
+  </data>
+  <data name="ExperienceGained" xml:space="preserve">
+    <value>You have gained {0} experience.</value>
+  </data>
+  <data name="ExperienceLost" xml:space="preserve">
+    <value>You have lost {0} experience.</value>
+  </data>
+  <data name="GaveItem" xml:space="preserve">
+    <value>You gave {0} to {1}.</value>
+  </data>
+  <data name="GiveWho" xml:space="preserve">
+    <value>Who are you trying to give this item to?</value>
+  </data>
+  <data name="GotItem" xml:space="preserve">
+    <value>You retrieved {0}.</value>
+  </data>
+  <data name="HealthGained" xml:space="preserve">
+    <value>Your health has increased by {0}.</value>
+  </data>
+  <data name="HealthLost" xml:space="preserve">
+    <value>Your health has decreased by {0}.</value>
+  </data>
+  <data name="ImgAvatar" xml:space="preserve">
+    <value>avatar-{0}-{1}.png</value>
+  </data>
+  <data name="ImgItem" xml:space="preserve">
+    <value>item-{0}-{1}.png</value>
+  </data>
+  <data name="ImgOrder" xml:space="preserve">
+    <value>order-{0}-128.png</value>
+  </data>
+  <data name="InventoryFull" xml:space="preserve">
+    <value>Your inventory is full!</value>
+  </data>
+  <data name="InventoryNotEnoughSpace" xml:space="preserve">
+    <value>You do not have enough space in your inventory for the requested items.</value>
+  </data>
+  <data name="ItemAdded" xml:space="preserve">
+    <value>{0} was added to your inventory.</value>
+  </data>
+  <data name="ItemAlreadyEquipped" xml:space="preserve">
+    <value>Item {0} is already equipped.</value>
+  </data>
+  <data name="ItemCanNotBeUsed" xml:space="preserve">
+    <value>{0} can not be used.</value>
+  </data>
+  <data name="ItemCanNotEquip" xml:space="preserve">
+    <value>You can not equip {0}.</value>
+  </data>
+  <data name="ItemCanNotEquipNoContainer" xml:space="preserve">
+    <value>That item can not be unequipped because you do not currently have a container such as backpack or bag equipped.</value>
+  </data>
+  <data name="ItemCanNotEquipNotInInventory" xml:space="preserve">
+    <value>That item can not be equipped because it was not found in your inventory.</value>
+  </data>
+  <data name="ItemCanNotEquipNoUnequip" xml:space="preserve">
+    <value>You can not equip {0}, so it stands to reason that you would not be able to un-equip it. :)</value>
+  </data>
+  <data name="ItemCanNotPurchase" xml:space="preserve">
+    <value>You can not purchase {0}.</value>
+  </data>
+  <data name="ItemCanNotSell" xml:space="preserve">
+    <value>You can not sell {0} to {1}.</value>
+  </data>
+  <data name="ItemCanNotUnequipNotInEquipment" xml:space="preserve">
+    <value>That item can not be unequipped because it was not found in your equipment.</value>
+  </data>
+  <data name="ItemCreated" xml:space="preserve">
+    <value>You create {0}.</value>
+  </data>
+  <data name="ItemDropped" xml:space="preserve">
+    <value>You drop {0}.</value>
+  </data>
+  <data name="ItemEquipped" xml:space="preserve">
+    <value>You have equipped {0}.</value>
+  </data>
+  <data name="ItemGained" xml:space="preserve">
+    <value>You receive {0}.</value>
+  </data>
+  <data name="ItemHealthGained" xml:space="preserve">
+    <value>{0} has increased your health.</value>
+  </data>
+  <data name="ItemHealthLost" xml:space="preserve">
+    <value>{0} has caused a negative affect to your health!</value>
+  </data>
+  <data name="ItemNoAffect" xml:space="preserve">
+    <value>{0} has no affect on you.</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>Item '{0}' could not be located.</value>
+  </data>
+  <data name="ItemPurchased" xml:space="preserve">
+    <value>You purchased {0}.</value>
+  </data>
+  <data name="ItemRemoved" xml:space="preserve">
+    <value>{0} has been removed from your inventory.</value>
+  </data>
+  <data name="ItemSkillLevelRequiredNotMet" xml:space="preserve">
+    <value>You do not have the skill level required to equip {0}; raise your skill in '{1}' to at least '{2}'.</value>
+  </data>
+  <data name="ItemsMustBeSoldToNPCs" xml:space="preserve">
+    <value>Items can only be sold to merchant Non-Player Characters (NPCs).</value>
+  </data>
+  <data name="ItemSold" xml:space="preserve">
+    <value>You sold {0}.</value>
+  </data>
+  <data name="ItemUnequipped" xml:space="preserve">
+    <value>You have unequipped {0}.</value>
+  </data>
+  <data name="ItemWillpowerGained" xml:space="preserve">
+    <value>{0} has increased your willpower.</value>
+  </data>
+  <data name="LevelGained" xml:space="preserve">
+    <value>You have advanced to level {0}!</value>
+  </data>
+  <data name="MsgChat" xml:space="preserve">
+    <value>{0} says: {1}</value>
+  </data>
+  <data name="MsgShout" xml:space="preserve">
+    <value>{0} shouts: {1}</value>
+  </data>
+  <data name="MsgTell" xml:space="preserve">
+    <value>{0} tells you: {1}</value>
+  </data>
+  <data name="NameAvailable" xml:space="preserve">
+    <value>The name '{0}' is available!</value>
+  </data>
+  <data name="NameUnavailable" xml:space="preserve">
+    <value>The name '{0}' is unavailable for the following reason: {1}</value>
+  </data>
+  <data name="NotEnoughEmblem" xml:space="preserve">
+    <value>You do not have enough Emblem to purchase this item. Current Emblem: {0}, Item Cost: {1}.</value>
+  </data>
+  <data name="PlaceAvatarEnters" xml:space="preserve">
+    <value>{0} enters from the {1}.</value>
+  </data>
+  <data name="PlaceAvatarExits" xml:space="preserve">
+    <value>{0} exits to the {1}.</value>
+  </data>
+  <data name="PlaceDiscovered" xml:space="preserve">
+    <value>You have discovered {0}.</value>
+  </data>
+  <data name="PlaceDiscoveryExperienceGained" xml:space="preserve">
+    <value>You have gained {0} experience for your discovery.</value>
+  </data>
+  <data name="PlayerDead" xml:space="preserve">
+    <value>You are dead.</value>
+  </data>
+  <data name="PlayerNotFound" xml:space="preserve">
+    <value>Player record not found.</value>
+  </data>
+  <data name="PlayerUnconscious" xml:space="preserve">
+    <value>You are unconscious.</value>
+  </data>
+  <data name="QuestAddedToLog" xml:space="preserve">
+    <value>The quest '{0}' has been added to your quest log.</value>
+  </data>
+  <data name="QuestAlreadyComplete" xml:space="preserve">
+    <value>You have already completed this quest.</value>
+  </data>
+  <data name="QuestCompleteLogUpdated" xml:space="preserve">
+    <value>You have completed the '{0}' quest. Your quest log has been updated.</value>
+  </data>
+  <data name="QuestNotFound" xml:space="preserve">
+    <value>A quest with the ID or Alias of '{0}' could not be found.</value>
+  </data>
+  <data name="QuestNotInPlace" xml:space="preserve">
+    <value>You need to be in the same place as the quest giver.</value>
+  </data>
+  <data name="QuestNotStarted" xml:space="preserve">
+    <value>You have not started this quest yet.</value>
+  </data>
+  <data name="QuestParentRequired" xml:space="preserve">
+    <value>You can not undertake this quest until you complete '{0}'.</value>
+  </data>
+  <data name="SkillGained" xml:space="preserve">
+    <value>Your skill in {0} has been increased to {1}.</value>
+  </data>
+  <data name="SpellDamagedByTarget" xml:space="preserve">
+    <value>You were hit for {0} damage by a spell from {1}!</value>
+  </data>
+  <data name="SpellDamagedTarget" xml:space="preserve">
+    <value>Your spell hit {0} for {1} damage!</value>
+  </data>
+  <data name="SpellDestroyedTraget" xml:space="preserve">
+    <value>Your spell has destroyed {0}.</value>
+  </data>
+  <data name="SpellEnchanted" xml:space="preserve">
+    <value>You have enchanted {0}.</value>
+  </data>
+  <data name="SpellHealthGained" xml:space="preserve">
+    <value>Your spell has restored {0} health.</value>
+  </data>
+  <data name="SpellHealthGainedByTarget" xml:space="preserve">
+    <value>You have had {0} health restored by a spell from {1}.</value>
+  </data>
+  <data name="SpellHealthGainedTarget" xml:space="preserve">
+    <value>Your spell has restored {0} health to {1}.</value>
+  </data>
+  <data name="SpellKilledByTarget" xml:space="preserve">
+    <value>You were killed by a spell from {0}.</value>
+  </data>
+  <data name="SpellKilledTarget" xml:space="preserve">
+    <value>Your spell has killed {0}.</value>
+  </data>
+  <data name="SpellProtectionGained" xml:space="preserve">
+    <value>Your spell has increased your protection by {0}.</value>
+  </data>
+  <data name="SpellProtectionGainedByTarget" xml:space="preserve">
+    <value>Your protection was increased {0} points by {1}.</value>
+  </data>
+  <data name="SpellProtectionGainedTarget" xml:space="preserve">
+    <value>Your spell has increased the protection of {0} by {1}.</value>
+  </data>
+  <data name="SpellStatGained" xml:space="preserve">
+    <value>Your spell has increased your {0} by {1}.</value>
+  </data>
+  <data name="SpellStatGainedByTarget" xml:space="preserve">
+    <value>A spell from {0} has increased your {0} by {1}.</value>
+  </data>
+  <data name="SpellStatGainedTarget" xml:space="preserve">
+    <value>Your spell has increased the {0} of {1} by {2}.</value>
+  </data>
+  <data name="SpellTransported" xml:space="preserve">
+    <value>You have been transported to {0}.</value>
+  </data>
+  <data name="SpellTransportedByTarget" xml:space="preserve">
+    <value>You have been transported to {0}.</value>
+  </data>
+  <data name="SpellTransportedTarget" xml:space="preserve">
+    <value>You transported {0} to {1}.</value>
+  </data>
+  <data name="SpellUnconsciousByTarget" xml:space="preserve">
+    <value>You have been rendered unconscious by a spell from {0}.</value>
+  </data>
+  <data name="SpellUnconsciousTarget" xml:space="preserve">
+    <value>Your spell has rendered {0} unconscious.</value>
+  </data>
+  <data name="SpellWillpowerGained" xml:space="preserve">
+    <value>Your spell has restored {0} willpower.</value>
+  </data>
+  <data name="SpellWillpowerGainedByTarget" xml:space="preserve">
+    <value>You have had your willpower restored {0} points by {1}.</value>
+  </data>
+  <data name="SpellWillpowerGainedTarget" xml:space="preserve">
+    <value>Your spell has restored {0} willpower for {1}.</value>
+  </data>
+  <data name="TargetDead" xml:space="preserve">
+    <value>Your target is already dead.</value>
+  </data>
+  <data name="TargetEngaged" xml:space="preserve">
+    <value>{0} is already engaged with another player.</value>
+  </data>
+  <data name="TargetNotFound" xml:space="preserve">
+    <value>Could not locate the target specified as '{0}'.</value>
+  </data>
+  <data name="TargetNotOnline" xml:space="preserve">
+    <value>{0} does not seem to be online.</value>
+  </data>
+  <data name="TargetSet" xml:space="preserve">
+    <value>Target set to {0}.</value>
+  </data>
+  <data name="TargetUnconscious" xml:space="preserve">
+    <value>Your target is unconscious.</value>
+  </data>
+  <data name="WhoFormat" xml:space="preserve">
+    <value>{0} (Level {1} {2} {3})</value>
+  </data>
+  <data name="WillpowerGained" xml:space="preserve">
+    <value>Your willpower has increased by {0}.</value>
+  </data>
+  <data name="WillpowerLost" xml:space="preserve">
+    <value>Your willpower has decreased by {0}.</value>
+  </data>
+  <data name="EmoteSing" xml:space="preserve">
+    <value>{0} begins to sing.</value>
+  </data>
+  <data name="EmoteSingSelf" xml:space="preserve">
+    <value>You begin to sing.</value>
+  </data>
+  <data name="EmoteSmile" xml:space="preserve">
+    <value>{0} smiles.</value>
+  </data>
+  <data name="EmoteSmileSelf" xml:space="preserve">
+    <value>You smile.</value>
+  </data>
+  <data name="EmoteWink" xml:space="preserve">
+    <value>{0} winks.</value>
+  </data>
+  <data name="EmoteWinkSelf" xml:space="preserve">
+    <value>You wink.</value>
+  </data>
+  <data name="EmoteWinkByTarget" xml:space="preserve">
+    <value>{0} winks at you.</value>
+  </data>
+  <data name="EmoteWinkTarget" xml:space="preserve">
+    <value>You wink at {0}.</value>
+  </data>
+  <data name="GameOffline" xml:space="preserve">
+    <value>Perenthia is currently offline.</value>
+  </data>
+  <data name="CanNotAttackSelf" xml:space="preserve">
+    <value>You are currently targeting yourself, choose another target to attack.</value>
+  </data>
+  <data name="CanNotEquipMoreBags" xml:space="preserve">
+    <value>You can not equip {0}, you do not have enough container slots open to equip it.</value>
+  </data>
+  <data name="CanNotUnequipBag" xml:space="preserve">
+    <value>{0} is full and can not be unequipped. Remove the contents before attempting to unequip.</value>
+  </data>
+  <data name="PutItem" xml:space="preserve">
+    <value>You put {0} into {1}.</value>
+  </data>
+  <data name="CanNotUseWhileStunned" xml:space="preserve">
+    <value>You can not use {0} while stunned.</value>
+  </data>
+  <data name="CanNotUseWhileFrozen" xml:space="preserve">
+    <value>You can use {0} while frozen!</value>
+  </data>
+  <data name="PlayerKilled" xml:space="preserve">
+    <value>You were killed by {0}.</value>
+  </data>
+  <data name="PlayerLevelGained" xml:space="preserve">
+    <value>{0} has advanced to level {1}!</value>
+  </data>
+  <data name="AwardGained" xml:space="preserve">
+    <value>Your actions have earned you the {0}!</value>
+  </data>
+  <data name="QuestDoesNotHaveRequiredSkill" xml:space="preserve">
+    <value>You do not have sufficient skill in {0} to undertake this quest.</value>
+  </data>
+  <data name="LoginInvalid" xml:space="preserve">
+    <value>Invalid login credentials supplied.</value>
+  </data>
+</root>

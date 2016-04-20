@@ -1,0 +1,127 @@
+﻿<controls:FloatableWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=FloatableWindow"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="Perenthia.Windows.CombatWindow"
+           Width="592" Height="376" 
+           Title="Combat!" mc:Ignorable="d">
+	<controls:FloatableWindow.Resources>
+		<ItemsPanelTemplate x:Key="CombatantsLayoutStyle">
+			<StackPanel Orientation="Horizontal"/>
+		</ItemsPanelTemplate>
+		<Style x:Key="CombatantsItemStyle" TargetType="ListBoxItem">
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="VerticalContentAlignment" Value="Top"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="TabNavigation" Value="Local"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ListBoxItem">
+						<Grid Background="{TemplateBinding Background}" Margin="0" d:DesignHeight="136" d:DesignWidth="110" Width="100">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetName="fillColor" Storyboard.TargetProperty="Opacity">
+												<SplineDoubleKeyFrame KeyTime="0" Value=".35"/>
+											</DoubleAnimationUsingKeyFrames>
+											<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="fillColor" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+												<EasingColorKeyFrame KeyTime="00:00:00" Value="{StaticResource PositiveColor}"/>
+											</ColorAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="SelectionStates">
+									<VisualState x:Name="Unselected"/>
+									<VisualState x:Name="Selected">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetName="fillColor2" Storyboard.TargetProperty="Opacity">
+												<SplineDoubleKeyFrame KeyTime="0" Value=".75"/>
+											</DoubleAnimationUsingKeyFrames>
+											<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="fillColor2" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+												<EasingColorKeyFrame KeyTime="00:00:00" Value="{StaticResource PositiveColor}"/>
+											</ColorAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused"/>
+									<VisualState x:Name="Unfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="fillColor" Fill="#FFBADDE9" RadiusX="1" RadiusY="1" IsHitTestVisible="False" Opacity="0"/>
+							<Rectangle x:Name="fillColor2" Fill="#FFBADDE9" RadiusX="1" RadiusY="1" IsHitTestVisible="False" Opacity="0"/>
+							<Rectangle x:Name="FocusVisualElement" Stroke="{x:Null}" StrokeThickness="1" RadiusX="1" RadiusY="1" Visibility="Collapsed"/>
+							<StackPanel Margin="0" DataContext="{TemplateBinding Content}">
+								<TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" TextWrapping="Wrap">
+									<TextBlock.Foreground>
+										<SolidColorBrush Color="{StaticResource TextColor}"/>
+									</TextBlock.Foreground>
+								</TextBlock>
+								<Border Height="72" HorizontalAlignment="Center" Margin="0,8,0,0" VerticalAlignment="Top" Width="72" BorderThickness="1" CornerRadius="1">
+									<Border.BorderBrush>
+										<SolidColorBrush Color="{StaticResource BorderColor}"/>
+									</Border.BorderBrush>
+									<Image Source="{Binding ImageSource, Mode=OneWay}"/>
+								</Border>
+								<Grid Height="10" Margin="0,2,0,0" HorizontalAlignment="Center" Width="80">
+									<ProgressBar Height="10" Margin="0" Style="{StaticResource StatBarStyle}" VerticalAlignment="Top" Foreground="{StaticResource HealthBrush}" Maximum="{Binding BodyMax, Mode=OneWay}" Value="{Binding Body, Mode=OneWay}"/>
+									<TextBlock Margin="0" VerticalAlignment="Top" FontSize="8" Text="{Binding BodyValueMax, Mode=OneWay}" TextAlignment="Center" TextWrapping="Wrap" d:LayoutOverrides="Width">
+										<TextBlock.Foreground>
+											<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+										</TextBlock.Foreground>
+									</TextBlock>
+								</Grid>
+								<Grid Height="10" Margin="0,2,0,0" Width="80" HorizontalAlignment="Center">
+									<ProgressBar Height="10" Margin="0" Style="{StaticResource StatBarStyle}" VerticalAlignment="Top" Foreground="{StaticResource WillpowerBrush}" Maximum="{Binding MindMax, Mode=OneWay}" Value="{Binding Mind, Mode=OneWay}"/>
+									<TextBlock Margin="0" VerticalAlignment="Top" FontSize="8" Text="{Binding MindValueMax, Mode=OneWay}" TextAlignment="Center" TextWrapping="Wrap" d:LayoutOverrides="Width">
+										<TextBlock.Foreground>
+											<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+										</TextBlock.Foreground>
+									</TextBlock>
+								</Grid>
+							</StackPanel>
+							<Ellipse Margin="0,48,0,80" Width="32" Height="32" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+								<Ellipse.Fill>
+									<SolidColorBrush Color="{StaticResource WindowBackgroundColor}"/>
+								</Ellipse.Fill>
+								<Ellipse.Stroke>
+									<SolidColorBrush Color="{StaticResource LabelAltColor}"/>
+								</Ellipse.Stroke>
+							</Ellipse>
+							<TextBlock Margin="4,50,0,0" VerticalAlignment="Top" Text="1" TextWrapping="Wrap" HorizontalAlignment="Left" TextAlignment="Center" FontSize="13.333" Width="23">
+								<TextBlock.Foreground>
+									<SolidColorBrush Color="{StaticResource TextColor}"/>
+								</TextBlock.Foreground>
+							</TextBlock>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</controls:FloatableWindow.Resources>
+	<controls:FloatableWindow.Style>
+		<StaticResource ResourceKey="FloatableWindowStyle"/>
+	</controls:FloatableWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0.5*"/>
+    		<RowDefinition Height="0.5*"/>
+    	</Grid.RowDefinitions>
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.6" FontSize="16" FontWeight="Bold" Text="ENEMIES" TextWrapping="Wrap">
+    		<TextBlock.Foreground>
+    			<SolidColorBrush Color="{StaticResource NegativeColor}"/>
+    		</TextBlock.Foreground>
+    	</TextBlock>
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" Opacity="0.6" FontSize="16" Text="ALLIES" TextWrapping="Wrap" Grid.Row="1" FontWeight="Bold">
+    		<TextBlock.Foreground>
+    			<SolidColorBrush Color="{StaticResource PositiveColor}"/>
+    		</TextBlock.Foreground>
+    	</TextBlock>
+    	<ListBox Margin="12,27,12,8" Style="{StaticResource ListBoxStyle}" ItemsPanel="{StaticResource CombatantsLayoutStyle}" ItemContainerStyle="{StaticResource CombatantsItemStyle}"/>
+    </Grid>
+</controls:FloatableWindow>

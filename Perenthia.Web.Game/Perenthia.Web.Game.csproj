@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{945C23CD-6F8A-44D7-8055-31A602580170}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Perenthia.Web</RootNamespace>
+    <AssemblyName>Perenthia.Web.Game</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplicationList>{DA271ECB-0EA0-46C5-B3F8-F7238DB5F5CD}|..\Perenthia\Perenthia.csproj|ClientBin|False,{33FC0EB2-1FD6-440C-841B-F91BE14222BD}|..\Perenthia.Loader\Perenthia.Loader.csproj|ClientBin|False</SilverlightApplicationList>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.PollingDuplex, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Silverlight\v3.0\Libraries\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clientaccesspolicy.xml" />
+    <Content Include="ClientBin\Perenthia.Loader.xap" />
+    <Content Include="ClientBin\Perenthia.xap" />
+    <Content Include="common\media\avatar-blank.png" />
+    <Content Include="common\media\avatar-najii-female.png" />
+    <Content Include="common\media\avatar-najii-male.png" />
+    <Content Include="common\media\avatar-norvic-female.png" />
+    <Content Include="common\media\avatar-norvic-male.png" />
+    <Content Include="common\media\avatar-peren-female.png" />
+    <Content Include="common\media\avatar-peren-male.png" />
+    <Content Include="common\media\avatar-xhin-female.png" />
+    <Content Include="common\media\avatar-xhin-male.png" />
+    <Content Include="common\media\copper.png" />
+    <Content Include="common\media\creature-blank.png" />
+    <Content Include="common\media\creature-creeper.png" />
+    <Content Include="common\media\creature-kobold.png" />
+    <Content Include="common\media\creature-rat.png" />
+    <Content Include="common\media\creature-skeleton.png" />
+    <Content Include="common\media\emblem.png" />
+    <Content Include="common\media\emblem16X16.png" />
+    <Content Include="common\media\gold.png" />
+    <Content Include="common\media\item-air-damage.png" />
+    <Content Include="common\media\item-air-shield.png" />
+    <Content Include="common\media\item-bone.png" />
+    <Content Include="common\media\item-claw.png" />
+    <Content Include="common\media\item-clothing-dress.png" />
+    <Content Include="common\media\item-clothing-pants.png" />
+    <Content Include="common\media\item-clothing-robe.png" />
+    <Content Include="common\media\item-clothing-shirt.png" />
+    <Content Include="common\media\item-container-backpack.png" />
+    <Content Include="common\media\item-container-bag.png" />
+    <Content Include="common\media\item-container-box.png" />
+    <Content Include="common\media\item-container-chest.png" />
+    <Content Include="common\media\item-container-pouch.png" />
+    <Content Include="common\media\item-copper-ore.png" />
+    <Content Include="common\media\item-earth-damage.png" />
+    <Content Include="common\media\item-earth-shield.png" />
+    <Content Include="common\media\item-fire-damage.png" />
+    <Content Include="common\media\item-fire-shield.png" />
+    <Content Include="common\media\item-food-ale.png" />
+    <Content Include="common\media\item-food-bread.png" />
+    <Content Include="common\media\item-food-cheese.png" />
+    <Content Include="common\media\item-food-pie.png" />
+    <Content Include="common\media\item-food-water.png" />
+    <Content Include="common\media\item-food-wine.png" />
+    <Content Include="common\media\item-fur.png" />
+    <Content Include="common\media\item-gold-ore.png" />
+    <Content Include="common\media\item-gold-ring.png" />
+    <Content Include="common\media\item-iron-ore.png" />
+    <Content Include="common\media\item-key.png" />
+    <Content Include="common\media\item-kobold-insignia.png" />
+    <Content Include="common\media\item-leather-boots.png" />
+    <Content Include="common\media\item-leather-cap.png" />
+    <Content Include="common\media\item-leather-gloves.png" />
+    <Content Include="common\media\item-leather-jerkin.png" />
+    <Content Include="common\media\item-leather-pants.png" />
+    <Content Include="common\media\item-leather-shirt.png" />
+    <Content Include="common\media\item-leather-shoes.png" />
+    <Content Include="common\media\item-light-candle.png" />
+    <Content Include="common\media\item-light-torch.png" />
+    <Content Include="common\media\item-linen-gloves.png" />
+    <Content Include="common\media\item-mandible.png" />
+    <Content Include="common\media\item-padded-cap.png" />
+    <Content Include="common\media\item-padded-pants.png" />
+    <Content Include="common\media\item-padded-shirt.png" />
+    <Content Include="common\media\item-pearl.png" />
+    <Content Include="common\media\item-pendant.png" />
+    <Content Include="common\media\item-potion-heal.png" />
+    <Content Include="common\media\item-potion-poison.png" />
+    <Content Include="common\media\item-potion-willpower.png" />
+    <Content Include="common\media\item-rat-tail.png" />
+    <Content Include="common\media\item-ring.png" />
+    <Content Include="common\media\item-rotting-flesh.png" />
+    <Content Include="common\media\item-shield-buckler.png" />
+    <Content Include="common\media\item-shield-heater.png" />
+    <Content Include="common\media\item-shield-round.png" />
+    <Content Include="common\media\item-shield-tower.png" />
+    <Content Include="common\media\item-silver-ring.png" />
+    <Content Include="common\media\item-spell-comboattack.png" />
+    <Content Include="common\media\item-spell-createbread.png" />
+    <Content Include="common\media\item-spell-createwater.png" />
+    <Content Include="common\media\item-spell-damage.png" />
+    <Content Include="common\media\item-spell-dexterity.png" />
+    <Content Include="common\media\item-spell-heal.png" />
+    <Content Include="common\media\item-spell-protection.png" />
+    <Content Include="common\media\item-spell-sight.png" />
+    <Content Include="common\media\item-spell-stamina.png" />
+    <Content Include="common\media\item-spell-strength.png" />
+    <Content Include="common\media\item-spirit-essence.png" />
+    <Content Include="common\media\item-studded-cap.png" />
+    <Content Include="common\media\item-studded-gloves.png" />
+    <Content Include="common\media\item-studded-guantlets.png" />
+    <Content Include="common\media\item-studded-jerkin.png" />
+    <Content Include="common\media\item-studded-pants.png" />
+    <Content Include="common\media\item-train-skill.png" />
+    <Content Include="common\media\item-transport-coach.png" />
+    <Content Include="common\media\item-water-damage.png" />
+    <Content Include="common\media\item-water-shield.png" />
+    <Content Include="common\media\item-weapon-axe.png" />
+    <Content Include="common\media\item-weapon-bow.png" />
+    <Content Include="common\media\item-weapon-club.png" />
+    <Content Include="common\media\item-weapon-dagger.png" />
+    <Content Include="common\media\item-weapon-fists.png" />
+    <Content Include="common\media\item-weapon-mace.png" />
+    <Content Include="common\media\item-weapon-staff.png" />
+    <Content Include="common\media\item-weapon-sword.png" />
+    <Content Include="common\media\Map.png" />
+    <Content Include="common\media\silver.png" />
+    <Content Include="common\scripts\Silverlight.js" />
+    <Content Include="common\scripts\Silverlight.supportedUserAgent.js" />
+    <Content Include="common\scripts\Splash.js" />
+    <Content Include="crossdomain.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\HttpGameService.ashx.cs">
+      <DependentUpon>HttpGameService.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ServiceHostFactories.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common\media\Thumbs.db" />
+    <None Include="common\media\vssver2.scc" />
+    <Content Include="Config\ConnectionStrings_Stage.config" />
+    <Content Include="Config\AppSettings_Stage.config" />
+    <Content Include="Services\HttpGameService.ashx" />
+    <Content Include="Config\AppSettings.config" />
+    <Content Include="Config\AppSettings_Debug.config" />
+    <Content Include="Config\AppSettings_Release.config" />
+    <Content Include="Config\ConnectionStrings.config" />
+    <Content Include="Config\ConnectionStrings_Debug.config" />
+    <Content Include="Config\ConnectionStrings_Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common\css\Default.css" />
+    <Content Include="common\images\logo.png" />
+    <Content Include="common\xaml\splash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Services\AjaxGameService.svc" />
+    <Content Include="Services\ArmorialService.svc" />
+    <Content Include="Services\DepotService.svc" />
+    <Content Include="Services\GameService.svc" />
+    <Content Include="_app_offline.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\corp\src\Lionsguard\Lionsguard.csproj">
+      <Project>{F0DACB3D-6392-48DD-8108-6A1AB5284E59}</Project>
+      <Name>Lionsguard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\lib\src\PollingDuplex.Scalable\Microsoft.ServiceModel.PollingDuplex.Scalable\Microsoft.ServiceModel.PollingDuplex.Scalable.csproj">
+      <Project>{3DF8047D-000F-45F3-8B6C-87F3812F9EEB}</Project>
+      <Name>Microsoft.ServiceModel.PollingDuplex.Scalable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lionsguard.Logging\Lionsguard.Logging.csproj">
+      <Project>{19755449-881B-474A-AE88-DF8C2A5575F7}</Project>
+      <Name>Lionsguard.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perenthia.Server\Perenthia.Server.csproj">
+      <Project>{F0DE2E8C-B528-45E8-9C34-6BEDA7B7FFE7}</Project>
+      <Name>Perenthia.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radiance.Contract\Radiance.Contract.csproj">
+      <Project>{00CEB77B-F8E9-4F09-81FE-5942759A1E42}</Project>
+      <Name>Radiance.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radiance\Radiance.csproj">
+      <Project>{8AD9C1E8-47C9-44DA-9552-EF48A558A0EF}</Project>
+      <Name>Radiance</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>81</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)config.bat $(ConfigurationName) $(ProjectDir)Config $(ProjectDir)Config</PostBuildEvent>
+  </PropertyGroup>
+</Project>

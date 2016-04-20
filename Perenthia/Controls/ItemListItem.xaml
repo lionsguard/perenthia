@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Perenthia.Controls.ItemListItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="240" Height="38" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<vsm:VisualStateManager.VisualStateGroups>
+    		<vsm:VisualStateGroup x:Name="ItemStates">
+    			<vsm:VisualState x:Name="Normal"/>
+    			<vsm:VisualState x:Name="Equipped">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="EquippedElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    		</vsm:VisualStateGroup>
+    	</vsm:VisualStateManager.VisualStateGroups>
+
+    	<Border HorizontalAlignment="Left" Width="34" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" Margin="0,0,0,4" d:IsLocked="True"/>
+    	<Image Height="32" HorizontalAlignment="Left" Margin="1,1,0,0" x:Name="MainImage" VerticalAlignment="Top" Width="32" d:IsLocked="True"/>
+    	<TextBlock HorizontalAlignment="Stretch" Margin="38,0,0,0" x:Name="NameLabel" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Text="Name" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment, Height" MouseEnter="NameLabel_MouseEnter" MouseLeave="NameLabel_MouseLeave" d:IsLocked="True"/>
+    	<TextBlock HorizontalAlignment="Left" Text="1" TextWrapping="Wrap" d:LayoutOverrides="Height" Margin="10.587,0,0,5" VerticalAlignment="Bottom" Foreground="{StaticResource HeadingBrush}" FontFamily="Trebuchet MS" FontSize="8" TextAlignment="Right" Width="18.92" x:Name="QuantityLabel" Visibility="Collapsed"/>
+    	<Border Margin="0,0,0,4" x:Name="EquippedElement" Background="{StaticResource EquippedBrush}" BorderBrush="{StaticResource EquippedBorderBrush}" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" Visibility="Collapsed">
+    		<TextBlock Text="EQUIPPED" TextWrapping="Wrap" Foreground="{StaticResource EquippedBorderBrush}" FontWeight="Bold" FontFamily="Trebuchet MS" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="38,16,0,0"/>
+    	</Border>
+    	<Canvas Margin="40.001,14,-0.001,0" x:Name="EmblemContainer" Visibility="Collapsed" d:LayoutOverrides="VerticalAlignment">
+    		<Button Content="Buy" Style="{StaticResource FeatureButtonStyle}" Width="35.75" Foreground="{StaticResource TextAltBrush}" d:LayoutOverrides="Height" x:Name="btnBuySellEmblem" Click="btnBuySellEmblem_Click" Cursor="Hand" Canvas.Left="164"/>
+    		<TextBlock x:Name="EmblemLabel" Width="142.608" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" d:LayoutOverrides="Height" Canvas.Top="4.999"/>
+    		<Image Height="16" Width="16" Source="../Assets/emblem16X16.png" Stretch="Fill" ToolTipService.ToolTip="Emblem" Canvas.Left="144" Canvas.Top="4"/>
+    	</Canvas>
+    	<Canvas Margin="40.002,14,-0.002,0" x:Name="CurrencyContainer" d:LayoutOverrides="VerticalAlignment" Visibility="Collapsed">
+    		<Button Content="Buy" Style="{StaticResource FeatureButtonStyle}" Width="35.75" Foreground="{StaticResource TextAltBrush}" d:LayoutOverrides="Height" x:Name="btnBuySellCurrency" Click="btnBuySellCurrency_Click" Cursor="Hand" Canvas.Left="164"/>
+    		<Image Height="16" Source="../Assets/copper.png" Stretch="Fill" ToolTipService.ToolTip="Copper" Width="16" Canvas.Left="148" Canvas.Top="4"/>
+    		<Image Height="16" Width="16" Source="../Assets/gold.png" Stretch="Fill" ToolTipService.ToolTip="Gold" Canvas.Left="84.926" Canvas.Top="4"/>
+    		<Image Height="16" Width="16" Source="../Assets/silver.png" Stretch="Fill" ToolTipService.ToolTip="Silver" Canvas.Left="116.463" Canvas.Top="4"/>
+    		<TextBlock Width="13.516" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" x:Name="CopperLabel" d:LayoutOverrides="Height" Canvas.Left="132.463" Canvas.Top="4.928"/>
+    		<TextBlock Width="12.849" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" x:Name="SilverLabel" d:LayoutOverrides="Height" Canvas.Left="100.926" Canvas.Top="4.928"/>
+    		<TextBlock x:Name="GoldLabel" Width="79.823" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="0" TextAlignment="Right" TextWrapping="Wrap" Height="10.25" Canvas.Top="4.928" Canvas.Left="4.002"/>
+
+    	</Canvas>
+    	<Canvas Margin="40.001,14,-0.001,0" x:Name="GetDropContainer" Visibility="Visible">
+    		<Button Content="Get" Style="{StaticResource FeatureButtonStyle}" Width="39.75" Foreground="{StaticResource TextAltBrush}" d:LayoutOverrides="Height" x:Name="btnGetDrop" Click="btnGetDrop_Click" Cursor="Hand" Canvas.Left="160.125"/>
+    	</Canvas>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+﻿<div class="signup">
+    <fieldset>
+		<legend>Age Verification</legend>
+		<p>In order to create a Lionsguard ID you will need to verify your age. If you are under the age 
+		of 18 you must get consent from a parent or guardian in order to proceed. Some games offered by 
+		Lionsguard Technologies may have an age requirement.</p>
+		<table cellpadding="2" cellspacing="0" border="0">
+			<tr>
+				<td colspan="3"><strong>Please choose your birthdate:</strong></td>
+			</tr>
+			<tr>
+				<td>Month</td>
+				<td>Day</td>
+				<td>Year</td>
+			</tr>
+			<tr>
+				<td>
+				    <select id="month">
+				        
+				    </select>
+				<asp:DropDownList ID="ddlMonth" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMonth_SelectedIndexChanged">
+					<asp:ListItem Text="January" Value="1"></asp:ListItem>
+					<asp:ListItem Text="February" Value="2"></asp:ListItem>
+					<asp:ListItem Text="March" Value="3"></asp:ListItem>
+					<asp:ListItem Text="April" Value="4"></asp:ListItem>
+					<asp:ListItem Text="May" Value="5"></asp:ListItem>
+					<asp:ListItem Text="June" Value="6"></asp:ListItem>
+					<asp:ListItem Text="July" Value="7"></asp:ListItem>
+					<asp:ListItem Text="August" Value="8"></asp:ListItem>
+					<asp:ListItem Text="September" Value="9"></asp:ListItem>
+					<asp:ListItem Text="October" Value="10"></asp:ListItem>
+					<asp:ListItem Text="November" Value="11"></asp:ListItem>
+					<asp:ListItem Text="December" Value="11"></asp:ListItem>
+				</asp:DropDownList></td>
+				<td><asp:DropDownList ID="ddlDay" runat="server"></asp:DropDownList></td>
+				<td><asp:DropDownList ID="ddlYear" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlYear_SelectedIndexChanged"></asp:DropDownList></td>
+			</tr>
+		</table>
+    </fieldset>
+</div>
+<script type="text/javascript">
+    
+</script>

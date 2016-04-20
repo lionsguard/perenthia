@@ -1,0 +1,33 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Perenthia_Dialogs="clr-namespace:Perenthia.Dialogs" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input" x:Class="Perenthia.Screens.LoginScreen">
+    <Grid x:Name="LayoutRoot" Background="#FF000000">
+
+    	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    		<Image Height="73" Source="../Assets/logo.png" Stretch="Fill" HorizontalAlignment="Center" Width="249"/>
+    		<dataInput:ValidationSummary x:Name="valMain"/>
+    		<TextBlock Text="Username" TextWrapping="Wrap" Foreground="{StaticResource TextBrush}" FontSize="13.333" TextAlignment="Center" Margin="0,12,0,0"/>
+    		<TextBox Text="" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" x:Name="txtUsername" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Height="24" Width="200" FontSize="13.333" d:LayoutOverrides="Width" Margin="0,8,0,0" TabIndex="0" MaxLength="256">
+    			<TextBox.CaretBrush>
+    				<SolidColorBrush Color="{StaticResource CaretColor}"/>
+    			</TextBox.CaretBrush>
+    		</TextBox>
+    		<TextBlock Foreground="{StaticResource TextBrush}" Text="Password" TextWrapping="Wrap" TextAlignment="Center" FontSize="13.333" Margin="0,12,0,0"/>
+    		<PasswordBox FontFamily="Trebuchet MS" Height="24" Style="{StaticResource PasswordBoxStyle}" x:Name="txtPassword" Foreground="{StaticResource HeadingBrush}" Password="" KeyDown="txtPassword_KeyDown" Width="200" FontSize="13.333" Margin="0,8,0,0" MaxLength="15" TabIndex="1">
+    			<PasswordBox.CaretBrush>
+    				<SolidColorBrush Color="{StaticResource CaretColor}"/>
+    			</PasswordBox.CaretBrush>
+    		</PasswordBox>
+    		<CheckBox x:Name="cbxRememberMe" Content="Remember Me" FontSize="13.333" Width="125" Margin="0,8,0,0" TabIndex="2">
+    			<CheckBox.Foreground>
+    				<SolidColorBrush Color="{StaticResource TextColor}"/>
+    			</CheckBox.Foreground>
+    		</CheckBox>
+    		<Button Content="LOGIN" Style="{StaticResource ButtonStyle}" Foreground="{StaticResource HeadingBrush}" Height="30" Click="btnLogin_Click" x:Name="btnLogin" Width="100" FontSize="14.667" Margin="0,24,0,0" TabIndex="3"/>
+    		<HyperlinkButton x:Name="lnkSignUp" Content="Need a free user account?" HorizontalAlignment="Center" Margin="0,12,0,0" Background="{x:Null}" Foreground="{StaticResource LinkBrush}" FontSize="13.333" Click="lnkSignUp_Click"/>
+    		<HyperlinkButton x:Name="lnkForgotPassword" HorizontalAlignment="Center" Margin="0,12,0,0" Background="{x:Null}" FontSize="13.333" Foreground="{StaticResource LinkBrush}" Content="Forgot your password?" Click="lnkForgotPassword_Click"/>
+    	</StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,41 @@
+﻿#game-menu
+{
+	width:500px;
+	margin: 0px auto;
+}
+#game-menu ul
+{
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	display: inline;
+	top: 3px;
+}
+#game-menu ul li
+{
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: inline;
+}
+#game-menu ul li a
+{
+	font-family: 'Times New Roman' , Times, serif;
+	font-size: 1.2em;
+	color: #fffac5;
+	font-weight: bolder;
+	text-decoration: none;
+}
+#game-menu ul li a:hover
+{
+	color: #ffff00;
+	font-weight: bolder;
+}
+
+#silverlightControlHost 
+{
+	height: 100%;
+	width:100%;
+	text-align:center;
+}

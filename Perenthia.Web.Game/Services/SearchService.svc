@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Factory="Perenthia.Web.Services.SearchServiceHostFactory" Service="Perenthia.ServiceModel.SearchService" %>

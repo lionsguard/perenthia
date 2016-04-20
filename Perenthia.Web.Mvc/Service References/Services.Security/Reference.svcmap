@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5568f825-91ee-40e9-a26c-48cfc73eba1f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://games.lionsguard.com/Auth.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="729fe4ea-c047-4c80-947c-2b678082b82e" SourceId="1" SourceUrl="http://games.lionsguard.com/Auth.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e659f8a6-683e-4cbc-be1d-bde545799dc4" SourceId="1" SourceUrl="http://games.lionsguard.com/Auth.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a48958e1-1b35-4b6b-8397-ac251e296c66" SourceId="1" SourceUrl="http://games.lionsguard.com/Auth.svc/mex" />
+    <MetadataFile FileName="Lionsguard.Security.xsd" MetadataType="Schema" ID="56c07710-626d-4421-8fe7-ebaa7a0f90ba" SourceId="1" SourceUrl="http://games.lionsguard.com/Auth.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

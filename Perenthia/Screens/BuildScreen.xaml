@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Perenthia.Screens.BuildScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="995" Height="620" 
+             xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d" 
+             xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" 
+        xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight" xmlns:Perenthia="clr-namespace:Perenthia">
+	<Grid x:Name="LayoutRoot" Background="#FF000000">
+
+		<controls:DockPanel Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" LastChildFill="True">
+			<Border controls:DockPanel.Dock="Top" Height="24" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,1,1,1" Background="{StaticResource ToolbarBrush}" d:IsLocked="True"/>
+			<Border controls:DockPanel.Dock="Bottom" Height="18" BorderBrush="{x:Null}" BorderThickness="0,1,0,0" Background="{StaticResource LinkBrush}" d:IsLocked="True">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock x:Name="txtStatus" FontFamily="Trebuchet MS" Foreground="#FF000000" FontSize="11" />
+				</StackPanel>
+			</Border>
+			<Border controls:DockPanel.Dock="Left" Width="195" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,0,1,0">
+
+				<StackPanel>
+					<controls:Expander Background="{StaticResource ToolbarBrush}" Foreground="{StaticResource TextAltBrush}" HorizontalAlignment="Stretch" x:Name="pnlItems" VerticalAlignment="Top" Header="Items" Collapsed="pnlItems_Collapsed" Expanded="pnlItems_Expanded">
+						<Perenthia_Controls:ActorList Height="150" Width="Auto" x:Name="lstItems"/>
+					</controls:Expander>
+					<controls:Expander Background="{StaticResource ToolbarBrush}" Foreground="{StaticResource TextAltBrush}" HorizontalAlignment="Stretch" x:Name="pnlCreatures" VerticalAlignment="Top" Header="Creatures" Margin="0,0,0,0" Collapsed="pnlCreatures_Collapsed" Expanded="pnlCreatures_Expanded">
+						<Perenthia_Controls:ActorList Height="150" Width="Auto" x:Name="lstCreatures"/>
+					</controls:Expander>
+					<controls:Expander Background="{StaticResource ToolbarBrush}" Foreground="{StaticResource TextAltBrush}" HorizontalAlignment="Stretch" x:Name="pnlNpcs" VerticalAlignment="Top" Header="NPCs" Margin="0,0,0,0" Collapsed="pnlNpcs_Collapsed" Expanded="pnlNpcs_Expanded">
+						<Perenthia_Controls:ActorList Height="150" Width="Auto" x:Name="lstNpcs"/>
+					</controls:Expander>
+					<controls:Expander Background="{StaticResource ToolbarBrush}" Foreground="{StaticResource TextAltBrush}" HorizontalAlignment="Stretch" x:Name="pnlQuests" VerticalAlignment="Top" Header="Quests" Margin="0,0,0,0" Collapsed="pnlQuests_Collapsed" Expanded="pnlQuests_Expanded">
+						<Perenthia_Controls:ActorList Height="150" Width="Auto" x:Name="lstQuests"/>
+					</controls:Expander>
+				</StackPanel>
+
+			</Border>
+			<Border controls:DockPanel.Dock="Right" Width="195" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,0,0,0">
+
+				<StackPanel>
+					<controls:Expander Background="{StaticResource ToolbarBrush}" Foreground="{StaticResource TextAltBrush}" x:Name="pnlProperties" Header="Properties">
+						<Perenthia_Controls:PropertyList Height="150" Width="Auto" x:Name="ctlProperties"/>
+					</controls:Expander>
+					<controls:Expander Background="{StaticResource ToolbarBrush}" Foreground="{StaticResource TextAltBrush}" x:Name="pnlActors" Header="Actors">
+						<Perenthia_Controls:ActorList x:Name="ctlActors" Height="150" Width="Auto"/>
+					</controls:Expander>
+				</StackPanel>
+
+			</Border>
+			<Grid x:Name="ContentElement" Width="605" Height="578">
+                <Perenthia_Controls:ActorDetails x:Name="ctlActorDetails" Visibility="Collapsed" />
+				<Perenthia_Controls:MapEditor x:Name="ctlMap"/>
+			</Grid>
+		</controls:DockPanel>
+		<Canvas x:Name="PopupContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+		<Perenthia_Controls:Wait Height="0" HorizontalAlignment="Left" x:Name="ctlWait" VerticalAlignment="Top" Width="0" d:LayoutOverrides="Margin"/>
+		<Grid Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" x:Name="LoaderElement" Background="{StaticResource DialogFillBrush}" d:IsHidden="True">
+			<ProgressBar Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" x:Name="pgLoader" Style="{StaticResource StatBarStyle}"/>
+			<TextBlock VerticalAlignment="Top" Text="Loading map components..." TextWrapping="Wrap" Foreground="{StaticResource LinkBrush}" d:LayoutOverrides="Height" Margin="298,282,297.5,0" x:Name="txtLoader"/>
+		</Grid>
+
+	</Grid>
+</UserControl>

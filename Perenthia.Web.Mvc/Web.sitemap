@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-1.0" enableLocalization="true">
+	<mvcSiteMapNode title="Home" controller="Home" action="Index" isDynamic="true" dynamicParameters="*">
+		<mvcSiteMapNode title="Armorial" controller="Armorial" action="Search" isDynamic="true" dynamicParameters="*">
+			<mvcSiteMapNode title="Signatures" action="Signatures" isDynamic="true" dynamicParameters="*" visibility="InSiteMapPathOnly"/>
+			<mvcSiteMapNode title="Character" action="Character" isDynamic="true" dynamicParameters="*" visibility="InSiteMapPathOnly"/>
+			<mvcSiteMapNode title="Household" action="Household" isDynamic="true" dynamicParameters="*" visibility="InSiteMapPathOnly"/>
+			<mvcSiteMapNode title="Item" action="Item" isDynamic="true" dynamicParameters="*" visibility="InSiteMapPathOnly"/>
+			<mvcSiteMapNode title="Creature" action="Creature" isDynamic="true" dynamicParameters="*" visibility="InSiteMapPathOnly"/>
+		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="Perenthia Lore" controller="Lore" action="Index">
+			<mvcSiteMapNode title="Attributes and Skills" action="AttributesAndSkills"/>
+			<mvcSiteMapNode title="History of Perenthia" action="History"/>
+			<mvcSiteMapNode title="Races of Perenthia" action="Races"/>
+			<mvcSiteMapNode title="Household Information" action="Households"/>
+			<mvcSiteMapNode title="Perenthia Development" action="Development"/>
+		</mvcSiteMapNode>
+		
+		<mvcSiteMapNode title="Play Perenthia!" controller="Home" action="Play"/>
+
+		<mvcSiteMapNode title="Media" controller="Media" action="Index">
+			<mvcSiteMapNode title="Screenshots" action="Screenshots"/>
+		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="Customer Support" controller="Support" action="Index">
+			<mvcSiteMapNode title="Frequently Asked Questions (FAQ)" action="Faq"/>
+		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="Account Information" controller="Security" action="Index">
+			<mvcSiteMapNode title="Login" action="Login"/>
+			<mvcSiteMapNode title="Sign Up" action="SignUp"/>
+			<mvcSiteMapNode title="Forgot Password" action="ForgotPassword"/>
+			<mvcSiteMapNode title="Change Password" action="ChangePassword" visibility="InSiteMapPathOnly"/>
+		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="Latest News" controller="Home" action="News">
+			<mvcSiteMapNode title="Press Releases" action="Press" visibility="InSiteMapPathOnly"/>
+		</mvcSiteMapNode>
+		<mvcSiteMapNode title="Site Map" controller="Home" action="SiteMap"/>
+		
+		
+		
+		<!--<mvcSiteMapNode title="Armorial" controller="Armorial" action="Search" />
+		<mvcSiteMapNode title="Armorial" controller="Armorial" action="Search" />
+		<mvcSiteMapNode title="Armorial" controller="Armorial" action="Search" />
+		<mvcSiteMapNode title="Armorial" controller="Armorial" action="Search" />
+
+		<mvcSiteMapNode title="$resources:SiteMapLocalizations,ProductsTitle" controller="Products">
+			<mvcSiteMapNode title="$resources:SiteMapLocalizations,ProductsListTitle"
+							controller="Products" action="List"
+							isDynamic="true" dynamicParameters="id"
+							visibility="InSiteMapPathOnly"
+							key="ProductsListCategory"/>
+		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="$resources:SiteMapLocalizations,AccountTitle" controller="Account" visibility="InSiteMapPathOnly">
+			--><!-- No need to specify controller here if not needed: parent controller name will be used --><!--
+			<mvcSiteMapNode title="$resources:SiteMapLocalizations,LoginTitle" action="LogOn" />
+			<mvcSiteMapNode title="$resources:SiteMapLocalizations,AccountCreationTitle" action="Register" />
+			<mvcSiteMapNode title="$resources:SiteMapLocalizations,ChangePasswordTitle" action="ChangePassword" />
+			<mvcSiteMapNode title="$resources:SiteMapLocalizations,LogoutTitle" action="LogOff" />
+		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="Site Map" controller="Home" action="SiteMap" visibility="InSiteMapPathOnly" />
+
+		<mvcSiteMapNode title="$resources:SiteMapLocalizations,AboutUsTitle" controller="Home" action="About" />-->
+
+	</mvcSiteMapNode>
+</siteMap>

@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Perenthia.Controls.ActorItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Stretch">
+		<StackPanel>
+			<TextBlock x:Name="NameElement" Foreground="{StaticResource TextBrush}" FontSize="11" FontFamily="Trebuchet MS" FontWeight="Bold" Height="13" Width="Auto" Text="Name"/>
+			<StackPanel x:Name="LinksPanel" Orientation="Horizontal" Height="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

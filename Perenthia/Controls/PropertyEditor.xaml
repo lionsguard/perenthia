@@ -1,0 +1,47 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Radiance="clr-namespace:Radiance;assembly=Radiance.Silverlight" x:Class="Perenthia.Controls.PropertyEditor"
+    mc:Ignorable="d" d:DesignWidth="432" d:DesignHeight="148">
+	<StackPanel x:Name="LayoutRoot" DataContext="{Binding}" >
+		<TextBlock FontSize="13.333" Text="Name:" TextWrapping="Wrap">
+			<TextBlock.Foreground>
+				<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+			</TextBlock.Foreground>
+		</TextBlock>
+		<TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}" TextWrapping="Wrap">
+			<TextBox.Foreground>
+				<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+			</TextBox.Foreground>
+			<TextBox.CaretBrush>
+				<SolidColorBrush Color="{StaticResource CaretColor}"/>
+			</TextBox.CaretBrush>
+		</TextBox>
+		<TextBlock FontSize="13.333" Text="Value:" TextWrapping="Wrap">
+			<TextBlock.Foreground>
+				<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+			</TextBlock.Foreground>
+		</TextBlock>
+		<TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=Explicit}" TextWrapping="Wrap">
+			<TextBox.CaretBrush>
+				<SolidColorBrush Color="{StaticResource CaretColor}"/>
+			</TextBox.CaretBrush>
+			<TextBox.Foreground>
+				<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+			</TextBox.Foreground>
+		</TextBox>
+		<CheckBox Content="Is Template Property" IsChecked="{Binding IsTemplateProperty, Mode=TwoWay, UpdateSourceTrigger=Explicit}">
+			<CheckBox.Foreground>
+				<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+			</CheckBox.Foreground>
+			<CheckBox.BorderBrush>
+				<SolidColorBrush Color="{StaticResource BorderColor}"/>
+			</CheckBox.BorderBrush>
+		</CheckBox>
+		<Path Stretch="Fill" Height="1" Margin="0,8" UseLayoutRounding="False" Data="M8,124 L424.01923,124" StrokeThickness="2">
+			<Path.Stroke>
+				<SolidColorBrush Color="{StaticResource AlertColor}"/>
+			</Path.Stroke>
+		</Path>
+	</StackPanel>
+</UserControl>

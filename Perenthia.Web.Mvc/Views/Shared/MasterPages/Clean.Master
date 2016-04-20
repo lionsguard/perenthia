@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/MasterPages/Common.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="Lionsguard" %>
+<asp:Content ID="cnTitle" runat="server" ContentPlaceHolderID="cphTitle">
+    <asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnMeta" runat="server" ContentPlaceHolderID="cphMeta">
+    <asp:ContentPlaceHolder ID="cphMeta" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnHead" runat="server" ContentPlaceHolderID="cphHead">
+    <link rel="stylesheet" type="text/css" href="/common/css/clean.css" media="screen, projection" />
+	<asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</asp:Content>
+<asp:Content ID="cnMain" runat="server" ContentPlaceHolderID="cphMain">
+	<asp:ContentPlaceHolder ID="cphMain" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cnScript" runat="server" ContentPlaceHolderID="cphScript">
+	<asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

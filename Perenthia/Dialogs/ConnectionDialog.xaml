@@ -1,0 +1,15 @@
+﻿<controls:ChildWindow x:Class="Perenthia.Dialogs.ConnectionDialog"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="300" 
+           Title="Testing Connection Capabilities" Style="{StaticResource ChildWindowStyle}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+    	<TextBlock x:Name="MessageText" VerticalAlignment="Top" Text="Perenthia is testing to see whether or not you can connect via port {0}. If you have control over opening ports you can open port {0} and refresh this page. Otherwise you will be connected via a slower HTTP connection." TextWrapping="Wrap" FontSize="13.333">
+    		<TextBlock.Foreground>
+    			<SolidColorBrush Color="{StaticResource TextAltColor}"/>
+    		</TextBlock.Foreground>
+    	</TextBlock>
+    	<ProgressBar Height="24" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300" Margin="0,135,0,0" IsIndeterminate="True"/>
+    </Grid>
+</controls:ChildWindow>

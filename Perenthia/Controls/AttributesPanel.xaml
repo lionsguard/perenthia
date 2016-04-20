@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Perenthia.Controls.AttributesPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="360" Height="68" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="49.869" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Strength:" TextAlignment="Right" TextWrapping="Wrap" d:LayoutOverrides="Width"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="54,0,0,0" x:Name="lblStr" VerticalAlignment="Top" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource StatExcellentBrush}" Text="0" TextWrapping="Wrap" d:LayoutOverrides="Width"/>
+    	<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Dexterity:" TextWrapping="Wrap" Margin="0,17,0,0" TextAlignment="Right"/>
+    	<TextBlock HorizontalAlignment="Left" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Stamina:" TextWrapping="Wrap" Margin="0,0,0,21.228" Width="49.527" TextAlignment="Right" d:LayoutOverrides="Width, Height" VerticalAlignment="Bottom"/>
+    	<TextBlock HorizontalAlignment="Left" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Beauty:" TextWrapping="Wrap" Margin="0,0,0,4.228" VerticalAlignment="Bottom" Width="49.839" TextAlignment="Right" d:LayoutOverrides="Width, Height"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="54,17,0,0" x:Name="lblDex" VerticalAlignment="Top" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource StatAboveAverageBrush}" Text="0" TextWrapping="Wrap" d:LayoutOverrides="Width"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="54,0,0,21.228" x:Name="lblSta" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource StatAverageBrush}" Text="0" TextWrapping="Wrap" d:LayoutOverrides="Width, Height" VerticalAlignment="Bottom"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="54,0,0,4.228" x:Name="lblBea" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource StatBelowAverageBrush}" Text="0" TextWrapping="Wrap" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height"/>
+    	<TextBlock Margin="173,0,121,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Intelligence:" TextWrapping="Wrap" TextAlignment="Right"/>
+    	<TextBlock Margin="173,17,121,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Perception:" TextWrapping="Wrap" TextAlignment="Right"/>
+    	<TextBlock Margin="173,0,121,21.228" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Endurance:" TextWrapping="Wrap" TextAlignment="Right" d:LayoutOverrides="Height" VerticalAlignment="Bottom"/>
+    	<TextBlock Margin="173,0,121,4.228" FontFamily="Trebuchet MS" Foreground="{StaticResource HeadingBrush}" Text="Affinity:" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Right" d:LayoutOverrides="Height"/>
+    	<TextBlock Margin="0,0,20,0" x:Name="lblInt" VerticalAlignment="Top" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource StatPoorBrush}" Text="0" TextWrapping="Wrap" HorizontalAlignment="Right" d:LayoutOverrides="Width"/>
+    	<TextBlock Margin="0,17,20,0" x:Name="lblPer" VerticalAlignment="Top" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="Wrap" HorizontalAlignment="Right" d:LayoutOverrides="Width"/>
+    	<TextBlock Margin="0,0,20,21.228" x:Name="lblEnd" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="Wrap" HorizontalAlignment="Right" d:LayoutOverrides="Width, Height" VerticalAlignment="Bottom"/>
+    	<TextBlock Margin="0,0,20,4.228" x:Name="lblAff" Width="97.289" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="Wrap" HorizontalAlignment="Right" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height"/>
+
+    </Grid>
+</UserControl>

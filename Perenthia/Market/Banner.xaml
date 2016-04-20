@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Perenthia.Market.Banner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="70" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+	<Border Height="Auto" Width="Auto" Background="{StaticResource AdBackgroundBrush}" BorderBrush="{StaticResource AdBorderBrush}" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4" Padding="2,2,2,2">
+		<Grid x:Name="LayoutRoot">
+			<Path Height="16" Margin="-0.167,21,0,0" VerticalAlignment="Top" Fill="{StaticResource AdArrowBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" x:Name="btnLeft" Width="32" Cursor="Hand" ToolTipService.ToolTip="West" MouseLeftButtonDown="btnLeft_MouseLeftButtonDown" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleX="-1"/>
+						<SkewTransform/>
+						<RotateTransform Angle="-90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Height="16" Margin="0,21,0,0" VerticalAlignment="Top" Fill="{StaticResource AdArrowBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" RenderTransformOrigin="0.5,0.5" x:Name="btnRight" MouseLeftButtonDown="btnRight_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="West" HorizontalAlignment="Right" Width="32" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Canvas Margin="31.833,0,32,0" x:Name="ctlContent"/>
+		</Grid>
+	</Border>
+</UserControl>

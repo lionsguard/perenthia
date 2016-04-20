@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radiance.Silverlight", "Radiance.Silverlight.csproj", "{C03D5045-02D9-49B8-B001-62FB6FEEF881}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/Radiance/Radiance.Silverlight/Radiance.Silverlight\u0022,\u0020EKAAAAAA
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectFilePathRelativizedFromConnection0 = Radiance.Silverlight\\
+		SccProjectUniqueName1 = Radiance.Silverlight.csproj
+		SccLocalPath1 = ..
+		SccProjectFilePathRelativizedFromConnection1 = Radiance.Silverlight\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C03D5045-02D9-49B8-B001-62FB6FEEF881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03D5045-02D9-49B8-B001-62FB6FEEF881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03D5045-02D9-49B8-B001-62FB6FEEF881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03D5045-02D9-49B8-B001-62FB6FEEF881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

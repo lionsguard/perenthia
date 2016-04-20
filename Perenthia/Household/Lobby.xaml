@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Perenthia.Household.Lobby"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="955" Height="500" xmlns:Perenthia_Household="clr-namespace:Perenthia.Household" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Perenthia_Household:SearchOrCreate HorizontalAlignment="Center" x:Name="ctlSearchOrCreate" VerticalAlignment="Center" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Perenthia_Household:Search HorizontalAlignment="Center" x:Name="ctlSearch" VerticalAlignment="Center" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Perenthia_Household:Create HorizontalAlignment="Left" x:Name="ctlCreate" VerticalAlignment="Top" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Perenthia_Household:Details HorizontalAlignment="Center" x:Name="ctlDetails" VerticalAlignment="Center" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Perenthia_Household:Join HorizontalAlignment="Center" x:Name="ctlJoin" VerticalAlignment="Center" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Perenthia_Household:JoinRequest HorizontalAlignment="Center" x:Name="ctlJoinRequest" VerticalAlignment="Center" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Perenthia_Household:JoinRequestComplete HorizontalAlignment="Center" x:Name="ctlJoinRequestComplete" VerticalAlignment="Center" Visibility="Collapsed" d:IsLocked="True"/>
+
+    </Grid>
+</UserControl>

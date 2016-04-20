@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Perenthia.Controls.Chat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" xmlns:Lionsguard="clr-namespace:Lionsguard;assembly=Lionsguard.Silverlight">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Lionsguard:ChatPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="ctlChat" Style="{StaticResource ChatPanelStyle}" InputReceived="ctlChat_InputReceived"/>
+
+    </Grid>
+</UserControl>

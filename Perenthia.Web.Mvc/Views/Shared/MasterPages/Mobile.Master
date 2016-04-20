@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/MasterPages/MobileCommon.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<asp:Content ID="cnTitle" runat="server" ContentPlaceHolderID="cphTitle">
+	<asp:ContentPlaceHolder ID="cphTitle" runat="server" />
+</asp:Content>
+<asp:Content ID="cnHead" runat="server" ContentPlaceHolderID="cphHead">
+	<asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</asp:Content>
+<asp:Content ID="cnMenu" runat="server" ContentPlaceHolderID="cphMenu">
+	<div id="menu">
+		<ul>
+			<li><%= Html.ActionLink("PLAY", "Play", "Home", "Play Perenthia!", new { accesskey = 0 })%></li>
+			<li class="divider"></li> 
+			<li><%= Html.ActionLink("GETTING STARTED", "GettingStarted", "Home", "Information on how to begin and how to play the game.", new { accesskey = 1 })%></li>
+			<li class="divider"></li> 
+			<li><%= Html.ActionLink("ARMORIAL", "Search", "Armorial", "Search for characters, households, items and creatures.", new { accesskey = 2 })%></li>
+			<li class="divider"></li> 
+			<li><%= Html.ActionLink("NEWS", "News", "Home", "The latest news and press releases for the browser based game Perenthia.", new { accesskey = 3 })%></li>
+			<li class="divider"></li> 
+			<li><%= Html.ActionLink("SCREENSHOTS", "Screenshots", "Media", "Screenshots of the character creation process including some user submitted game play images.", new { accesskey = 4 })%></li>
+			<%--<li class="divider"></li> 
+			<li><%= Html.ActionLink("MARKET", "Index", "Market", "Buy, sell and trade items and goods with other players.")%></li> --%>
+			<li class="divider"></li> 
+			<li><%= Html.ActionLink("HOME", "Index", "Home", "The Perenthia home page.", new { accesskey = 5 })%></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cnMain" runat="server" ContentPlaceHolderID="cphMain">
+	<asp:ContentPlaceHolder ID="cphMain" runat="server" />
+</asp:Content>
+<asp:Content ID="cnScript" runat="server" ContentPlaceHolderID="cphScript">
+	<asp:ContentPlaceHolder ID="cphScript" runat="server" />
+</asp:Content>

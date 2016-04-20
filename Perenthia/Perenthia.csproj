@@ -1,0 +1,1397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA271ECB-0EA0-46C5-B3F8-F7238DB5F5CD}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Perenthia</RootNamespace>
+    <AssemblyName>Perenthia</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Perenthia.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Perenthia.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>"%24/Perenthia/Perenthia/Perenthia", HOAAAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <NoConfig>true</NoConfig>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.PollingDuplex, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Syndication, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Perenthia.Server\Currency.cs">
+      <Link>Currency.cs</Link>
+    </Compile>
+    <Compile Include="..\PerenthiaVersionInfo.cs">
+      <Link>Properties\PerenthiaVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActorHelper.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Asset.cs" />
+    <Compile Include="Controls\AvatarIcon.xaml.cs">
+      <DependentUpon>AvatarIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewActorDialog.xaml.cs">
+      <DependentUpon>NewActorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewPlaceDialog.xaml.cs">
+      <DependentUpon>NewPlaceDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Avatars.cs" />
+    <Compile Include="Brushes.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Controls\ActorDetails.xaml.cs">
+      <DependentUpon>ActorDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActorItem.xaml.cs">
+      <DependentUpon>ActorItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActorList.xaml.cs">
+      <DependentUpon>ActorList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActorManager.xaml.cs">
+      <DependentUpon>ActorManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AffectIcon.xaml.cs">
+      <DependentUpon>AffectIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ArmorialSearch.xaml.cs">
+      <DependentUpon>ArmorialSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttackActionWindow.xaml.cs">
+      <DependentUpon>AttackActionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributePanel.xaml.cs">
+      <DependentUpon>AttributePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributeSelection.xaml.cs">
+      <DependentUpon>AttributeSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributesPanel.xaml.cs">
+      <DependentUpon>AttributesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AvatarDetails.xaml.cs">
+      <DependentUpon>AvatarDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AvatarListItem.xaml.cs">
+      <DependentUpon>AvatarListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AvatarPage.xaml.cs">
+      <DependentUpon>AvatarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AvatarPanel.xaml.cs">
+      <DependentUpon>AvatarPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AvatarPanelIcon.xaml.cs">
+      <DependentUpon>AvatarPanelIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Badge.xaml.cs">
+      <DependentUpon>Badge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CharacterSummary.xaml.cs">
+      <DependentUpon>CharacterSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Chat.xaml.cs">
+      <DependentUpon>Chat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommerceActionWindow.xaml.cs">
+      <DependentUpon>CommerceActionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContextMenu.xaml.cs">
+      <DependentUpon>ContextMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CurrencyPanel.xaml.cs">
+      <DependentUpon>CurrencyPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GenderSelection.xaml.cs">
+      <DependentUpon>GenderSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HouseholdPage.xaml.cs">
+      <DependentUpon>HouseholdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IActorListItem.cs" />
+    <Compile Include="Controls\InventoryActionWindow.xaml.cs">
+      <DependentUpon>InventoryActionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemDetails.xaml.cs">
+      <DependentUpon>ItemDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemListItem.xaml.cs">
+      <DependentUpon>ItemListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemPage.xaml.cs">
+      <DependentUpon>ItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemSlot.xaml.cs">
+      <DependentUpon>ItemSlot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingPanel.xaml.cs">
+      <DependentUpon>LoadingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapBorder.xaml.cs">
+      <DependentUpon>MapBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapNav.xaml.cs">
+      <DependentUpon>MapNav.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuItem.xaml.cs">
+      <DependentUpon>MenuItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NameSelection.xaml.cs">
+      <DependentUpon>NameSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Notify.xaml.cs">
+      <DependentUpon>Notify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyEditor.xaml.cs">
+      <DependentUpon>PropertyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyList.xaml.cs">
+      <DependentUpon>PropertyList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertyListItem.xaml.cs">
+      <DependentUpon>PropertyListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuantityPopup.xaml.cs">
+      <DependentUpon>QuantityPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuestInfoPanel.xaml.cs">
+      <DependentUpon>QuestInfoPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuestsActionWindow.xaml.cs">
+      <DependentUpon>QuestsActionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RaceSelection.xaml.cs">
+      <DependentUpon>RaceSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RoomPanel.xaml.cs">
+      <DependentUpon>RoomPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkillNameValue.xaml.cs">
+      <DependentUpon>SkillNameValue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkillPanel.xaml.cs">
+      <DependentUpon>SkillPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SkillsList.xaml.cs">
+      <DependentUpon>SkillsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Status.xaml.cs">
+      <DependentUpon>Status.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tab.xaml.cs">
+      <DependentUpon>Tab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TellActionWindow.xaml.cs">
+      <DependentUpon>TellActionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestControl.xaml.cs">
+      <DependentUpon>TestControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tile.xaml.cs">
+      <DependentUpon>Tile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TileMap.xaml.cs">
+      <DependentUpon>TileMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TutorialBubble.xaml.cs">
+      <DependentUpon>TutorialBubble.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wait.xaml.cs">
+      <DependentUpon>Wait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\ActorImageSourceConverter.cs" />
+    <Compile Include="Converters\ActorNameConverter.cs" />
+    <Compile Include="Converters\ActorPropertyConverter.cs" />
+    <Compile Include="Converters\ActorPropertyVisibilityConverter.cs" />
+    <Compile Include="Converters\AvatarImageConverter.cs" />
+    <Compile Include="Converters\IsMerchantConverter.cs" />
+    <Compile Include="Converters\IsObjectTypeVisibilityConverter.cs" />
+    <Compile Include="Converters\IsQuestGiverConverter.cs" />
+    <Compile Include="DesignerProperties.cs" />
+    <Compile Include="Dialogs\ActorDialog.xaml.cs">
+      <DependentUpon>ActorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AlertDialog.xaml.cs">
+      <DependentUpon>AlertDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AttributesDialog.xaml.cs">
+      <DependentUpon>AttributesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BagDialog.xaml.cs">
+      <DependentUpon>BagDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CharacterSheetDialog.xaml.cs">
+      <DependentUpon>CharacterSheetDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CommandProgessDialog.xaml.cs">
+      <DependentUpon>CommandProgessDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ConnectionDialog.xaml.cs">
+      <DependentUpon>ConnectionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CraftDialog.xaml.cs">
+      <DependentUpon>CraftDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateCharacterChoiceDialog.xaml.cs">
+      <DependentUpon>CreateCharacterChoiceDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DeleteCharacterDialog.xaml.cs">
+      <DependentUpon>DeleteCharacterDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HelpDialog.xaml.cs">
+      <DependentUpon>HelpDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HouseholdDialog.xaml.cs">
+      <DependentUpon>HouseholdDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\IncreaseIsoQuotaDialog.xaml.cs">
+      <DependentUpon>IncreaseIsoQuotaDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LoadingCharactersDialog.xaml.cs">
+      <DependentUpon>LoadingCharactersDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MapDialog.xaml.cs">
+      <DependentUpon>MapDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MarketPlaceDialog.xaml.cs">
+      <DependentUpon>MarketPlaceDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewPlayerIntroDialog.xaml.cs">
+      <DependentUpon>NewPlayerIntroDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\QuestFacilitatorDialog.xaml.cs">
+      <DependentUpon>QuestFacilitatorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\QuestLogDialog.xaml.cs">
+      <DependentUpon>QuestLogDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ResetCharacterDialog.xaml.cs">
+      <DependentUpon>ResetCharacterDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SpellbookDialog.xaml.cs">
+      <DependentUpon>SpellbookDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WaitDialog.xaml.cs">
+      <DependentUpon>WaitDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="FileNames.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Host.xaml.cs">
+      <DependentUpon>Host.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IActionWindow.cs" />
+    <Compile Include="Household\Armory.xaml.cs">
+      <DependentUpon>Armory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\IHouseholdScreen.cs" />
+    <Compile Include="Household\Join.xaml.cs">
+      <DependentUpon>Join.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\JoinRequest.xaml.cs">
+      <DependentUpon>JoinRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\JoinRequestComplete.xaml.cs">
+      <DependentUpon>JoinRequestComplete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\Members.xaml.cs">
+      <DependentUpon>Members.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\RankItem.xaml.cs">
+      <DependentUpon>RankItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Household\SearchOrCreate.xaml.cs">
+      <DependentUpon>SearchOrCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageManager.cs" />
+    <Compile Include="ItemHelper.cs" />
+    <Compile Include="Items.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapDetail.cs" />
+    <Compile Include="MapManager.cs" />
+    <Compile Include="Market\Banner.xaml.cs">
+      <DependentUpon>Banner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Market\HotItems.xaml.cs">
+      <DependentUpon>HotItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Market\Lobby.xaml.cs">
+      <DependentUpon>Lobby.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Market\NewItems.xaml.cs">
+      <DependentUpon>NewItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Market\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MobileHelper.cs" />
+    <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Extensions.cs" />
+    <Compile Include="Models\Place.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Page.xaml.cs">
+      <DependentUpon>Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopupManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuantityPopupManager.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="ScreenManager.cs" />
+    <Compile Include="Screens\AdminScreen.xaml.cs">
+      <DependentUpon>AdminScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ArmorialScreen.xaml.cs">
+      <DependentUpon>ArmorialScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CreateCharacterWizardScreen.xaml.cs">
+      <DependentUpon>CreateCharacterWizardScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ForgotPasswordScreen.xaml.cs">
+      <DependentUpon>ForgotPasswordScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\GameOfflineScreen.xaml.cs">
+      <DependentUpon>GameOfflineScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\IScreen.cs" />
+    <Compile Include="Screens\SignUpScreen.xaml.cs">
+      <DependentUpon>SignUpScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UISettings.cs" />
+    <Compile Include="Windows\AlertWindow.xaml.cs">
+      <DependentUpon>AlertWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ChatWindow.xaml.cs">
+      <DependentUpon>ChatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CombatWindow.xaml.cs">
+      <DependentUpon>CombatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GeneralWindow.xaml.cs">
+      <DependentUpon>GeneralWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GodModeWindow.xaml.cs">
+      <DependentUpon>GodModeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ITextWindow.cs" />
+    <Compile Include="Screens\LoginScreen.xaml.cs">
+      <DependentUpon>LoginScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PlayScreen.xaml.cs">
+      <DependentUpon>PlayScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IWindow.cs" />
+    <Compile Include="Windows\TextPanel.xaml.cs">
+      <DependentUpon>TextPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TextWindowHelper.cs" />
+    <Compile Include="ServerManager.cs" />
+    <Compile Include="ServiceManager.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Skill.cs" />
+    <Compile Include="SlotHelper.cs" />
+    <Compile Include="StorageManager.cs" />
+    <Compile Include="TemplateItem.cs" />
+    <Compile Include="Terrain.cs" />
+    <Compile Include="Windows\AvatarWindow.xaml.cs">
+      <DependentUpon>AvatarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DeleteCharacterWindow.xaml.cs">
+      <DependentUpon>DeleteCharacterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IncreaseIsoQuotaWindow.xaml.cs">
+      <DependentUpon>IncreaseIsoQuotaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewPlayerIntroWindow.xaml.cs">
+      <DependentUpon>NewPlayerIntroWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\ActorDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ActorItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ActorList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ActorManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AffectIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ArmorialSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttackActionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttributePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttributeSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttributesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AvatarDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AvatarIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AvatarListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AvatarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AvatarPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AvatarPanelIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Badge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CharacterSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CommerceActionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CurrencyPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\GenderSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\HouseholdPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\InventoryActionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ItemDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ItemListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ItemSlot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MapBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MapNav.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\NameSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Notify.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PropertyListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\QuantityPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\QuestInfoPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\QuestsActionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RaceSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RoomPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SkillNameValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SkillPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SkillsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Status.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Tab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TellActionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TestControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Tile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TileMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TutorialBubble.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Wait.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\ActorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\AlertDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\AttributesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\BagDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\CharacterSheetDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\CommandProgessDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\ConnectionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\CraftDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\CreateCharacterChoiceDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\DeleteCharacterDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\HelpDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\HouseholdDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\IncreaseIsoQuotaDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\LoadingCharactersDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\MapDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\MarketPlaceDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\NewActorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\NewPlaceDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\NewPlayerIntroDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\QuestFacilitatorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\QuestLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\ResetCharacterDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\SpellbookDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\WaitDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Host.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\Armory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\Create.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\Details.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\Join.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\JoinRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\JoinRequestComplete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\Members.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\RankItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Household\SearchOrCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IconResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\Banner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\HotItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\Lobby.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\NewItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Market\Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\AdminScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\ArmorialScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\CreateCharacterWizardScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\ForgotPasswordScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\GameOfflineScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\HomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\LoginScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\PlayScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\SignUpScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AlertWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AvatarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ChatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\CombatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DeleteCharacterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\GeneralWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\GodModeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\IncreaseIsoQuotaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\NewPlayerIntroWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\TextPanel.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <Resource Include="Assets\Map.png" />
+    <Resource Include="Assets\menu-draw.png" />
+    <Resource Include="Assets\menu-exits.png" />
+    <Resource Include="Assets\menu-fill.png" />
+    <Resource Include="Assets\menu-select.png" />
+    <Resource Include="Assets\menu-z-down.png" />
+    <Resource Include="Assets\menu-z-up.png" />
+    <Resource Include="Assets\menu-zoom-out.png" />
+    <Resource Include="Assets\menu-zoom-in.png" />
+    <Resource Include="Assets\menu-zoom-to-edit.png" />
+    <Resource Include="Assets\menu-gridlines.png" />
+    <Resource Include="Assets\menu-show-maps.png" />
+    <Resource Include="Assets\bg-dress.png" />
+    <Resource Include="Assets\bg-pants.png" />
+    <Resource Include="Assets\bg-shirt.png" />
+    <Resource Include="Assets\icon-lionhead.png" />
+    <Resource Include="Assets\menu-household.png" />
+    <Resource Include="Assets\Data\races.txt" />
+    <Resource Include="Assets\Data\skills.txt" />
+    <Resource Include="Assets\Data\terrain.txt" />
+    <Resource Include="Assets\Data\skillgroups.txt" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\avatar-blank.png" />
+    <Resource Include="Assets\avatar-najii-female.png" />
+    <Resource Include="Assets\avatar-najii-male.png" />
+    <Resource Include="Assets\avatar-norvic-female.png" />
+    <Resource Include="Assets\avatar-norvic-male.png" />
+    <Resource Include="Assets\avatar-peren-female.png" />
+    <Resource Include="Assets\avatar-peren-male.png" />
+    <Resource Include="Assets\avatar-xhin-female.png" />
+    <Resource Include="Assets\avatar-xhin-male.png" />
+    <Resource Include="Assets\bg-game.png" />
+    <Resource Include="Assets\bg-parchment.png" />
+    <Resource Include="Assets\icon-female.png" />
+    <Resource Include="Assets\icon-male.png" />
+    <Resource Include="Assets\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\menu-help.png" />
+    <Resource Include="Assets\menu-inventory.png" />
+    <Resource Include="Assets\menu-map.png" />
+    <Resource Include="Assets\menu-quest.png" />
+    <Resource Include="Assets\menu-quit.png" />
+    <Resource Include="Assets\menu-spells.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\bg-bag.png" />
+    <Resource Include="Assets\bg-key.png" />
+    <Resource Include="Assets\bg-light.png" />
+    <Resource Include="Assets\bg-pendant.png" />
+    <Resource Include="Assets\bg-ring.png" />
+    <Resource Include="Assets\bg-shield.png" />
+    <Resource Include="Assets\bg-weapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon-sundial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\copper.png" />
+    <Resource Include="Assets\gold.png" />
+    <Resource Include="Assets\silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\emblem.png" />
+    <Resource Include="Assets\emblem16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon-attack.png" />
+    <Resource Include="Assets\icon-chat.png" />
+    <Resource Include="Assets\icon-commerce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon-loot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\menu-who.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon-quests.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\order-arcane-128.png" />
+    <Resource Include="Assets\order-knighthood-128.png" />
+    <Resource Include="Assets\order-ranger-128.png" />
+    <Resource Include="Assets\order-rogue-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\order-none-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\lib\src\FloatableWindow\FloatableWindow.csproj">
+      <Project>{D47E6045-91BB-4CD0-942F-FF015F10F7F2}</Project>
+      <Name>FloatableWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lionsguard.Logging.Silverlight\Lionsguard.Logging.Silverlight.csproj">
+      <Project>{68E1E2F7-3282-4819-B3AA-7D446894F37F}</Project>
+      <Name>Lionsguard.Logging.Silverlight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lionsguard.Silverlight\Lionsguard.Silverlight.csproj">
+      <Project>{BB7D13CC-D5EC-4A9C-891B-31713EB4AAB6}</Project>
+      <Name>Lionsguard.Silverlight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radiance.Contract.Silverlight\Radiance.Contract.Silverlight.csproj">
+      <Project>{180683B3-6388-44F0-9F74-08318E15B3D1}</Project>
+      <Name>Radiance.Contract.Silverlight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radiance.Silverlight\Radiance.Silverlight.csproj">
+      <Project>{C03D5045-02D9-49B8-B001-62FB6FEEF881}</Project>
+      <Name>Radiance.Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

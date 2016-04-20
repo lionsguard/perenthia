@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Perenthia.Controls.Tile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="22" Height="22" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+    	<Rectangle Height="10" Margin="10,-1.625,10,0" x:Name="north" VerticalAlignment="Top" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Rectangle Margin="10,0,10,-1.625" x:Name="south" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" Height="10" VerticalAlignment="Bottom" Visibility="Collapsed" d:IsLocked="True"/>
+    	<Rectangle Margin="0,6.25,2,5.75" x:Name="east" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Width" Visibility="Collapsed" d:IsLocked="True">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="90"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    	</Rectangle>
+    	<Rectangle Margin="2,6.25,0,5.75" x:Name="west" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Width" Visibility="Collapsed" d:IsLocked="True">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="90"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    	</Rectangle>
+    	<Rectangle Margin="0,-1.625,2,0" x:Name="northeast" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" Height="10" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Width" Visibility="Collapsed" d:IsLocked="True">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="45"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    	</Rectangle>
+    	<Rectangle Margin="2,0,0,-2" x:Name="southwest" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" RenderTransformOrigin="0.5,0.5" Height="10" HorizontalAlignment="Left" VerticalAlignment="Bottom" d:LayoutOverrides="Width" Visibility="Collapsed" d:IsLocked="True">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="45"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    	</Rectangle>
+    	<Rectangle Margin="2,-1.625,0,0" x:Name="northwest" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" d:LayoutOverrides="Width" Visibility="Collapsed" d:IsLocked="True">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="-45"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    	</Rectangle>
+    	<Rectangle Margin="0,0,2,-1.625" x:Name="southeast" Width="2" Fill="{StaticResource ExitBrush}" Stroke="{x:Null}" RenderTransformOrigin="0.5,0.5" Height="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" d:LayoutOverrides="Width" Visibility="Collapsed" d:IsLocked="True">
+    		<Rectangle.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="-45"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Rectangle.RenderTransform>
+    	</Rectangle>
+		<Border x:Name="TileElement" Background="{StaticResource TileGrassBrush}" CornerRadius="2,2,2,2" Margin="4,4,4,4" d:IsLocked="True" MouseLeftButtonDown="TileElement_MouseLeftButtonDown">
+			<Image x:Name="ImageElement" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>	
+		</Border>
+		<Ellipse Stroke="{StaticResource HeadingBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="8" Height="8" Fill="{StaticResource PlayerIconBrush}" x:Name="player" Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

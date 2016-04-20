@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Perenthia.Loader.Loader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    xmlns:Perenthia.Loader="clr-namespace:Perenthia.Loader">
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel x:Name="DownloadListStackCtrl">
+            <!-- we will populate this area with dynamicaly generated progress controls. 
+                 One for each download... --> 
+            <!--<Perenthia.Loader:ProgressCtrl></Perenthia.Loader:ProgressCtrl>
+            <Perenthia.Loader:ProgressCtrl></Perenthia.Loader:ProgressCtrl>-->
+        </StackPanel>
+    </Grid>
+</UserControl>

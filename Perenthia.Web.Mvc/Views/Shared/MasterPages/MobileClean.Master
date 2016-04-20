@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/MasterPages/MobileCommon.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<asp:Content ID="cnTitle" runat="server" ContentPlaceHolderID="cphTitle">
+	<asp:ContentPlaceHolder ID="cphTitle" runat="server" />
+</asp:Content>
+<asp:Content ID="cnHead" runat="server" ContentPlaceHolderID="cphHead">
+	<asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</asp:Content>
+<asp:Content ID="cnMenu" runat="server" ContentPlaceHolderID="cphMenu">
+</asp:Content>
+<asp:Content ID="cnMain" runat="server" ContentPlaceHolderID="cphMain">
+	<asp:ContentPlaceHolder ID="cphMain" runat="server" />
+</asp:Content>
+<asp:Content ID="cnScript" runat="server" ContentPlaceHolderID="cphScript">
+	<asp:ContentPlaceHolder ID="cphScript" runat="server" />
+</asp:Content>

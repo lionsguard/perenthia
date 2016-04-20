@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Perenthia.Controls.AvatarListItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="240" Height="44" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Border HorizontalAlignment="Left" Width="40" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" Margin="0,0,0,4"/>
+    	<Image HorizontalAlignment="Left" Margin="1,1,0,5" x:Name="MainImage" Width="38" Height="38"/>
+    	<TextBlock HorizontalAlignment="Stretch" Margin="44.062,0,0,0" x:Name="NameLabel" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Text="Name" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment" MouseEnter="NameLabel_MouseEnter" MouseLeave="NameLabel_MouseLeave"/>
+    	<Image Height="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="16" Source="../Assets/icon-commerce.png" Stretch="Fill" Margin="85.5,0,0,3.5" x:Name="btnCommerce" MouseLeftButtonDown="btnCommerce_MouseLeftButtonDown" ToolTipService.ToolTip="Goods and Services" Visibility="Collapsed" Cursor="Hand"/>
+    	<Image Height="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="16" Source="../Assets/icon-attack.png" Stretch="Fill" Margin="65.062,0,0,4" x:Name="btnAttack" MouseLeftButtonDown="btnAttack_MouseLeftButtonDown" ToolTipService.ToolTip="Set Target" Cursor="Hand" Visibility="Visible"/>
+    	<Image Height="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="16" Source="../Assets/icon-chat.png" Stretch="Fill" Margin="44.562,0,0,5" x:Name="btnTell" MouseLeftButtonDown="btnTell_MouseLeftButtonDown" ToolTipService.ToolTip="Tell" Cursor="Hand"/>
+    	<Image Height="16" VerticalAlignment="Bottom" Source="../Assets/icon-loot.png" Stretch="Fill" Margin="45.124,0,0,3.5" Width="16" x:Name="btnLoot" MouseLeftButtonDown="btnLoot_MouseLeftButtonDown" Visibility="Collapsed" ToolTipService.ToolTip="Loot Corpse" Cursor="Hand" d:LayoutOverrides="Width" HorizontalAlignment="Left"/>
+		<Image Height="16" VerticalAlignment="Bottom" Source="../Assets/icon-quests.png" Stretch="Fill" Margin="105.124,0,118.876,3.5" Width="16" x:Name="btnQuests" MouseLeftButtonDown="btnQuests_MouseLeftButtonDown" Visibility="Collapsed" ToolTipService.ToolTip="View Quests" Cursor="Hand" d:LayoutOverrides="Width"/>
+
+	</Grid>
+</UserControl>

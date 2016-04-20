@@ -1,0 +1,14 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="Perenthia.Windows.TextPanel"
+    mc:Ignorable="d" d:DesignWidth="256" d:DesignHeight="183">
+    <Grid x:Name="LayoutRoot">
+    	<ScrollViewer x:Name="TextScrollViewer" Style="{StaticResource ScrollViewerStyle}" BorderBrush="{x:Null}">
+    		<ScrollViewer.Background>
+    			<SolidColorBrush Color="{StaticResource WindowBackgroundColor}"/>
+    		</ScrollViewer.Background>
+    		<StackPanel x:Name="TextList" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+    	</ScrollViewer>
+    </Grid>
+</UserControl>

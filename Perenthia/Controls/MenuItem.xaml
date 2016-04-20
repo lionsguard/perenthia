@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Perenthia.Controls.MenuItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" Cursor="Hand" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave" MouseLeftButtonDown="UserControl_MouseLeftButtonDown" xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" MouseLeftButtonUp="UserControl_MouseLeftButtonUp">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+    	<vsm:VisualStateManager.VisualStateGroups>
+    		<vsm:VisualStateGroup x:Name="CommonStates">
+    			<vsm:VisualState x:Name="Normal"/>
+    			<vsm:VisualState x:Name="MouseOver">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    			<vsm:VisualState x:Name="Pressed">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    			<vsm:VisualState x:Name="Disabled"/>
+    		</vsm:VisualStateGroup>
+    	</vsm:VisualStateManager.VisualStateGroups>
+    	<Border x:Name="MouseOverElement" Background="{StaticResource AdBackgroundBrush}" Visibility="Collapsed"/>
+    	<Border x:Name="PressedElement" Background="{StaticResource HighlightBrush}" Visibility="Collapsed"/>
+    	<Border BorderThickness="0,1,0,1" BorderBrush="{StaticResource AdBackgroundBrush}">
+    		<TextBlock Text="Name" TextWrapping="NoWrap" x:Name="lblName" Foreground="{StaticResource TextBrush}" Margin="8,4,8,4"/>
+    	</Border>
+
+    </Grid>
+</UserControl>

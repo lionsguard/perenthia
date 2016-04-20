@@ -1,0 +1,14 @@
+﻿<controls:FloatableWindow x:Class="Perenthia.Windows.GeneralWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=FloatableWindow"
+           xmlns:local="clr-namespace:Perenthia.Windows"
+           Width="500" Height="300" 
+           Title="General" Style="{StaticResource FloatableWindowStyle}" HasCloseButton="False">
+	<Grid x:Name="LayoutRoot" Margin="2">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<local:TextPanel x:Name="TextContainer"/>
+	</Grid>
+</controls:FloatableWindow>

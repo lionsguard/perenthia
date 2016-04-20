@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Perenthia.Dialogs.ResetCharacterDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="995" Height="620" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Perenthia_Dialogs="clr-namespace:Perenthia.Dialogs">
+	<Grid x:Name="LayoutRoot" Background="#FF000000">
+
+		<Perenthia_Controls:AttributeSelection HorizontalAlignment="Center" Margin="0,0,0,0" x:Name="ctlAttributes" VerticalAlignment="Center" AttributeChanged="ctlAttributes_AttributeChanged" d:IsLocked="True"/>
+		<Canvas Margin="191,76.5,190.846,204" x:Name="SkillGroupsContainer" Visibility="Collapsed" d:IsLocked="True">
+		
+			<TextBlock FontFamily="Trebuchet MS" FontSize="12" Foreground="{StaticResource TextAltBrush}" Text="Perenthia is a skills based game; what this means is that all actions in the game such as attacking an opponent with a sword, casting a healing spell, etc. require skills. Each time your Character executes an action a skill test is performed utilizing one your attributes relevant to the skill in question and the value of the skill in question to resolve the action." TextWrapping="Wrap" Width="613" Canvas.Left="0.154" d:LayoutOverrides="Height"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="12" Foreground="{StaticResource TextAltBrush}" Text="The traditional class system used in many games does not exist in Perenthia so if you choose to be a plate armor wearing spell caster that is entirely up to you. There are four specialized groups, called Orders, which players can join later in the game. These Orders provide some additional game play options and the skill groups below align with the base skill requirements for entry into the Orders. " TextWrapping="Wrap" Canvas.Top="60" Width="613" Canvas.Left="0.154" d:LayoutOverrides="Height"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="12" Foreground="{StaticResource TextAltBrush}" Text="You have two options for selecting your starting skills; you can either choose from a list of pre-determined skill groups or use a pool of skill points to set your Character’s initial skills. If you are new to role playing games or want the feel provided by a class system the skill groups can provide a quick and easy way to get the starting skills you need. If you are well versed in role playing games or have played skills based games before you may be more comfortable with selecting your own skills." TextWrapping="Wrap" Canvas.Top="120" d:LayoutOverrides="Height" Width="613"/>
+			<TextBlock Width="143.511" FontFamily="Georgia" FontSize="14" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" Text="SKILL GROUPS" TextWrapping="Wrap" Canvas.Left="100" Canvas.Top="228.5" d:LayoutOverrides="Height"/>
+			<TextBlock Width="143.511" FontFamily="Georgia" FontSize="14" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" Text="FREE FORM" TextWrapping="Wrap" Canvas.Left="381" Canvas.Top="228.5" d:LayoutOverrides="Height"/>
+			<HyperlinkButton Content="Fighter" FontFamily="Trebuchet MS" FontSize="14" Foreground="{StaticResource LinkBrush}" x:Name="btnFighter" Click="btnFighter_Click" Canvas.Left="101" Canvas.Top="263.5" d:LayoutOverrides="Height" Width="54"/>
+			<HyperlinkButton Content="Spell Caster" FontFamily="Trebuchet MS" FontSize="14" Foreground="{StaticResource LinkBrush}" x:Name="btnCaster" Click="btnCaster_Click" Canvas.Left="101" Canvas.Top="283.5" d:LayoutOverrides="Height" Width="88"/>
+			<HyperlinkButton Content="Thief" FontFamily="Trebuchet MS" FontSize="14" Foreground="{StaticResource LinkBrush}" x:Name="btnThief" Click="btnThief_Click" Canvas.Left="102" Canvas.Top="303.5" d:LayoutOverrides="Height" Width="42"/>
+			<HyperlinkButton Content="Explorer" FontFamily="Trebuchet MS" FontSize="14" Foreground="{StaticResource LinkBrush}" x:Name="btnExplorer" Click="btnExplorer_Click" Canvas.Left="102" Canvas.Top="323.5" Width="66" d:LayoutOverrides="Height"/>
+			<HyperlinkButton Content="Select My Own Skills" FontFamily="Trebuchet MS" FontSize="14" Foreground="{StaticResource LinkBrush}" x:Name="btnFreeForm" Click="btnFreeForm_Click" Canvas.Left="381.489" Canvas.Top="263.5" d:LayoutOverrides="Height" Width="139"/>
+			 
+		
+		</Canvas>
+			 
+		
+		<Canvas HorizontalAlignment="Left" Margin="236,72.5,0,0" x:Name="SkillsContainer" VerticalAlignment="Top" Visibility="Collapsed" d:IsLocked="True">
+		
+			<TextBlock FontFamily="Trebuchet MS" FontSize="12" Foreground="{StaticResource TextAltBrush}" Text="Use the skill points to increase the levels of your skills. One (1) point causes the skill to be learned, which will prevent an unskilled test when performing actions. Unskilled tests have a greater chance of failure." TextWrapping="Wrap" Width="607.025" Height="47" Canvas.Left="-43.5"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="12" Foreground="{StaticResource TextAltBrush}" Text="Skills should be set at a minimum of three (3) in order to have the greatest chance of success when starting the game." TextWrapping="Wrap" Width="601" Canvas.Top="60" Height="32" Canvas.Left="-43.5"/>
+			<Perenthia_Controls:SkillsList Height="369" Width="602" Canvas.Top="95.5" x:Name="ctlSkills" Canvas.Left="-43.5" SkillChanged="ctlSkills_SkillChanged"/>
+		
+		</Canvas>
+		
+		<Button Cursor="Hand" Height="26.5" HorizontalAlignment="Right" Margin="0,0,190.692,45.5" x:Name="btnNext" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="84" Content="NEXT &gt;&gt;" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" ToolTipService.ToolTip="Next" Click="btnNext_Click" d:IsLocked="True"/>
+		<Button Cursor="Hand" Height="26.5" HorizontalAlignment="Right" Margin="0,0,279,45" x:Name="btnBack" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="84" Content="&lt;&lt; BACK" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" ToolTipService.ToolTip="Next" Visibility="Collapsed" Click="btnBack_Click" d:IsLocked="True"/>
+		<Button Cursor="Hand" Height="26.5" HorizontalAlignment="Right" Margin="0,0,402,45" x:Name="btnCancel" Style="{StaticResource ButtonStyle}" VerticalAlignment="Bottom" Width="84" Content="CANCEL" FontFamily="Trebuchet MS" FontSize="12" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" ToolTipService.ToolTip="Next" Click="btnCancel_Click" d:IsLocked="True"/>
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Name" TextWrapping="NoWrap" Margin="191,24,0,0" x:Name="lblName" Foreground="{StaticResource HeadingBrush}" FontFamily="Georgia" FontSize="18"/>
+
+		<Perenthia_Dialogs:AlertDialog HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="diagAlert" Visibility="Collapsed"/>
+
+	</Grid>
+</UserControl>

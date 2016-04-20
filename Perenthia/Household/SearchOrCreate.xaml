@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Perenthia.Household.SearchOrCreate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+    	<Button FontFamily="Portable User Interface" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" Cursor="Hand" Height="36" HorizontalAlignment="Left" Margin="8,8,8,0" x:Name="btnCreate" Style="{StaticResource ButtonStyle}" VerticalAlignment="Top" Width="194.5" Content="CREATE NEW HOUSEHOLD" Click="btnCreate_Click" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+    	<Button FontFamily="Portable User Interface" FontWeight="Bold" Foreground="{StaticResource HeadingBrush}" Cursor="Hand" Margin="8,100,8,8" x:Name="btnJoin" Style="{StaticResource ButtonStyle}" Width="194.5" Content="JOIN A HOUSEHOLD" Click="btnJoin_Click" Height="36" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+    </Grid>
+</UserControl>

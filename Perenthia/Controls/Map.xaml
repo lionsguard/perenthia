@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="Perenthia.Controls.Map"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="250" Height="270" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Perenthia_Controls="clr-namespace:Perenthia.Controls">
+	<Grid x:Name="LayoutRoot" MouseEnter="LayoutRoot_MouseEnter" MouseLeave="LayoutRoot_MouseLeave" Background="#02000000">
+		<Grid x:Name="Chrome" Margin="0" Height="20" VerticalAlignment="Top" MouseLeftButtonDown="Chrome_MouseLeftButtonDown" Visibility="Collapsed">
+			<Border BorderThickness="1" Background="{StaticResource PanelBrush}">
+				<StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Visibility="Collapsed">
+					<Button x:Name="MinimizeButton" Content="Button" Style="{StaticResource MinimizeButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,4,0" Click="MinimizeButton_Click"/>
+					<Button x:Name="CloseButton" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource XButtonStyle}" Margin="0,0,4,0" Click="CloseButton_Click"/>
+				</StackPanel>
+			</Border>
+		</Grid>
+		<Grid x:Name="MapGrid" Margin="0,20,0,0">
+
+			<Border HorizontalAlignment="Left" Margin="0,64.5,0,98" Width="47.5" Background="{StaticResource DialogFillBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4" d:IsLocked="True"/>
+			<Border Margin="80.5,0,50.5,8" Background="{StaticResource DialogFillBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4" Height="48" VerticalAlignment="Bottom" d:IsLocked="True"/>
+			<Image Height="59" HorizontalAlignment="Left" Margin="29.834,8.5,0,0" VerticalAlignment="Top" Width="59" Source="../Assets/icon-sundial.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" x:Name="SundialImage">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform x:Name="SundialRotateTransform" Angle="-48.511"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+			<Path Height="8" HorizontalAlignment="Left" Margin="37.429,16.614,0,0" VerticalAlignment="Top" Width="4.371" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HealthBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M16,8.125 C15.033426,13.600575 15.080498,18.970676 16,24.25 L23.625,15.683594 z">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleY="-1"/>
+						<SkewTransform/>
+						<RotateTransform Angle="41.067"/>
+						<TranslateTransform X="6.629830906490497E-09" Y="-2.654957071968056E-07"/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Ellipse Height="59.5" HorizontalAlignment="Left" Margin="29.334,7.5,0,0" VerticalAlignment="Top" Width="59.5" Fill="{x:Null}" Stroke="{StaticResource BorderBrush}" d:LayoutOverrides="Width, Height" x:Name="TimeEllipse" StrokeThickness="2" d:IsLocked="True"/>
+			<Ellipse Margin="33,0,0,33" x:Name="BackgroundEllipse" Fill="{StaticResource DialogFillBrush}" Stroke="{StaticResource BorderBrush}" StrokeThickness="2" d:IsLocked="True"/>
+			<Ellipse Margin="35,2,2,35" x:Name="EllipseBorder" Fill="{x:Null}" Stroke="#FF474637" StrokeThickness="23" d:IsLocked="True"/>
+			<Ellipse Margin="56,23,24,56" x:Name="ForegroundEllipse" Fill="{x:Null}" Stroke="{StaticResource BorderBrush}" StrokeThickness="2" d:IsLocked="True"/>
+			<Path Height="16" Margin="124.667,4.001,93.333,0" x:Name="north" VerticalAlignment="Top" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" MouseLeftButtonDown="north_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="North"/>
+			<Path Margin="0,0,93,37.001" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" Height="16" HorizontalAlignment="Right" x:Name="south" VerticalAlignment="Bottom" Width="32" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="south_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="South" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleY="-1"/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Height="16" Margin="0,98.5,-2.833,0" VerticalAlignment="Top" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" HorizontalAlignment="Right" x:Name="east" Width="32" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="east_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="East" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Height="16" Margin="29.167,99,0,0" VerticalAlignment="Top" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" x:Name="west" Width="32" MouseLeftButtonDown="west_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="West" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleX="-1"/>
+						<SkewTransform/>
+						<RotateTransform Angle="-90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Height="16" Margin="55.833,33,0,0" VerticalAlignment="Top" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" HorizontalAlignment="Left" x:Name="northwest" Width="32" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="northwest_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="Northwest" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-45"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Height="16" Margin="0,33,23.667,0" VerticalAlignment="Top" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" HorizontalAlignment="Right" Width="32" RenderTransformOrigin="0.5,0.5" x:Name="northeast" MouseLeftButtonDown="northeast_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="Northeast" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleX="-1"/>
+						<SkewTransform/>
+						<RotateTransform Angle="45"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Margin="56.5,0,0,66" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" HorizontalAlignment="Left" Width="32" RenderTransformOrigin="0.5,0.5" Height="16" x:Name="southwest" VerticalAlignment="Bottom" MouseLeftButtonDown="southwest_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="Southwest" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="225"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Margin="0,0,23.667,66" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" HorizontalAlignment="Right" Width="32" RenderTransformOrigin="0.5,0.5" Height="16" VerticalAlignment="Bottom" x:Name="southeast" MouseLeftButtonDown="southeast_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="Southeast" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleX="-1"/>
+						<SkewTransform/>
+						<RotateTransform Angle="-225"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Height="16" Margin="2.833,67.5,0,0" VerticalAlignment="Top" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" HorizontalAlignment="Left" x:Name="up" Width="32" MouseLeftButtonDown="up_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="Up" d:IsLocked="True"/>
+			<Path Margin="2.833,0,0,101" Fill="{StaticResource DirectionOffBrush}" Stretch="Fill" Stroke="{x:Null}" StrokeThickness="23" Data="M130.30292,26.614321 L118.98532,35.367596 L141.5062,35.367596 z" Height="16" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" x:Name="down" Width="32" MouseLeftButtonDown="down_MouseLeftButtonDown" Cursor="Hand" ToolTipService.ToolTip="Down" d:IsLocked="True">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform ScaleY="-1"/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<TextBlock Margin="85,0,55,15" x:Name="LocationLabel" VerticalAlignment="Bottom" FontFamily="Trebuchet MS" FontSize="9" Foreground="{StaticResource TextBrush}" Text="X:0, Y:0, Z:0" TextAlignment="Center" TextWrapping="Wrap" d:IsLocked="True"/>
+
+			<Canvas x:Name="ctlViewPort" Background="{x:Null}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="61.167,27.001,28.833,60">
+				<Canvas x:Name="ctlMapContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5">
+					<Canvas.RenderTransform>
+						<TransformGroup>
+							<TranslateTransform x:Name="mapTranslate"/>
+						</TransformGroup>
+					</Canvas.RenderTransform>
+					<Canvas x:Name="ctlMap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+				</Canvas>
+			</Canvas>
+			<Canvas Height="Auto" HorizontalAlignment="Stretch" x:Name="ctlLoading" VerticalAlignment="Stretch" Width="Auto" Visibility="Collapsed">
+				<Ellipse Fill="#FF000000" Stroke="{x:Null}" StrokeThickness="2" Height="169" Width="168" Canvas.Left="57" Canvas.Top="24"/>
+				<TextBlock Width="69.652" Canvas.Left="106" Canvas.Top="98" FontFamily="Trebuchet MS" FontSize="14" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Text="Loading..." TextWrapping="Wrap"/>
+			</Canvas>
+
+		</Grid>
+	</Grid>
+</UserControl>

@@ -1,0 +1,633 @@
+﻿/*
+tan = #9e7a38;
+blue = #94A9B6;
+brown = #4f3d1c;
+green = #3f8630;
+lighter green = #056600;
+purple = #94A9B6;
+*/
+
+
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	color: #94A9B6;
+	font-size: 12px;
+	overflow: auto;
+	width: 100%;
+	line-height: 1.25em;
+}
+a
+{
+	color: #ccd2e8;
+	font-weight: bolder;
+}
+sup
+{
+	font-size: .8em;
+}
+p
+{
+	padding: 4px;
+}
+h1, h2, h3, h4
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #fff;
+}
+h1
+{
+	font-size: 1.8em;
+}
+h2
+{
+	font-size: 1.5em;
+}
+h3
+{
+	font-size: 1.3em;
+}
+h4
+{
+	font-size: 1.2em;
+}
+ul,ol { margin: 1.12em 0 }
+li
+{
+	display: list-item;
+	list-style-type: disc;
+}
+ul { margin-left: 40px }
+ol { list-style-type: decimal }
+ol ul, ul ol, ul ul, ol ol { margin-top: 0; margin-bottom: 0 }
+
+.clear
+{
+	clear: both;
+}
+.breadcrumbs
+{
+	font-size: smaller;
+}
+.breadcrumbs a
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.breadcrumbs .link
+{
+}
+.breadcrumbs .separator
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+
+/*http://matthewjamestaylor.com/blog/perfect-3-column.htm*/
+/* column container */
+.colmask
+{
+	background-position: center top;
+	position: relative; /* This fixes the IE7 overflow hidden bug */
+	clear: both;
+	overflow: hidden; /* This chops off any overhanging divs */
+	width: 960px;
+	margin: 0px auto;
+	margin-top: -25px;
+	background-image: url(/common/images/bg-main.png);
+	background-repeat: repeat-y;
+}
+/* common column settings */
+.colright, .colmid, .colleft
+{
+	width: 100%; /* width of page */
+	position: relative;
+}
+.col1, .col2, .col3
+{
+	float: left;
+	position: relative;
+	padding: 0 0 1em 0; /* no left and right padding on columns, we just make them narrower instead  						only padding top and bottom is included here, make it whatever value you need */
+	overflow: hidden;
+}
+/* 2 Column (left menu) settings */
+.twocol
+{
+}
+.twocol .colleft
+{
+	right: 75%; /* right column width */
+}
+.twocol .col1
+{
+	width: 71%; /* right column content width */
+	left: 102%; /* 100% plus left column left padding */
+}
+.twocol .col2
+{
+	width: 21%; /* left column content width (column width minus left and right padding) */
+	left: 6%; /* (right column left and right padding) plus (left column left padding) */
+}
+
+
+#container
+{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	background-image: url(/common/images/bg-perenthia.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+#header
+{
+	margin: 0px auto;
+	width: 1280px;
+	height: 560px;
+	text-align: center;
+}
+#menu
+{
+	margin: 0px auto;
+	top: 450px;
+	position: relative;
+	width: 940px;
+	height: 24px;
+	font-size: .8em;
+}
+#menu ul
+{
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	display: inline;
+	top: 3px;
+}
+#menu ul.left
+{
+	position: absolute;
+	left: 100px;
+}
+#menu ul.right
+{
+	position: absolute;
+	right: 80px;
+}
+#menu ul li
+{
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: inline;
+}
+#menu ul li a
+{
+	font-family: 'Times New Roman' , Times, serif;
+	font-size: 1.45em;
+	color: #fffac5;
+	font-weight: bolder;
+	text-decoration: none;
+}
+#menu ul li a:hover
+{
+	color: #ffff00;
+	font-weight: bolder;
+}
+#menu ul li.divider
+{
+	background-image: url(/common/images/link-divider.gif);
+	width: 3px;
+	background-repeat: no-repeat;
+}
+#menu ul li.gap
+{
+	padding-left: 100px;
+	padding-right: 65px;
+}
+
+#main
+{
+	margin: 0px auto;
+	width: 960px;
+	position: relative;
+}
+#submenu
+{
+	/*border:1px solid #fff; 	display: table-cell; 	width: 160px; 	padding-left: 60px;*/
+}
+#submenu h3
+{
+	font-weight: bold;
+	font-size: 1.1em;
+	padding-left: 10px;
+	padding-top: 12px;
+	padding-bottom: 6px;
+	color: #fff;
+}
+#submenu ul
+{
+	border: 1px solid #94A9B6;
+	padding: 6px;
+	margin:0px;
+}
+#submenu ul li
+{
+	padding: 8px 0px 8px 0px;
+	border-bottom: 1px solid #94A9B6;
+	list-style-type: none;
+}
+#submenu ul li:hover
+{
+	background-image: url(/common/images/bg-menu.png);
+}
+#submenu ul li:hover a
+{
+	color: #fff;
+}
+#submenu ul li a
+{
+	padding: 4px 0px 4px 8px;
+	color: #94A9B6;
+	text-decoration: none;
+}
+#submenu ul li a:hover
+{
+	color: #fff;
+}
+#content
+{
+	/*border:1px solid #fff; 	display: table-cell; 	width: 560px;*/
+	padding: 8px;
+}
+#sidebar
+{
+	/*border:1px solid #fff; 	display: table-cell; 	width: 180px; 	padding-right: 60px;*/
+}
+#footer
+{
+	clear: both;
+	text-align: center;
+	padding: 2px;
+	font-size: .9em;
+	margin: 0px auto;
+	width: 960px;
+	height: 182px;
+	color: #808080;
+}
+#footer a
+{
+	color: #808080;
+}
+#footer div
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#footer ul
+{
+	padding: 0px;
+	margin: 0px;
+}
+#footer ul li
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	display: inline;
+}
+#footer ul li a
+{
+	color: #808080;
+	text-decoration: underline;
+}
+#footer ul li a:hover
+{
+}
+
+
+.avatar
+{
+	padding: 8px;
+}
+.avatar .image
+{
+	float:left;
+}
+.avatar .details
+{
+	float:left;
+	padding-left:12px;
+}
+.avatar .name
+{
+	font-size:1.25em;
+	padding:4px;
+}
+.avatar .location
+{
+	padding:4px;
+}
+.avatar .race
+{
+	padding:4px;
+	font-style:italic;
+}
+.avatar .household
+{
+	padding:4px;
+}
+
+
+.twitter, .facebook
+{
+	border: 1px dashed #808080;
+	background-color: #FFE2A6;
+	margin-top:12px;
+	margin-bottom: 12px;
+	padding: 20px;
+	color: #000;
+}
+.twitter a, .facebook a
+{
+	color: #000;
+	font-weight: bolder;
+	text-align: center;
+	padding: 4px;
+}
+
+
+.feed
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.feed-title, .feed-title a
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+.feed-author
+{
+	color: #ffff00;
+	font-weight: bold;
+}
+.feed-text
+{
+	color: #94A9B6;
+	font-weight: bold;
+}
+.feed-text a
+{
+	color: #94A9B6;
+}
+.help
+{
+	font-size: 11px;
+	font-style: italic;
+}
+.title
+{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #94A9B6;
+}
+.title-home
+{
+	font-size: 1.25em;
+}
+
+.box
+{
+	border: 1px solid #94A9B6;
+	background-image: url(/common/images/bg-box.png);
+	background-repeat: repeat-x;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	color: #fff;
+}
+.box h1
+{
+	font-size: 1.1em;
+	color: #fff;
+	font-weight: bold;
+	padding: 8px;
+	background-image: url(/common/images/bg-heading.png);
+	border-bottom: 1px solid #000;
+}
+.box .heading
+{
+	padding: 8px;
+	color: #ffff00;
+	font-weight: bold;
+}
+.box .content
+{
+	padding: 8px;
+}
+
+
+#mini-login
+{
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #94A9B6;
+	background-image: url(/common/images/bg-heading.png);
+	padding:4px;
+}
+#mini-login .item
+{
+	padding: 4px 0px 4px 0px;
+}
+#mini-login input
+{
+	font-size: smaller;
+}
+#mini-login .login
+{
+	padding: 12px;
+	color: #fff;
+}
+#mini-login .login a
+{
+	color: #ccd2e8;
+	font-weight: bolder;
+}
+#mini-login .signup
+{
+	border-top: 1px solid #94A9B6;
+	padding: 12px;
+}
+
+.content-left
+{
+	width: 48%;
+	float: left;
+}
+
+.content-right
+{
+	width: 48%;
+	float: right;
+}
+
+
+
+input[type="text"], input[type="password"], input[type="checkbox"], select
+{
+	background-color: #000;
+	color: #94A9B6;
+	border: 1px solid #94A9B6;
+	vertical-align: middle;
+}
+input[type="image"]
+{
+	border: 0px;
+	vertical-align: middle;
+}
+input[type="radio"]
+{
+	background-color: #000;
+	color: #94A9B6;
+	vertical-align: middle;
+}
+
+.button
+{
+	background-position: 0px 0px;
+	background-image: url(/common/images/btn-blank.png);
+	background-repeat: repeat-x;
+	background-color: #000000;
+	display: inline-block;
+	height: 24px;
+	padding: 0px 18px 0px 18px;
+	vertical-align: middle;
+	margin: 4px 0px 4px 0px;
+	border: 1px solid #435763;
+}
+.button a
+{
+	color: #94A9B6;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+	position: relative;
+	top: 4px;
+}
+.button a:hover
+{
+	color: #fff;
+}
+
+
+.table th, .table td
+{
+	padding-left:12px;
+	padding-right:12px;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+.table th
+{
+	color:#FFFFCC;
+	font-weight:bold;
+}
+
+.positive
+{
+    color: #003300;
+    font-weight: bold;
+}
+.negative
+{
+    color: #800000;
+    font-weight: bold;
+}
+
+.avatar-list, .household-list
+{
+	border-color:#FFFFCC;
+}
+.avatar-list td, .avatar-list th, .household-list td, .household-list th, .table th, .table td
+{
+	padding-left:8px;
+	padding-right:8px;
+}
+.avatar-list th, .household-list th, .table th
+{
+	color:#FFFFCC;
+	font-weight:bold;
+}
+.avatar-list .pager, .household-list .pager
+{
+	color:#FFFFCC;
+	padding:4px;
+}
+.avatar-list .pager a, .household-list .pager a
+{
+	color:#FFFFCC;
+	font-weight:bold;
+}
+.avatar-list a, .household-list a
+{
+	text-decoration:none;
+}
+.avatar-list .level, .household-list .honor
+{
+	color:#FFCC66;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+}
+.avatar-list .avatarImg, .household-list .image
+{
+}
+.avatar-list .avatarImg img, .household-list .image img
+{
+	border:1px solid #3f8630;
+}
+.avatar-list .name, .household-list .name
+{
+	color:#ffff00;
+}
+.avatar-list .name a, .household-list .name a
+{
+	color:#ffff00;
+	text-decoration:underline;
+}
+.avatar-list .householdImg
+{
+}
+.avatar-list .household
+{
+}
+.avatar-list .zone
+{
+}
+.avatar-list .online
+{
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}
+.avatar-list .online .True
+{
+	color: #009900;
+}
+.avatar-list .online .False
+{
+	color: #990000;
+}
+.avatar-list .location
+{
+}
+.household-list .members
+{
+}
+.household-list .motto
+{
+}

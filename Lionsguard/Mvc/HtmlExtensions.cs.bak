@@ -1,0 +1,183 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web.Mvc;
+using System.Web.Mvc.Html;
+using System.Web.Routing;
+using System.Web;
+
+namespace Lionsguard.Mvc
+{
+	public static class HtmlExtensions
+	{
+		public const string LeftArrow = "&#x25C0;";
+		public const string RightArrow = "&#x25BA;";
+		public const string UpArrow = "&#x25B2;";
+		public const string DownArrow = "&#x25BC;";
+		public const string NonBreakingSpace = "&nbsp;";
+
+		#region Pager
+		// TODO: Add routeValues
+		public static string Pager(this HtmlHelper helper, string actionName, string controller,
+			int pageIndex, int maximumRows, int totalRowCount, int buttonCount)
+		{
+			return helper.Pager(actionName, controller, pageIndex, maximumRows, totalRowCount, buttonCount,  
+				new RouteValueDictionary(),	new RouteValueDictionary(), new RouteValueDictionary());
+		}
+
+		public static string Pager(this HtmlHelper helper, string actionName, string controller,
+			int pageIndex, int maximumRows, int totalRowCount, int buttonCount, object routeValues)
+		{
+			return helper.Pager(actionName, controller, pageIndex, maximumRows, totalRowCount, buttonCount, 
+				new RouteValueDictionary(routeValues), new RouteValueDictionary(), new RouteValueDictionary());
+		}
+
+		public static string Pager(this HtmlHelper helper, string actionName, string controller,
+			int pageIndex, int maximumRows, int totalRowCount, int buttonCount, object routeValues,
+			object pageHtmAttributes, object buttonsHtmlAttributes)
+		{
+			return helper.Pager(actionName, controller, pageIndex, maximumRows, totalRowCount, buttonCount,
+				new RouteValueDictionary(routeValues), new RouteValueDictionary(pageHtmAttributes), 
+				new RouteValueDictionary(buttonsHtmlAttributes));
+		}
+
+		public static string Pager(this HtmlHelper helper, string actionName, string controller, 
+			int pageIndex, int maximumRows, int totalRowCount, int buttonCount, IDictionary<string, object> routeValues,
+			IDictionary<string, object> pageHtmAttributes, IDictionary<string, object> buttonsHtmlAttributes)
+		{
+			helper.ViewContext.RouteData.Values.Merge(new RouteValueDictionary(routeValues));
+
+			StringBuilder sb = new StringBuilder();
+			UrlHelper url = new UrlHelper(helper.ViewContext.RequestContext);
+
+			int lastPageIndex = (totalRowCount / maximumRows) - 1;
+
+			if (pageIndex > 0 && lastPageIndex > 1)
+			{
+				int prevPageIndex = pageIndex - buttonCount;
+				if (prevPageIndex < 0) prevPageIndex = 0;
+
+				TagBuilder prev = new TagBuilder("a");
+				prev.MergeAttributes(buttonsHtmlAttributes);
+				prev.MergeAttribute("href", url.Action(actionName, controller, new { start = prevPageIndex }));
+				prev.InnerHtml = LeftArrow;
+
+				sb.Append(prev.ToString(TagRenderMode.Normal));
+				sb.Append(NonBreakingSpace);
+			}
+
+			for (int i = pageIndex; (i < (pageIndex + buttonCount) && i <= lastPageIndex); i++)
+			{
+				if (i == pageIndex)
+				{
+					sb.AppendFormat("[ {0} ]", pageIndex + 1);
+				}
+				else
+				{
+					TagBuilder link = new TagBuilder("a");
+					link.MergeAttributes(pageHtmAttributes);
+					link.MergeAttribute("href", url.Action(actionName, controller, new { start = i }));
+					link.InnerHtml = (i + 1).ToString();
+					sb.Append(link.ToString(TagRenderMode.Normal));
+				}
+				sb.Append(NonBreakingSpace);
+			}
+
+			if ((pageIndex + buttonCount) < lastPageIndex)
+			{
+				int nextPageIndex = pageIndex + buttonCount;
+				if (nextPageIndex > lastPageIndex) nextPageIndex = lastPageIndex;
+
+				TagBuilder next = new TagBuilder("a");
+				next.MergeAttributes(buttonsHtmlAttributes);
+				next.MergeAttribute("href", url.Action(actionName, controller, new { start = nextPageIndex }));
+				next.InnerHtml = RightArrow;
+
+				sb.Append(next.ToString(TagRenderMode.Normal));
+				sb.Append(NonBreakingSpace);
+			}
+
+			return sb.ToString();
+		}
+		#endregion
+
+		#region Login
+		public static string Login(
+			this HtmlHelper htmlHelper,
+			string submitHref,
+			string signUpAction,
+			string signUpController,
+			string forgotPasswordAction,
+			string forgotPasswordController,
+			string cancelAction,
+			string cancelController,
+			object containerHtmlAttributes,
+			object buttonHtmlAttributes)
+		{
+			StringBuilder sb = new StringBuilder();
+
+			//<div class="login">
+			TagBuilder outerDiv = new TagBuilder("div");
+			outerDiv.MergeAttributes<string, object>(((IDictionary<string, object>)new RouteValueDictionary(containerHtmlAttributes)));
+			sb.Append(outerDiv.ToString(TagRenderMode.StartTag));
+
+			//    <fieldset>
+			sb.Append("<fieldset>");
+
+			//        <legend>Login</legend>
+			sb.Append("<legend>Login</legend>");
+
+			//        <label for="username">UserName:</label>
+			sb.Append("<label for=\"username\">UserName:</label>");
+
+			//        <div>$username$</div>
+			sb.Append("<div>").Append(htmlHelper.TextBox("username", null, new { length = 256, width = "150px" })).Append("</div>");
+
+			//        <label for="password">Password:</label>
+			sb.Append("<label for=\"password\">Password:</label>");
+
+			//        <div>$password$</div>
+			sb.Append("<div>").Append(htmlHelper.Password("password", null, new { length = 256, width = "150px" })).Append("</div>");
+
+			//        <label for="rememberMe">Remember Me:</label>
+			sb.Append("<label for=\"rememberMe\">Remember Me:</label>");
+
+			//        <span>$rememberMe$</span>
+			sb.Append("<span>").Append(htmlHelper.CheckBox("rememberMe", true)).Append("</span>");
+
+			//        <div class="button">
+			//            $login$
+			//        </div>
+			TagBuilder btnLogin = new TagBuilder("div");
+			btnLogin.MergeAttributes<string, object>(((IDictionary<string, object>)new RouteValueDictionary(buttonHtmlAttributes)));
+			sb.Append(btnLogin.ToString(TagRenderMode.StartTag));
+			sb.AppendFormat("<a href=\"{0}\" title=\"Login\">Login</a>", submitHref);
+			sb.Append(btnLogin.ToString(TagRenderMode.EndTag));
+
+			//        <div class="button">
+			//            $cancel$
+			//        </div>
+			TagBuilder btnCancel = new TagBuilder("div");
+			btnCancel.MergeAttributes<string, object>(((IDictionary<string, object>)new RouteValueDictionary(buttonHtmlAttributes)));
+			sb.Append(btnCancel.ToString(TagRenderMode.StartTag));
+			sb.Append(htmlHelper.ActionLink("Cancel", cancelAction, cancelController));
+			sb.Append(btnCancel.ToString(TagRenderMode.EndTag));
+
+			//        <div>$signup$</div>
+			sb.Append("<div>").Append(htmlHelper.ActionLink("Sign Up", signUpAction, signUpController)).Append("</div>");
+
+			//        <div>$forgotPassword$</div>
+			sb.Append("<div>").Append(htmlHelper.ActionLink("Forgot Password?", forgotPasswordAction, forgotPasswordController)).Append("</div>");
+
+			//    </fieldset>
+			sb.Append("</fieldset>");
+
+			//</div>
+			sb.Append(outerDiv.ToString(TagRenderMode.EndTag));
+
+			return sb.ToString();
+		}
+		#endregion
+	}
+}

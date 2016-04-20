@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Perenthia.Controls.AvatarDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="225" Height="200" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+	<Grid x:Name="LayoutRoot" Background="{x:Null}">
+
+		<Border Background="{StaticResource DialogFillBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1,1,1,1" CornerRadius="2,2,2,2" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" d:IsLocked="True"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Health:" TextWrapping="NoWrap"/>
+		<TextBlock Margin="76,2,2,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource HealthBrush}" Text="100/1000" TextWrapping="NoWrap" x:Name="lblHealth"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,18,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Willpower:" TextWrapping="NoWrap"/>
+		<TextBlock Margin="76,18,2,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource WillpowerBrush}" Text="100/100" TextWrapping="NoWrap" x:Name="lblWillpower"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,34,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Experience:" TextWrapping="NoWrap"/>
+		<TextBlock Margin="76,34,2,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource ExperienceBrush}" Text="1234567/12345678" TextWrapping="NoWrap" x:Name="lblXp"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,50,0,0" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Order:" TextWrapping="NoWrap" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+		<TextBlock Margin="76,50,2,0" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="None" TextWrapping="NoWrap" x:Name="lblOrder" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,66,0,0" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Level:" TextWrapping="NoWrap" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+		<TextBlock Margin="76,66,2,0" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="1" TextWrapping="NoWrap" x:Name="lblLevel" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,81.5,0,0" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Race:" TextWrapping="NoWrap" Height="15" VerticalAlignment="Top"/>
+		<TextBlock Margin="76,81.5,2,0" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="Creature" TextWrapping="NoWrap" x:Name="lblRace" Height="15" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="2,0,0,86.728" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextBrush}" Text="Attributes:" TextWrapping="NoWrap" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+		<Canvas Height="24" Margin="23,0,33,58.5" VerticalAlignment="Bottom">
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="STR:" TextWrapping="NoWrap"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblStr" Canvas.Left="22"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="DEX:" TextWrapping="NoWrap" Canvas.Left="40"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblDex" Canvas.Left="62"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="STA:" TextWrapping="NoWrap" Canvas.Left="81" d:LayoutOverrides="Width"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblSta" Canvas.Left="102.72"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="BEA:" TextWrapping="NoWrap" Canvas.Left="117.527" d:LayoutOverrides="Width"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblBea" Canvas.Left="140.72"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="INT:" TextWrapping="NoWrap" Canvas.Top="14"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblInt" Canvas.Left="22" Canvas.Top="14"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="PER:" TextWrapping="NoWrap" Canvas.Left="40" Canvas.Top="14"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblPer" Canvas.Left="62" Canvas.Top="14"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="END:" TextWrapping="NoWrap" Canvas.Left="81" Canvas.Top="14" d:LayoutOverrides="Width"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblEnd" Canvas.Left="102.72" Canvas.Top="14"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource TextBrush}" Text="AFF:" TextWrapping="NoWrap" Canvas.Left="118" Canvas.Top="14"/>
+			<TextBlock FontFamily="Trebuchet MS" FontSize="10" Foreground="{StaticResource PositiveBrush}" Text="0" TextWrapping="NoWrap" x:Name="lblAff" Canvas.Left="140.72" Canvas.Top="14"/>
+		</Canvas>
+		<TextBlock Margin="2,0,2,2" FontFamily="Trebuchet MS" FontSize="11" Foreground="{StaticResource TextAltBrush}" Text="" TextWrapping="NoWrap" x:Name="lblNotes" Height="52.5" VerticalAlignment="Bottom"/>
+
+	</Grid>
+</UserControl>
